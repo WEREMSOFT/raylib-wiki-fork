@@ -1,5 +1,3 @@
-#Compile for Web
-
 To build your raylib game for HTML5 you need a different compiler than the one that comes with raylib installation, actually, you need a set of tools. Those tools are the [emscripten SDK](http://kripken.github.io/emscripten-site/).
 
 ##Installing emscripten
