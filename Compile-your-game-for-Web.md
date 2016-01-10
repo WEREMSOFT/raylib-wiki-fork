@@ -22,7 +22,7 @@ To see how code should be refactored to fit compilation for web, check [core_bas
 ###Compiling raylib game
 Just open your raylib web-prepared game code and run the Notepad++ script named `raylib_compile_emscripten`. Note that script defines some paths to the required tools, check you are using the correct versions of those tools!
 
-Note also that required resources should be embedded into a .data file using the compiler parameter `--precompile-file filename.ext` or `--precompiled-file folder`.
+Note also that required resources should be embedded into a .data file using the compiler parameter `--preload-file filename.ext` or `--preload-file folder`.
 
 ###Testing raylib game
 To test the newly created .html file (and its .js and .data), just create a localhost (you can do it using python) and open the web in the browser (required google chrome).
