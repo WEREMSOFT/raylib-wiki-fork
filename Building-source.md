@@ -1,5 +1,3 @@
-##Building source
-
 **Building raylib sources on desktop platforms:**
 
 _Step 1:_ Using MinGW make tool, just navigate from command line to `raylib/src/` folder and type:
