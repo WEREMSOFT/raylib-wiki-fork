@@ -14,7 +14,7 @@ NOTE: Make sure the following libs (and their headers) are accesible to the comp
 
 _Step 1._ Make sure you have installed in your Raspberry Pi the OpenAL Soft library for audio:
 
-    sudo apt-get install openal1
+    sudo apt-get install libopenal1 libopenal-dev
 
 _Step 2._ Navigate from command line to `raylib/examples/` folder and type:
 
