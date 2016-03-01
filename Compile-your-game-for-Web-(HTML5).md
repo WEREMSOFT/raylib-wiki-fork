@@ -12,7 +12,7 @@ _NOTE: If a newer preconpiled SDK version (newer than sdk-1.34.1-64bit) is avail
 
 ###Compiling raylib source code [Optional]
 
-Before compiling your game, raylib library must be recompiled for HTML5. By default, when you install raylib using the Windows Installer, an already pre-compiled raylib HTML5 version is found in C:\raylib\raylib\src\libraylib.bc. Notepad++ uses this version but you can regenerate it just recompiling raylib for web (in case you have modified raylib sources or you updated it with GitHub develop branch sources).
+Before compiling your game, raylib library must be recompiled for HTML5. By default, when you install raylib using the Windows Installer, an already pre-compiled raylib HTML5 version is found in `C:\raylib\raylib\src\libraylib.bc`. Notepad++ uses this version but you can regenerate it just recompiling raylib for web (in case you have modified raylib sources or you updated it with GitHub develop branch sources).
 
 ###Preparing your raylib game for web
 To compile your game for web, code must be slightly adapted. Basically it implies moving all your Update and Draw code to an external function. The reason for that is the way web games work within a browser; the browser needs to control the game loop and just allow and Update-Draw cycle when the tab is active or browser is not minimized. 
