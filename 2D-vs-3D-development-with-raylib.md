@@ -25,3 +25,12 @@ In addition to the above problem, we have 2D vs 3D mixing. We use the same buffe
 
 Sharing buffers for 2D and 3D is simple and works ok but presents a problem when mixing 2D and 3D: `DEPTH_TEST`. 2D screen elements are drawn in front of or behind the 3D elements; we don't want that.
 
+An issue was introduced to try to find a solution for all this problems: https://github.com/raysan5/raylib/issues/89
+
+A first idea was adding additional LINES and TRIANGLES buffers only for 3D but it was discarded due to the extra complexity and memory usage for raylib, considering that most of the time raylib users will probably use the library for 2D games and even in the case of using 3D, loaded 3D models are stored in separate static buffers. No need to overload the library with a new set of dinamic buffers.
+
+After some thinking, two solutions were introduced, probably not the best ones but they give a balance between 2D and 3D drawing, depth testing and blending.
+
+Solution 1: Disable `DEPTH_TEST` for 2D and enable it only for 3D. The problem with this solution (a part of not having `DEPTH_TEST` on 2D) was the blending between elements from different buffers (i.e. TRIANGLES and QUADS). It was partially solved moving some commonly-used 2D elements (Circle, RectangleLines) to QUADS. That way depth test and blending work ok with those elements. (Probably a final solution would be moving all elements drawing to a single buffer type: QUADS)
+
+Solution 2: 
