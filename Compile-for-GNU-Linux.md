@@ -2,13 +2,13 @@ To build your raylib game for GNU/Linux you need to download raylib git reposito
 
 This guide is for Ubuntu/Debian distros, that use APT as package manager; it is tested on Ubuntu 14.04.
 
-# Install basis and useful packages
+### Install basis and useful packages
 You have to install GCC compilers, Make tool and git (for downloading raylib repository):
 
     sudo apt install build-essential git
 
-# Compile raylib
-## Install raylib dependencies
+### Compile raylib source code
+#### Install raylib dependencies
 raylib requires GLFW3 (Windows and input management) and OpenAL Soft (audio system management). Just install them:
 
     sudo apt install libopenal1 libopenal-dev
@@ -24,7 +24,7 @@ Now, you need to download GLFW3 from sources and build it (you also need cmake t
     cmake .
     sudo make install
 
-## Compile raylib source code
+#### Compile raylib source code
 First, you need to download raylib repository from git; after you can compile it for GNU/Linux:
 
     git clone https://github.com/raysan5/raylib.git raylib
@@ -41,7 +41,7 @@ If you want, you can move the library and header in standards directories:
     sudo mkdir /usr/local/include/raylib # If there is not the directory
     sudo cp raylib.h /usr/local/include/raylib/raylib.h
 
-# Compile raylib examples
+### Compile raylib examples
 Just move to folder `raylib/examples/` and run:
 
     make PLATFORM=PLATFORM_DESKTOP
@@ -53,3 +53,8 @@ To compile just one specific example:
 To force one example recompile:
 
     make core_basic_window PLATFORM=PLATFORM_DESKTOP -B
+
+
+**If you have any doubt, [just let me know][raysan5].**
+
+[raysan5]: mailto:raysan5@gmail.com "Ramon Santamaria - Ray San"
