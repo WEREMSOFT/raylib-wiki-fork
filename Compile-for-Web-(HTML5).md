@@ -10,7 +10,7 @@ Download emscripten SDK from [here](http://kripken.github.io/emscripten-site/doc
 
 _NOTE: If a newer preconpiled SDK version (newer than sdk-1.34.1-64bit) is available, install new version. Preconpiled SDK already includes latest version of clang, emscripten, python and node.js, so you don't have to install it separately._
 
-###Compiling raylib source code [Optional]
+###Compiling raylib source code
 
 Before compiling your game, raylib library must be recompiled for HTML5. By default, when you install raylib using the Windows Installer, an already pre-compiled raylib HTML5 version is found in `C:\raylib\raylib\src\libraylib.bc`. Notepad++ uses this version but you can regenerate it just recompiling raylib for web (in case you have modified raylib sources or you updated it with GitHub develop branch sources).
 
