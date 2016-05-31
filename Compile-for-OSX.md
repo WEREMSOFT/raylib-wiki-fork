@@ -31,6 +31,7 @@ Pasos:
 - Para añadir Raylib darle al + y Add Other…, aquí se tiene que buscar el archivo libraylib.a creado anteriormente en la carpeta correspondiente. 
 - Para añadir GLFW3 hacer los mismos pasos que con Raylib pero en el buscador de archivos ejecutar ⇧⌘D y pegar este directorio /usr/local/lib, ya que se encuentra en un directorio oculto por el sistema. Dentro la carpeta buscar libglfw3(versión).dylib en mi caso es la 3.3.1. 
 - Ahora para que Xcode encuentre raylib.h ir a Build Settings > Search Paths y en Header y Library Search Paths doble click a su derecha para incluir el directorio arrastrando la carpeta src donde se encuentra raylib.h hacia allí.
+- Add raylib/src directory not only to the Build Settings -> Search Paths -> Library Search Paths, but also to the Build Settings -> Search Paths -> Header Search Paths
 
 6) Raylib ya debería funcionar correctamente. Para hacer la prueba, en la pagina oﬁcial de Raylib(www.raylib.com) hay varios ejemplos, por ahora coge el código de ejemplo de core > basic window, o el de a continuación. Lo pegas en el ﬁchero main.c y le das a Run o ⌘R.
 
