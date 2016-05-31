@@ -1,6 +1,6 @@
-Dealing with custom shaders and make them generic is not an easy task. There are many things to consider for a shader because, after all, the shader is the responsible to process all the data (mesh, materials, textures, lighting) send to the GPU to generate the final frame.
+Dealing with custom shaders and make them generic is not an easy task. There are many things to consider for a shader because, after all, the shader is the responsible to process all the data send to the GPU (mesh, materials, textures, lighting) to generate the final frame.
 
-Find an unified generic shader to deal with all kind of stuff is very complicated and, after analysing some of the big engines out there, I decided to go for a custom uber-shader-based solution.
+Find an unified generic shader to deal with all kind of stuff is very complicated and, after analyzing some of the big engines out there, I decided to go for a custom uber-shader-based solution.
 
 By default, raylib shader struct support the following data:
 ```c
