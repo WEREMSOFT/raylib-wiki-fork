@@ -1,6 +1,6 @@
 One of the main objectives with raylib was minimizing external dependencies. Developing a full-videogame-featured library avoiding external dependencies is a hard task.
 
-Here it is a list with the external dependencies used by raylib; note that most of those dependencies ara single-header public-domain libraries that are directly copied into raylib repository.
+Here it is a list with the external dependencies used by raylib; note that most of those dependencies are [single-header public-domain libraries](https://github.com/nothings/stb) that are [directly copied into raylib repository](https://github.com/raysan5/raylib/tree/develop/src/external).
 
 External dependencies:
 
