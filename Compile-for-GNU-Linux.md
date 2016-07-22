@@ -15,7 +15,7 @@ raylib requires GLFW3 (Windows and input management) and OpenAL Soft (audio syst
 
 GLFW3 depends on some other libraries:
 
-    sudo apt install mesa-common-dev libx11-dev libxrandr-dev libXi-dev xorg-dev libgl1-mesa-dev libglu1-mesa-dev libglew-dev
+    sudo apt install mesa-common-dev libx11-dev libxrandr-dev libxi-dev xorg-dev libgl1-mesa-dev libglu1-mesa-dev libglew-dev
 
 Now, you need to download GLFW3 from sources and build it (you also need cmake tool; if you have not, just do: `sudo apt install cmake`):
 
