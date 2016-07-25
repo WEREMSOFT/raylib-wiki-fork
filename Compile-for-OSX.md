@@ -39,8 +39,8 @@ _Steps:_
 - To add OpenGL and OpenAL: Click on + and add OpenGL.framework and OpenAL.framework
 - To add raylib: Click on + and `Add Other...`, look for `libraylib.a` file created previously, it should be in folder `raylib-master/release/osx` (make sure library has been created in that folder).
 - To add GLFW3: Click on + and `Add Other...`, look for folder `/usr/local/lib` and look for file `libglfw3(version).dylib`. 
-- Make sure XCode finds `raylib.h`: Go to `Build Settings > Search Paths` and add raylib header folder (raylib-master/src) to `Header Search Paths` and library folder (raylib-master/release/osx) to `Library Search Paths`.
-- Add raylib/src directory not only to the Build Settings -> Search Paths -> Library Search Paths, but also to the Build Settings -> Search Paths -> Header Search Paths
+- Make sure XCode finds `raylib.h`: Go to `Build Settings > Search Paths` and add raylib header folder (`raylib-master/src`) to `Header Search Paths` 
+- Make sure XCode finds `libraylib.a`: Go to `Build Settings > Search Paths` and add raylib library folder (`raylib-master/release/osx`) to `Library Search Paths`.
 
 6) raylib should work correctly. To make sure, just go to [official raylib page](www.raylib.com) and check the different examples available. Just copy the code into `main.c` file and run it with Run button or ⌘R.
 
