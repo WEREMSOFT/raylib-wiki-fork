@@ -1,44 +1,52 @@
 *NOTE: This tutorial is written in Spanish, it should be translated to English.*
 
-Software utilizado:
+This guide has been written using the following software:
 - OSX El Capitan (10.11.3) 
 - Xcode 7.2.1 (7C1002) 
 
-Pasos:
+_Steps:_
 
-1) Tener un Mac preferiblemente con la última versión de OSX (10.11.3)
+1) Get a Mac with OSX version 10.11.3.
 
-2) Instalar la versión correspondiente (según versión de OSX) de las *Apple Developer Tools*. Estas tools incluyen Xcode, en este caso la versión 7.2.1. 
+2) Install *Apple Developer Tools*. Those tools include XCode, in our case version 7.2.1. 
 
-3) Instalar la librería: GLFW3 
-- Para facilitar la instalación de packages instalar Homebrew, ejecuta en la app Terminal el siguiente comando: 
-    
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/ Homebrew/install/master/install)"
+3) Install GLFW3 library
 
-- Una vez instalado Homebrew copia brew install glfw3 en Terminal para su instalación.
+- To install required packages easier, first install Homebrew, execute in Terminal app the following command:  
+```
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+- Once Homebrew app is installed, run the following command in Terminal:
+```
+    brew install glfw3
+```
+4)  Install raylib library
+- Download or Clone raylib from GitHub (https://github.com/raysan5/raylib). `raylib-master.zip` contains all required files: source code, examples, templates, games...
+- Decompress `raylib-master.zip` in some folder. In case of using Safari browser, it will be automatically decompressed.
+- From Terminal app, access raylib-master/src directory:
+```
+    cd raylib-master/src
+```
+- Compile raylib library using the following command from Terminal:
+```
+    make PLATFORM=PLATFORM_DESKTOP
+```
+- If everything worked ok, `libraylib.a` should be created in `raylib-master/release/osx` folder.
 
-4)  Instalar la librería: raylib
-- Descargar raylib desde GitHub (https://github.com/raysan5/raylib). El ZIP incluye todo raylib: código fuente, ejemplos, algunas tools, juegos… 
-- Descomprimir el ZIP en algún directorio. En caso de usar el navegador Safari se descomprimirá automáticamente. 
-- Desde la app Terminal, acceder al directorio raylib-master/src, para ello escribe cd, pon un espacio, arrastra la carpeta del Finder src hacia Terminal y dale a Enter.
-- Escribir make y darle a Enter. Si ha funcionado se habrá creado un archivo en la misma carpeta que se llama libraylib.a.
-
-5) Añadir las librerías en el proyecto de Xcode para el correcto funcionamiento de Raylib. 
-
-- Crear un proyecto nuevo con Xcode y usar el template de Command Line Tool en OS X, darle a Next y en opciones asegurar-se que el lenguaje es C.
-- Una vez abierto, en a la ventana desplegable de la izquierda dentro del navegador del proyecto, donde se encuentran las carpetas i archivos, darle click a la carpeta principal o proyecto. En la ventana central aparecera Build Phases entre otras opciones, entrar allí y desplegar Link Binary With Libraries. Aquí es donde se añaden las librerías al proyecto.
-- Para añadir OpenGL y OpenAL no hay complicación porque vienen por defecto, darle al + y allí buscar OpenGL.framework y OpenAL.framework. 
-- Para añadir Raylib darle al + y Add Other…, aquí se tiene que buscar el archivo libraylib.a creado anteriormente en la carpeta correspondiente. 
-- Para añadir GLFW3 hacer los mismos pasos que con Raylib pero en el buscador de archivos ejecutar ⇧⌘D y pegar este directorio /usr/local/lib, ya que se encuentra en un directorio oculto por el sistema. Dentro la carpeta buscar libglfw3(versión).dylib en mi caso es la 3.3.1. 
-- Ahora para que Xcode encuentre raylib.h ir a Build Settings > Search Paths y en Header y Library Search Paths doble click a su derecha para incluir el directorio arrastrando la carpeta src donde se encuentra raylib.h hacia allí.
+5) Add generated libraries (raylib, glfw3) to XCode project.
+- Create a new XCode project using `Command Line Tool`. Make sure selected language is C.
+- Once project created and open, Mouse click over the project main folder in the left project-navigation panel. It should appear `Build Phases` window, just enter and select `Link Binary With Libraries`. There you should add project libraries:
+- To add OpenGL and OpenAL: Click on + and add OpenGL.framework and OpenAL.framework
+- To add raylib: Click on + and `Add Other...`, look for `libraylib.a` file created previously, it should be in folder `raylib-master/release/osx` (make sure library has been created in that folder).
+- To add GLFW3: Click on + and `Add Other...`, look for folder `/usr/local/lib` and look for file `libglfw3(version).dylib`. 
+- Make sure XCode finds `raylib.h`: Go to `Build Settings > Search Paths` and add raylib header folder (raylib-master/src) to `Header Search Paths` and library folder (raylib-master/release/osx) to `Library Search Paths`.
 - Add raylib/src directory not only to the Build Settings -> Search Paths -> Library Search Paths, but also to the Build Settings -> Search Paths -> Header Search Paths
 
-6) Raylib ya debería funcionar correctamente. Para hacer la prueba, en la pagina oﬁcial de Raylib(www.raylib.com) hay varios ejemplos, por ahora coge el código de ejemplo de core > basic window, o el de a continuación. Lo pegas en el ﬁchero main.c y le das a Run o ⌘R.
+6) raylib should work correctly. To make sure, just go to [official raylib page](www.raylib.com) and check the different examples available. Just copy the code into `main.c` file and run it with Run button or ⌘R.
 
-Apuntes: 
+_NOTES:_
 
-- Parece haber un problema con las pantallas retina en que la ventana de la aplicación se ve reducida, la solución es mover un poco la ventana y se reescalara correctamente. 
+- It seems there is a problem with HiDPI displays, in that case, app Window appears smaller. Solution is just moving a bit the Window and it should get scaled automatically.
+- Examples resources should be placed in the folder where XCode generates the product.
 
-- Los recursos de los ejemplos o de tu programa se tendrán que situar donde Xcode genere los productos.
-
-_Tutorial desarrollado por Aleix Rafegas_
+_Tutorial written by Aleix Rafegas and trasnlated to english by Ray_
