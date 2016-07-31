@@ -7,7 +7,7 @@ External dependencies:
 Library | Used Version | raylib module | Notes
 --- | :---: | :---: | ---
 [GLFW3](http://www.glfw.org/) | 3.2 | [core](https://github.com/raysan5/raylib/blob/develop/src/core.c) | Window and input management on desktop platforms
-[GLAD](https://github.com/raysan5/raylib/blob/develop/src/external/glad.h) | 0.1.9a3 | [core](https://github.com/raysan5/raylib/blob/develop/src/core.c), [rlgl](https://github.com/raysan5/raylib/blob/develop/src/rlgl.c) | Extensions initialization for OpenGL 3.3 Core
+[GLAD](https://github.com/raysan5/raylib/blob/develop/src/external/glad.h) | 0.1.9a3 | [rlgl](https://github.com/raysan5/raylib/blob/develop/src/rlgl.c) | Extensions initialization for OpenGL 3.3 Core
 [stb_image](https://github.com/raysan5/raylib/blob/develop/src/external/stb_image.h) | 2.12 | [textures](https://github.com/raysan5/raylib/blob/develop/src/texture.c) | Multiple image formats loading
 [stb_image_resize](https://github.com/raysan5/raylib/blob/develop/src/external/stb_image_resize.h) | 0.91 | [textures](https://github.com/raysan5/raylib/blob/develop/src/texture.c) | Image resizing (multiple algorythms)
 [stb_truetype](https://github.com/raysan5/raylib/blob/develop/src/external/stb_truetype.h) | 1.11 | [text](https://github.com/raysan5/raylib/blob/develop/src/text.c) | TTF font data loading
