@@ -1,3 +1,0 @@
-_TODO_
-
-Actually, it's quite the same as compiling for Desktop platforms...
