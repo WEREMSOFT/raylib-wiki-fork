@@ -16,6 +16,8 @@ Library | Used Version | raylib module | Notes
 [jar_mod](https://github.com/raysan5/raylib/blob/develop/src/external/jar_mod.h) | 0.01 | [audio](https://github.com/raysan5/raylib/blob/develop/src/audio.c) | MOD audio module loading
 [jar_xm](https://github.com/raysan5/raylib/blob/develop/src/external/jar_xm.h) | 0.01 | [audio](https://github.com/raysan5/raylib/blob/develop/src/audio.c) | XM audio module loading
 [OpenAL Soft](http://kcat.strangesoft.net/openal.html) | 1.17.2 | [audio](https://github.com/raysan5/raylib/blob/develop/src/audio.c) | Audio device management (multiple backends)
+[pthread Win32](https://www.sourceware.org/pthreads-win32/) | 2.9.1 | [physac](https://github.com/raysan5/raylib/blob/develop/src/physac.h) | POSIX style threads on Windows
+[lua](https://www.lua.org/about.html) | 5.3.3 | [rlua](https://github.com/raysan5/raylib/blob/develop/src/rlua.h) | raylib lua binding
 
 
 
