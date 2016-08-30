@@ -10,7 +10,7 @@ DESKTOP:Windows | `OpenGL 1.1`, `OpenGL 2.1`, `OpenGL 3.3` | Desired version can
 DESKTOP:Linux | `OpenGL 1.1`, `OpenGL 2.1`, `OpenGL 3.3` | Desired version can be selected at compile time
 DESKTOP:OSX | `OpenGL 1.1`, `OpenGL 2.1`, `OpenGL 3.3` | Desired version can be selected at compile time
 ANDROID| `OpenGL ES 2.0` | Selected automatically if `PLATFORM_ANDROID` is defined
-RASPBERRY PI | `OpenGL ES 2.0` | Run natively, no XWindows desktop supported.
+RASPBERRY PI | `OpenGL ES 2.0` | Selected automatically if `PLATFORM_RPI` is defined. Runs natively, no XWindows desktop supported.
 HTML5 (Web) | `WebGL 1.0 (OpenGL ES 2.0)` | `OpenGL ES 2.0` transformed to `WebGL 1.0` on compilation (using `emscripten SDK`), no emulation layer, only pure `WebGL 1.0` translation.
 OCULUS RIFT CV1 | `OpenGL 2.1`, `OpenGL 3.3` | Basically, same as `DESKTOP` platforms. `OpenGL 1.1` not supported because `GL_EXT_framebuffer_object` is required.
 
