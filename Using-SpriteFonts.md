@@ -2,12 +2,15 @@ raylib 1.4 supports AngelCode sprite fonts (BMFonts).
 
 BMFonts can be created using different programs. The better one is the official Bitmap Font Generator from [AngelCode.com](http://www.angelcode.com/products/bmfont/). Just download and install.
 
-When using BMFont, these settings proved necessary:
- - Select only the 95 characters from `SPACE (32)` to `~ (126)` -- anything else triggers the *"unordered chars data"* error (well, actually, you can leave out multiple contiguous characters at the end of that sequence....). BMFont doesn't do this by default or have a built-in way to do it, so you have to do it manually.
- - Change `Bit Depth` to 32 in `Export Settings` from the 8 bit default -- otherwise raylib renders all glyphs as solid rectangles.
- - Also, be careful with the following crash bug: If you change the font size in BMFont `Font Settings`, but forget to increase the texture size in `Export Settings` to match (BMFont does not do this automatically), raylib crashes when you try to load that font.
+**Recommended BMFont settings**
 
-raylib requires the .png file together with the .fnt text file (not binary) placed in the same folder.
+![BMFont recommended font settings](https://github.com/raysan5/raylib/blob/gh-pages/img/BMFont_font_settings.png) ![BMFont recommended export options](https://github.com/raysan5/raylib/blob/gh-pages/img/BMFont_export_options.png)
+
+Some notes:
+ - Recommended to select only the 95 characters from `SPACE (32)` to `~ (126)`, anything above this limit will be loaded but it could fail on rendering, rendering system expects all characters (starting from 32 up to 255) available in the font, if there is some gap (let's say, jumping from char 126 to 160), it doesn't consider that gap...  *- WORK IN PROGRESS -*
+ - Be careful when changing font size in BMFont `Font Settings`, texture size in `Export Settings` also requires to change to fit new size (BMFont does not change this automatically), `Visualize` font on BMFont to make sure everything is ok.
+
+ - raylib requires the .png file together with the .fnt text file (not binary) placed in the same folder.
 
 Alternatively, it's possible to use the web tool [Littera](http://kvazars.com/littera/) to generate BMFonts but due to some differences with original software, some exported fonts could not work with raylib.
 
