@@ -21,4 +21,5 @@
 * [How To: Using SpriteFonts](Using-SpriteFonts)
 * [How To: audio module as standalone library](Use-audio-module-as-standalone-library)
 * [How To: rlgl module as standalone library](Use-rlgl-module-as-standalone-library)
+* [How To: Create Visual Studio Project](Create-Visual-Studio-Project)
 * [FAQ](FAQ)
