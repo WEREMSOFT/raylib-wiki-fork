@@ -20,11 +20,11 @@ Those are the configuration parameters required:
 2. Include directory: `$(raylibSrcDir)`
 3. Advanced Configuration: `Compile as C Code (/TC)`
 4. Linker directories:
-    - $(raylibSrcDir)external\glfw3\lib\win32
-    - $(raylibSrcDir)external\openal_soft\lib\win32
+    - `$(raylibSrcDir)external\glfw3\lib\win32`
+    - `$(raylibSrcDir)external\openal_soft\lib\win32`
 5. Linker additional dependencies:
-    - glfw3.lib
-    - openal32.lib
+    - `glfw3.lib`
+    - `openal32.lib`
 
 
 
