@@ -1,8 +1,6 @@
-**Based on answer by `Morphology` user on [raylib forum](http://forum.raylib.com/index.php?p=/discussion/87/can-i-direct-the-output-to-framebuffer-1#latest):**
+The first stage is to get the TFT screen working with the Raspberry Pi, and these instructions apply specifically to one based on the `ili9340 TFT controller`, with an `ads7846 touchscreen controller`. These are quite common, and use SPI Bus 0 and 1, so SPI has to be enabled.
 
-There is no particular magic to what I am doing. The first stage is to get the TFT screen working with the Raspberry Pi. In my case I am using one based on the `ili9340 TFT controller`, with an `ads7846 touchscreen controller`. These use SPI Bus 0 and 1, so SPI has to be enabled.
-
-`Nortro's TFT drivers` are now built into the latest Raspberry Pi core, so to get this screen working on the Pi, you just need to edit `/etc/rc.local` and add the following just above the existing script that prints the IP address:
+`Notro's TFT drivers` are now built into the latest Raspberry Pi core, so to get this screen working on the Pi, you just need to edit `/etc/rc.local` and add the following just above the existing script that prints the IP address:
 ```
 modprobe fbtft_device custom name=fb_ili9340 buswidth=8 speed=16000000 bgr=1 gpios=reset:27,dc:22 rotate=270
 ```
