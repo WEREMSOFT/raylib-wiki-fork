@@ -23,5 +23,5 @@
 * [How To: rlgl module as standalone library](Use-rlgl-module-as-standalone-library)
 * [How To: Create Visual Studio Project](Create-Visual-Studio-Project)
 * [How To: Redirect-raylib-output-to-Framebuffer-1 (RPI)](Redirect-raylib-output-to-Framebuffer-1)
-* [How To: Install and configure Touchscreen on a Raspberry Pi](Install-and-configure-Touchscreen-Drivers-on-a-Raspberry-Pi)
+* [How To: Install and configure Touchscreen on an RPi](Install-and-configure-Touchscreen-Drivers-on-a-Raspberry-Pi)
 * [FAQ](FAQ)
