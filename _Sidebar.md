@@ -22,6 +22,6 @@
 * [How To: audio module as standalone library](Use-audio-module-as-standalone-library)
 * [How To: rlgl module as standalone library](Use-rlgl-module-as-standalone-library)
 * [How To: Create Visual Studio Project](Create-Visual-Studio-Project)
-* [How To: Install and configure Touchscreen on a Raspberry Pi](Install-and-configure-Touchscreen-Drivers-on-a-Raspberry-Pi
 * [How To: Redirect-raylib-output-to-Framebuffer-1 (RPI)](Redirect-raylib-output-to-Framebuffer-1)
+* [How To: Install and configure Touchscreen on a Raspberry Pi](Install-and-configure-Touchscreen-Drivers-on-a-Raspberry-Pi)
 * [FAQ](FAQ)
