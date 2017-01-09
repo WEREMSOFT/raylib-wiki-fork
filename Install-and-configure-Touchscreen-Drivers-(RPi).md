@@ -83,5 +83,5 @@ And this should be visible if you enter the following:
 
 **Note:** that if the new Input Event appears as anything other than /dev/input/event4 you will need to edit /raylib/src/core.c and change the #DEFAULT_TOUCH_DEV setting towards the top of the file, and re-build RayLib
 
-To run ts_uinput as a daemon automatically, each time the RPi is re-booted, you will need to place the ts_uint startup script in /etc/rc.local just above the default section that prints the IP address, and omit 'sudo' from the front as scripts in rc.local run as root.
+To run ts_uinput as a daemon automatically, each time the RPi is re-booted, you will need to place the ts_uinput startup script in /etc/rc.local just above the default section that prints the IP address, and omit 'sudo' from the front as scripts in rc.local run as root.
 
