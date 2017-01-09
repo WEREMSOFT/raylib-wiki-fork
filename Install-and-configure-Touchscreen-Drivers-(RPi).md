@@ -12,6 +12,10 @@ To build **tslib** on a Raspberry Pi, you will need automake and libtool:
 
     sudo apt-get install automake libtool
 
+Cloning the tslib repository doesn't create the default /etc/ts.conf file, so install tslib:
+
+    sudo apt-get install ts-lib
+
 ## Clone the tslib repository
 
 Navigate to the root directory beneath which you want to install the tslib source
@@ -48,7 +52,9 @@ tslib calibration data is held in the following file:
 
     /etc/pointercal
 
-This file doesn't need to be edited manually. Instead, calibration data is captured and stored using a separate program called **ts_calibrate** which guides the user through tapping on 5 separate positions on the touchscreen.
+This file doesn't need to be edited manually. Instead, calibration data is captured and stored using a separate program called **ts_calibrate** which guides the user through tapping on 5 separate positions on the touchscreen. However I did find that ts_calibrate would fail with an fopen error if it couldn't find the pointercal file, so first create an empty file:
+
+    sudo touch /etc/pointercal
 
 The **ts_calibrate** procedure can be run as often as you like, and it is particularly important to do so if the on-screen cursor doesn't seem to align accurately with the point you touched.
 
@@ -73,11 +79,7 @@ The arguments at the end are as follows:
 -v  Verbose (lists more information as ts_uinput loads)
 -d  Run as a daemon
 
-If all is well, ts_uinput should report that it has created a new event stream called
-
-    event4
-
-And this should be visible if you enter the following:
+If all is well, ts_uinput should report that it has created a new virtual input device input4, which should be listed as event4 and mouse2 if you enter the following:
 
     ls /dev/input
 
