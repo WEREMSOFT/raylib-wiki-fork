@@ -56,7 +56,7 @@ This file doesn't need to be edited manually. Instead, calibration data is captu
 
     sudo touch /etc/pointercal
 
-The **ts_calibrate** procedure can be run as often as you like, and it is particularly important to do so if the on-screen cursor doesn't seem to align accurately with the point you touched.
+The **ts_calibrate** procedure can be run as often as you like, and it is particularly important to do so if the on-screen cursor doesn't seem to align accurately with the point you touched. **Note:** if you are running ts_uinput as a daemon you will need to stop and re-start it following a re-calibration, as the calibration data is only read once when ts_uinput loads.
 
 I found I needed to explicitly specify the location for the various parameters when running both **ts_calibrate** and **ts_uinput**
 
