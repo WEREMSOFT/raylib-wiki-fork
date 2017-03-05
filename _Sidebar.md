@@ -2,6 +2,7 @@
 ***
 ## Library Design
 * [raylib arquitecture](raylib-arquitecture)
+* [raylib data structures](raylib-data-structures)
 * [External dependencies](External-dependencies)
 * [OpenGL Graphic API](OpenGL-Graphic-API)
 * [2D vs 3D Development](2D-vs-3D-development-with-raylib)
