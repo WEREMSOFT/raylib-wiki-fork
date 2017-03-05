@@ -14,6 +14,7 @@ raylib is a very modular library, defined by a small number of specific and self
 Those 7 modules share a common header: [`raylib.h`](https://github.com/raysan5/raylib/blob/master/src/raylib.h), all user functions are defined in that header, despite the fact they are divided internally in 7 modules. That way, user just needs to include `raylib.h` to get all raylib functionality. Other libraries use one headers for every module (that way user can choose included modules) or also headers that refer to other headers; raylib uses a simpler approach, easier for novice (and expert) users.
 
 A part of those 7 main modules, some other modules have been implemented with additional features:
+ - [`raymath`](https://github.com/raysan5/raylib/blob/develop/src/raymath.h): Vector3, Matrix and Quaternion math related functions
  - [`camera`](https://github.com/raysan5/raylib/blob/develop/src/camera.h): 3D Camera system (free, 1st person, 3rd person, custom)
  - [`gestures`](https://github.com/raysan5/raylib/blob/develop/src/gestures.h): Touch gestures detection and processing (Tap, Swipe, Drag, Pinch)
  - [`raygui`](https://github.com/raysan5/raygui): Simple IMGUI system with several controls for tools development
