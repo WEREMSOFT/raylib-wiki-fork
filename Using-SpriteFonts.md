@@ -4,7 +4,7 @@ BMFonts can be created using different programs. The better one is the official 
 
 **Recommended BMFont settings**
 
-![BMFont recommended font settings](https://github.com/raysan5/raylib/blob/gh-pages/img/BMFont_font_settings.png) ![BMFont recommended export options](https://github.com/raysan5/raylib/blob/gh-pages/img/BMFont_export_options.png)
+![BMFont recommended font settings](http://www.raylib.com/images/BMFont_font_settings.png) ![BMFont recommended export options](http://www.raylib.com/images/BMFont_export_options.png)
 
 Some notes:
  - Recommended to select only characters from `SPACE (32)` to `ÿ (255)`, anything above this limit will be loaded but it will fail on rendering, improved support for Unicode characters is on the TODO list.
