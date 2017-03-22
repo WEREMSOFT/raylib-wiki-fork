@@ -1,6 +1,6 @@
 To build your raylib game for Android you need a different compiler than the one that comes with raylib installation, actually, you need a set of tools. Those tools are basically the Android SDK and Android NDK.
 
-###Installing Android tools
+### Installing Android tools
 
 _Step 1._ Install Java Runtime 8 (JRE), Android SDK, Android NDK and Apache Ant tools:
 
@@ -22,7 +22,7 @@ _Step 3._ Make sure latest Android Platform Tools and desired SDKs are installed
 
     C:\android-sdk\SDK Manager.exe
 
-###Compiling raylib source code
+### Compiling raylib source code
 
 Navigate from command line to folder `raylib/src_android/` and type:
 
@@ -33,7 +33,7 @@ to Android project; if using `raylib/template_android` project, copy it to `rayl
 
 You can also use Notepad++ prepared script for raylib source compilation. Just open Notepad++, open `raylib/src_android/jni/Android.mk` and execute Notepad++ script: `raylib_source_compile_android`.
 
-###Compiling raylib game for Android (using project template)
+### Compiling raylib game for Android (using project template)
 
 _Step 1._ To compile project, navigate from command line to folder `raylib/template/android_project/jni/` and type:
 
