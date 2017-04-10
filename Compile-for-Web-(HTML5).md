@@ -18,7 +18,7 @@ Before compiling your game, raylib library must be recompiled for HTML5. By defa
 
 To compile your game for web, code must be slightly adapted. Basically it implies moving all your Update and Draw code to an external function. The reason for that is the way web games work within a browser; the browser needs to control the game loop and just allow and Update-Draw cycle when the tab is active or browser is not minimized. 
 
-To see how code should be refactored to fit compilation for web, check [core_basic_window_web.c](https://github.com/raysan5/raylib/blob/master/examples/core_basic_window_web.c) example.
+To see how code should be refactored to fit compilation for web, check [core_basic_window_web.c](https://github.com/raysan5/raylib/blob/master/examples/core/core_basic_window_web.c) example.
 
 ### Compiling raylib game
 
