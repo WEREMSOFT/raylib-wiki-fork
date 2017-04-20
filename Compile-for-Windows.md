@@ -6,7 +6,11 @@ If you want to use another code editor like Visual Studio or another compiler pa
 
 Just download raylib installer and run it. It installs Notepad++ and MinGW, custom versions for better integration with raylib.
 
-NOTE: Make sure the following libs (and their headers) are accesible to the compiler (placed on right folders):
+Add the bin path of raylib installer's GNU tools to your PATH environment variable.
+_e.g. C:\raylib\MinGW\bin_
+
+
+NOTE: Make sure the following libs (and their headers) are accessible to the compiler (This should be taken care of after following the above steps):
 
     libglfw3.a    - GLFW3 (static version)
     libopenal32.a - OpenAL Soft, audio device management
