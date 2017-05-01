@@ -6,16 +6,16 @@ _Step 1._ Install Java Runtime 8 (JRE), Android SDK, Android NDK and Apache Ant 
 
 > Download and Install [Java SE Runtime Environment 8](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)
 
-> Download and decompress on C: [Android SDK r24](http://dl.google.com/android/android-sdk_r24.4.1-windows.zip)
+> Download and decompress on C: [Android SDK](https://dl.google.com/android/repository/sdk-tools-windows-3859397.zip)
 
-> Download and decompress on C: [Android NDK r10e](http://dl.google.com/android/ndk/android-ndk-r10e-windows-x86.exe)
+> Download and decompress on C: [Android NDK](https://dl.google.com/android/repository/android-ndk-r14b-windows-x86.zip)
 
-> Download and decompress on C: [Apache Ant 1.9.6](http://apache.rediris.es//ant/binaries/apache-ant-1.9.6-bin.zip)
+> Download and decompress on C: [Apache Ant](http://apache.rediris.es//ant/binaries/apache-ant-1.9.6-bin.zip)
 
 _Step 2._ Create the following environment variables with the correct paths: 
 
     ANDROID_SDK_TOOLS = C:\android-sdk\platform-tools
-    ANDROID_NDK_ROOT = C:\android-ndk-r10e
+    ANDROID_NDK_ROOT = C:\android-ndk
     ANT_HOME = C:\apache-ant-1.9.6
 
 _Step 3._ Make sure latest Android Platform Tools and desired SDKs are installed, use SDK Manager tool:
