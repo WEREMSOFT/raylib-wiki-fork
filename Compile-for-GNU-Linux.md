@@ -49,8 +49,8 @@ If you want, you can install the library in the standard directories, or remove 
     sudo make install # Static version.
     sudo make install SHARED=YES # Dynamic shared version.
     
-    sudo make unistall
-    sudo make unistall SHARED=YES
+    sudo make uninstall
+    sudo make uninstall SHARED=YES
 
 ### Compile raylib examples
 Just move to folder `raylib/examples/` and run:
