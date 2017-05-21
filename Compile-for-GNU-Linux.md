@@ -37,7 +37,7 @@ First of all, you need to download raylib repository from Github; after you can 
     git clone https://github.com/raysan5/raylib.git raylib
     cd raylib/src/
     make PLATFORM=PLATFORM_DESKTOP # To make the static version.
-    make PLATFORM=PLATFORM_DESKTOP SHARED=YES # To make the dynamic shared version.
+    make PLATFORM=PLATFORM_DESKTOP SHARED_RAYLIB=YES # To make the dynamic shared version.
     make PLATFORM=PLATFORM_WEB # To make web version.
 
 **Warning:** if you want to compile a different type of library (static, ...), you must type `make clean` before the compiling.
@@ -47,10 +47,10 @@ _NOTE:_ By default raylib is compiled for OpenGL 3.3 Core graphics API backend; 
 If you want, you can install the library in the standard directories, or remove it:
 
     sudo make install # Static version.
-    sudo make install SHARED=YES # Dynamic shared version.
+    sudo make install SHARED_RAYLIB=YES # Dynamic shared version.
     
     sudo make uninstall
-    sudo make uninstall SHARED=YES
+    sudo make uninstall SHARED_RAYLIB=YES
 
 ### Compile raylib examples
 Just move to folder `raylib/examples/` and run:
