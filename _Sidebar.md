@@ -7,7 +7,6 @@
 * [OpenGL Graphic API](OpenGL-Graphic-API)
 * [2D vs 3D Development](2D-vs-3D-development-with-raylib)
 * [raylib custom shaders](raylib-generic-uber-shader-and-custom-shaders)
-* [Default Paths](Default-Paths)
 
 ## Platform Compilation
 * [Compile for Windows](Compile-for-Windows)
