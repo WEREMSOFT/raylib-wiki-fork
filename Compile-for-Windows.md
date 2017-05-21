@@ -1,4 +1,4 @@
-To build your raylib game for Windows, raylib installer comes with all the required tool; it includes a ready to use code editor: Notepad++ with some useful scripts ready and it also includes a compiler with basic C libraries: MinGW.
+To build your raylib game for Windows, raylib installer comes with all the required tool; it includes a ready to use code editor: Notepad++ with some useful scripts ready and it also includes MinGW compiler with basic C libraries.
 
 If you want to use another code editor like Visual Studio or another compiler package you can also use them but this instructions below are focused on raylib standard development tools: Notepad++ and MinGW.
 
@@ -9,11 +9,10 @@ Just download raylib installer and run it. It installs Notepad++ and MinGW, cust
 Add the bin path of raylib installer's GNU tools to your PATH environment variable.
 _e.g. C:\raylib\MinGW\bin_
 
-
 NOTE: Make sure the following libs (and their headers) are accessible to the compiler (This should be taken care of after following the above steps):
 
-    libglfw3.a    - GLFW3 (static version)
-    libopenal32.a - OpenAL Soft, audio device management
+    GLFW3 - libglfw3.a (static version)
+    OpenAL Soft - libOpenAL32.a (static version)
 
 ### Compiling raylib source code
 
