@@ -23,4 +23,4 @@ To compile just one specific example:
 
 To force one example recompile:
 
-    make core_basic_window PLATFORM=PLATFORM_RPI-B
+    make core_basic_window PLATFORM=PLATFORM_RPI -B
