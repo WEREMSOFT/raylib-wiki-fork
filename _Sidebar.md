@@ -16,7 +16,6 @@
 * [Compile for Android](Compile-for-Android)
 * [Compile for Raspberry Pi](Compile-for-Raspberry-Pi)
 * [Compile for Web (HTML5)](Compile-for-Web-(HTML5))
-* [Compile for Oculus Rift CV1](Compile-for-Oculus-Rift-CV1)
 
 ## Misc Help
 * [How To: Using SpriteFonts](Using-SpriteFonts)
