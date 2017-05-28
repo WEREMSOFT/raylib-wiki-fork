@@ -16,7 +16,7 @@ _Step 2._ Create the following environment variables with the correct paths:
 
     ANDROID_SDK_TOOLS = C:\android-sdk\platform-tools
     ANDROID_NDK_ROOT = C:\android-ndk
-    ANT_HOME = C:\apache-ant-1.9.6
+    ANT_HOME = C:\apache-ant
 
 _Step 3._ Make sure latest Android Platform Tools and desired SDKs are installed, use SDK Manager tool:
 
@@ -24,14 +24,16 @@ _Step 3._ Make sure latest Android Platform Tools and desired SDKs are installed
 
 ### Compiling raylib source code
 
-Navigate from command line to folder `raylib/src_android/` and type:
+To compile raylib src it's required to install a [custom ndk standalone toolchain](https://developer.android.com/ndk/guides/standalone_toolchain.html).
 
-    %ANDROID_NDK_ROOT%\ndk-build
+After that, just navigate from command line to folder `raylib/src/` and execute Makefile with:
 
-NOTE: libraylib.a will be generated in folder `raylib/src_android/obj/local/armeabi/`, it must be copied
+    mingw32-make PLATFORM=PLATFORM_ANDROID
+
+**Remember to setup `ANDROID_TOOLCHAIN` property properly in the Makefile!**
+
+NOTE: libraylib.a will be generated in folder `raylib/release/android/armeabi-v7a/`, it must be copied
 to Android project; if using `raylib/template_android` project, copy it to `raylib/template_android/jni/libs/`.
-
-You can also use Notepad++ prepared script for raylib source compilation. Just open Notepad++, open `raylib/src_android/jni/Android.mk` and execute Notepad++ script: `raylib_source_compile_android`.
 
 ### Compiling raylib game for Android (using project template)
 
