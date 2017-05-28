@@ -19,8 +19,8 @@ GLFW3 depends on some other libraries:
 
 Now, you need to download GLFW3 from sources and build it (you also need cmake tool; if you don't have, just do: `sudo apt install cmake`):
 
-    wget https://github.com/glfw/glfw/releases/download/3.2/glfw-3.2.zip
-    unzip glfw-3.2.zip
+    wget https://github.com/glfw/glfw/releases/download/3.2.1/glfw-3.2.1.zip
+    unzip glfw-3.2.1.zip
     cd glfw
     cmake .
     sudo make install
