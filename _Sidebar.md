@@ -21,7 +21,7 @@
 * [How To: audio module as standalone library](Use-audio-module-as-standalone-library)
 * [How To: rlgl module as standalone library](Use-rlgl-module-as-standalone-library)
 * [How To: Create Visual Studio Project](Create-Visual-Studio-Project)
-* [How To: Use raylib with Code::Blocks](Use-raylib-with-Code::Blocks)
+* [How To: Use raylib with Code::Blocks](Use-raylib-with-Code-Blocks)
 * [How To: Redirect-raylib-output-to-Framebuffer-1 (RPI)](Redirect-raylib-output-to-Framebuffer-1)
 * [How To: Install and configure Touchscreen (RPi)](Install-and-configure-Touchscreen-Drivers-(RPi))
 * [FAQ](FAQ)
