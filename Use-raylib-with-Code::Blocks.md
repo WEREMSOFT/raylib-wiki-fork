@@ -3,7 +3,7 @@ Guide provided by [Mark in raylib forum](http://forum.raylib.com/index.php?p=/di
 First, under Project Settings check the box that says, *"This is a custom Makefile"*.
 
 Then, in your project's folder create a file named Makefile and paste the following:
-```
+```make
 files = main.c
 output = main.exe
 
