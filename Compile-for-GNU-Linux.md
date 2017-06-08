@@ -25,7 +25,7 @@ Now, you need to download GLFW3 from sources and build it (you also need cmake t
     cmake .
     sudo make install
 
-#### Build raylib source code
+#### Build raylib source code using make
 You can compile three different type of raylib library:
 
 * The static library (default method);
@@ -64,6 +64,21 @@ To compile just one specific example:
 To force one example recompile:
 
     make core_basic_window PLATFORM=PLATFORM_DESKTOP -B
+
+### Build raylib source code using meson
+
+Building with meson on Linux is easy. If you have all the dependencies installed just use the following:
+
+```
+git clone https://github.com/raysan5/raylib.git raylib
+cd raylib
+meson builddir
+cd builddir
+ninja
+ninja install
+```
+
+In case any dependencies are missing, meson will tell you.
 
 **If you have any doubt, [just let me know][raysan5].**
 
