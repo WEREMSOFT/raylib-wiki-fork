@@ -16,6 +16,9 @@
 * [Compile for Raspberry Pi](Compile-for-Raspberry-Pi)
 * [Compile for Web (HTML5)](Compile-for-Web-(HTML5))
 
+## Installation
+* [Install on GNU Linux](Install-on-GNU-Linux)
+
 ## Misc Help
 * [How To: Using SpriteFonts](Using-SpriteFonts)
 * [How To: audio module as standalone library](Use-audio-module-as-standalone-library)
