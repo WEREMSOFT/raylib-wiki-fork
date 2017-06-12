@@ -20,7 +20,6 @@ A part of those 7 main modules, some other modules have been implemented with ad
  - [`raygui`](https://github.com/raysan5/raygui): Simple IMGUI system with several controls for tools development
  - [`easings`](https://github.com/raysan5/raylib/blob/develop/src/easings.h): Easing functions for animations (based on [Robert Penner](http://robertpenner.com/easing/) implementation)
  - [`physac`](https://github.com/victorfisac/Physac): 2D physics library (collision detection, resolution, dinamics...)
- - [`rlua`](https://github.com/raysan5/raylib-lua): raylib Lua binding, supporting Lua scripting
 
 Most of the modules have been designed to be as decoupled as possible from other modules, so, some modules can be used independently of raylib, as standalone libraries. Highlight two of those modules: `rlgl` ([example](https://github.com/raysan5/raylib/blob/develop/examples/others/rlgl_standalone.c)) and `audio` ([example](https://github.com/raysan5/raylib/blob/develop/examples/others/audio_standalone.c)).
 
