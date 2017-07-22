@@ -25,7 +25,7 @@ Most of the modules have been designed to be as decoupled as possible from other
 
 Most of the secondary modules can also be used as standalone libraries: `raymath`, `camera`, `gestures`, `raygui`, `easings`, `physac`. All those modules are distributed as configurable single-file header-only libraries to be independently added to any project. Being header-only means that header also contains the functions implementation; that's extremely useful in case you have a library (a bunch of functions) that you only want to drop on your code-base to cover a very specific functionality. But creating a header-only module is not trivial, that module has to minimize external dependencies and global variables and give a very specific functionality; let's say it has to be completely portable.
 
-*NOTE: `raymath`, `camera` and `gestures` are included by default on raylib.*
+*NOTE: `raymath`, `camera` and `gestures` are compiled by default with raylib.*
 
 raylib also uses some external libraries, most of them included as single-file header-only, like the well-known [stb libraries](https://github.com/nothings/stb) or [similar ones](https://github.com/raysan5/raylib/tree/develop/src/external).
 
