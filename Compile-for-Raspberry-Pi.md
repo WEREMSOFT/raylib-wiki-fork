@@ -1,4 +1,8 @@
-To build your raylib game for Raspberry Pi you need to download raylib git repository and install some dependencies. raylib already comes with ready-to-use makefiles to compile source code and examples. 
+To build your raylib game for Raspberry Pi you need to download raylib git repository and install some dependencies. raylib already comes with ready-to-use makefiles to compile source code and examples.
+
+### Supported Devices
+
+Right now, we only support the [Raspbian](https://www.raspberrypi.org/downloads/raspbian/) OS on Raspberry Pi 2 & 3 devices.
 
 ### Installing dependencies
 
