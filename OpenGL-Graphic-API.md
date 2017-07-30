@@ -5,13 +5,13 @@ All OpenGL API calls are contained in rlgl module, this module works as a layer 
 Here it is a table with the different OpenGL configurations supported by raylib on the different platforms:
 
 PLATFORM | OpenGL version | Notes
---- | :---: | ---
+--- | :-------: | ---
 DESKTOP:Windows | `OpenGL 1.1`,<br> `OpenGL 2.1`,<br> `OpenGL 3.3` | Desired version can be selected at compile time
 DESKTOP:Linux | `OpenGL 1.1`,<br> `OpenGL 2.1`,<br> `OpenGL 3.3` | Desired version can be selected at compile time
 DESKTOP:OSX | `OpenGL 1.1`,<br> `OpenGL 2.1`,<br> `OpenGL 3.3` | Desired version can be selected at compile time
 ANDROID| `OpenGL ES 2.0` | Selected automatically if `PLATFORM_ANDROID` is defined
 RASPBERRY PI | `OpenGL ES 2.0` | Selected automatically if `PLATFORM_RPI` is defined.<br> Runs natively, no XWindows desktop supported.
-HTML5 (Web) | `WebGL 1.0 (OpenGL ES 2.0)` | `OpenGL ES 2.0` transformed to `WebGL 1.0` on compilation (using `emscripten SDK`), no emulation layer, only pure `WebGL 1.0` translation.
+HTML5 (Web) | `WebGL 1.0 (OpenGL ES 2.0)` | `OpenGL ES 2.0` transformed to `WebGL 1.0` on compilation <br>(using `emscripten SDK`), no emulation layer, only pure `WebGL 1.0` translation.
 
 Additional backends (not supported by default): 
 
