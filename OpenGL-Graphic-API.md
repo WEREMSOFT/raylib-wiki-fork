@@ -19,7 +19,7 @@ PLATFORM | OpenGL version | Notes
 --- | :-------: | ---
 DESKTOP:Windows | `OpenGL ES 2.0` | Support through two possible ways: `WGL_EXT_create_context_es2_profile` <br> extension or [ANGLE](https://github.com/google/angle) project
 DESKTOP:Linux | `OpenGL ES 2.0` | Support through `GLX_EXT_create_context_es2_profile` extension
-ANDROID | `OpenGL ES 3.0` | Only about [55% Android devices](https://developer.android.com/about/dashboards/index.html) support it right now.
+ANDROID | `OpenGL ES 3.0` | Only about [55% Android devices](https://developer.android.com/about/dashboards/index.html) support it.
 RASPBERRY PI | `OpenGL 1.1`,<br> `OpenGL 2.1` | Supported through Gallium OpenGL driver, <br> only available for RPI 2 and 3
 HTML5 (Web) | `WebGL 2.0` <br>`(OpenGL ES 3.0)` | `OpenGL ES 3.0` transformed to `WebGL 2.0` on compilation <br>
  (using `emscripten SDK`).
