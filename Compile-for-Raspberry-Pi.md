@@ -19,12 +19,12 @@ Before compiling your game, raylib library must be recompiled for Raspbian. To d
 ### Compiling raylib examples
 Just move to folder `raylib/examples/` and run:
 
-    make PLATFORM=PLATFORM_RPI RAYLIB_PATH=../..
+    make PLATFORM=PLATFORM_RPI RAYLIB_PATH=..
 
 To compile just one specific example:
 
-    make core/core_basic_window PLATFORM=PLATFORM_RPI RAYLIB_PATH=../..
+    make core/core_basic_window PLATFORM=PLATFORM_RPI RAYLIB_PATH=..
 
 To force one example recompile:
 
-    make core/core_basic_window PLATFORM=PLATFORM_RPI -B RAYLIB_PATH=../..
+    make core/core_basic_window PLATFORM=PLATFORM_RPI -B RAYLIB_PATH=..
