@@ -17,11 +17,11 @@ Additional backends (not supported by default):
 
 PLATFORM | OpenGL version | Notes
 --- | :-------: | ---
-DESKTOP:Windows | `OpenGL ES 2.0` | Support through two possible ways: <br>`WGL_EXT_create_context_es2_profile` <br> extension or [ANGLE](https://github.com/google/angle) project
-DESKTOP:Linux | `OpenGL ES 2.0` | Support through `GLX_EXT_create_context_es2_profile` extension
+DESKTOP:Windows | `OpenGL ES 2.0` | Support through two possible ways: <br> - `WGL_EXT_create_context_es2_profile` extension<br> - [ANGLE](https://github.com/google/angle) project
+DESKTOP:Linux | `OpenGL ES 2.0` | Support through: <br> - `GLX_EXT_create_context_es2_profile` extension
 ANDROID | `OpenGL ES 3.0` | Only about [55% Android devices](https://developer.android.com/about/dashboards/index.html) support it.
-RASPBERRY PI | `OpenGL 1.1`,<br> `OpenGL 2.1` | Supported through Gallium OpenGL driver, <br> only available for RPI 2 and 3
-HTML5 (Web) | `WebGL 2.0` <br>`(OpenGL ES 3.0)` | `OpenGL ES 3.0` transformed to `WebGL 2.0` on compilation<br>(using `emscripten SDK`).
+RASPBERRY PI | `OpenGL 1.1`,<br> `OpenGL 2.1` | Supported through: <br> - Gallium OpenGL driver (only RPI2 and RPI3)
+HTML5 (Web) | `WebGL 2.0` <br>`(OpenGL ES 3.0)` | `OpenGL ES 3.0` transformed to `WebGL 2.0` <br> on compilation (using `emscripten SDK`).
 
 Please let me know if you require one of those backends to be implemented.
 
