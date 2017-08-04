@@ -59,11 +59,11 @@ Just move to folder `raylib/examples/` and run:
 
 To compile just one specific example:
 
-    make core_basic_window PLATFORM=PLATFORM_DESKTOP
+    make core/core_basic_window PLATFORM=PLATFORM_DESKTOP
 
 To force one example recompile:
 
-    make core_basic_window PLATFORM=PLATFORM_DESKTOP -B
+    make core/core_basic_window PLATFORM=PLATFORM_DESKTOP -B
 
 ### Build raylib source code using meson
 
