@@ -1,6 +1,6 @@
 One of the objectives of raylib was minimizing external dependencies. Developing a full-videogame-featured library avoiding external dependencies is a hard task.
 
-Here it is a list with the external dependencies used by raylib; note that most of those dependencies are [single-header public-domain libraries](https://github.com/nothings/stb) that are [directly copied into raylib repository](https://github.com/raysan5/raylib/tree/develop/src/external).
+Here is the list of external dependencies used by raylib. Note that most of these dependencies are [single-header public-domain libraries](https://github.com/nothings/stb) that are [directly copied into raylib repository](https://github.com/raysan5/raylib/tree/develop/src/external).
 
 External dependencies:
 
@@ -19,7 +19,7 @@ Library | Used Version | raylib module | Notes
 
 Note that [physac](https://github.com/raysan5/raylib/blob/develop/src/physac.h) and [rlua](https://github.com/raysan5/raylib/blob/develop/src/rlua.h) are additional raylib modules, single-header and not included in default raylib compilation.
 
-Note that raylib support multiple platforms and, consequently, not all library dependencies from above are the same for all the platforms. As commented, some of the above libraries included in raylib are single-file header-only libraries (`stb_image`, `stb_image_write`, `stb_image_resize`, `stb_vorbis`, `jar_mod`, `jar_xm`, `glad`), those libraries only depend on the C standard library for the target platform (libc, bionic) and are compiled together with raylib, no need for additional library linkage. But some other libraries require external linkage. Here it is a detailed list:
+Note that raylib supports multiple platforms and, consequently, not all library dependencies from above are the same for all supported platforms. As commented, some of the above libraries included in raylib are single-file header-only libraries (`stb_image`, `stb_image_write`, `stb_image_resize`, `stb_vorbis`, `jar_mod`, `jar_xm`, `glad`), those libraries only depend on the C standard library for the target platform (libc, bionic) and are compiled together with raylib—no need for additional library linkage. Some other libraries require external linkage. Here is a detailed list:
 
 PLATFORM | external dependencies | Notes
 --- | :---: | ---
@@ -31,9 +31,9 @@ RASPBERRY PI | `EGL`, `OpenGLES2.0`, `OpenAL`, `bcm_host` | The only external li
 HTML5 (Web) | `GLFW3`, `WebGL`, `OpenAL` | Code must be compiled using `emscripten SDK`, all required libraries are included in the package, actually it uses javascript versions of `GLFW3` (incomplete implementation) and `OpenAL` (features limited).
 OCULUS RIFT CV1 | `GLFW3`, `OpenGL`, `OpenAL`, `libOVR` | Basically, same as DESKTOP platforms and `libOVR` runtime library (link against `libOVRRT32_1.dll`)
 
-Note that raylib design is [very modular](http://www.raylib.com/images/raylib_architecture.png), some modules could be dropped if not required ([audio](https://github.com/raysan5/raylib/blob/develop/src/audio.c), [shapes](https://github.com/raysan5/raylib/blob/develop/src/shapes.c), [models](https://github.com/raysan5/raylib/blob/develop/src/models.c)...) and consequently the libraries used by those modules. Some modules can also be used as standalone, *independently* of raylib: [rlgl](https://github.com/raysan5/raylib/blob/develop/examples/others/rlgl_standalone.c), [audio](https://github.com/raysan5/raylib/blob/develop/examples/others/audio_standalone.c).
+Note that the raylib design is [very modular](http://www.raylib.com/images/raylib_architecture.png). Some modules can be dropped if they're not required ([audio](https://github.com/raysan5/raylib/blob/develop/src/audio.c), [shapes](https://github.com/raysan5/raylib/blob/develop/src/shapes.c), [models](https://github.com/raysan5/raylib/blob/develop/src/models.c)...) and consequently the libraries used by those modules. Some modules can also be used as standalones, *independently* of raylib: [rlgl](https://github.com/raysan5/raylib/blob/develop/examples/others/rlgl_standalone.c), [audio](https://github.com/raysan5/raylib/blob/develop/examples/others/audio_standalone.c).
 
-As stated, one of the raylib goals is to keep external dependencies to minimum and so I keep working to reduce this list as much as possible.
+As stated, one of the raylib goals is to keep external dependencies to a minimum, so I'll keep working to reduce this list as much as possible.
 
 
 
