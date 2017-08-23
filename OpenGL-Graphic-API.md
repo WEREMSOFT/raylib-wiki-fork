@@ -1,8 +1,8 @@
-raylib relies on OpenGL as its main graphic API. Depending on the platform raylib uses different versions of OpenGL by default but it's possible to configure the desired OpenGL API backend on library compilation; just select the appropriate define when compiling [rlgl](https://github.com/raysan5/raylib/blob/develop/src/rlgl.c) module.
+raylib relies on OpenGL as its main graphic API. Depending on the platform, raylib uses different versions of OpenGL by default, but it's possible to configure the desired OpenGL API backend on library compilation; just select the appropriate `#define` when compiling the [rlgl](https://github.com/raysan5/raylib/blob/develop/src/rlgl.c) module.
 
-All OpenGL API calls are contained in rlgl module, this module works as a layer to underlying graphic API. Used OpenGL version can be configured on this modules with defines at compile time.
+All OpenGL API calls are contained in the rlgl module. This module works as a layer to the underlying graphic API. The selected OpenGL version can be configured in this module using `#define`s at compile time.
 
-Here it is a table with the different OpenGL configurations supported by raylib on the different platforms:
+Here is a table with the different OpenGL configurations supported by raylib on the different platforms:
 
 PLATFORM | OpenGL version | Notes
 --- | :-------: | ---
