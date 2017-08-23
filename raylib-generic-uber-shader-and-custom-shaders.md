@@ -1,8 +1,8 @@
-Dealing with custom shaders and make them generic is not an easy task. There are many things to consider for a shader because, after all, the shader is the responsible to process all the data send to the GPU (mesh, materials, textures, lighting) to generate the final frame.
+Dealing with custom shaders and making them generic is not an easy task. There are many things to consider for a shader because, after all, the shader is responsible for processing all the data sent to the GPU (e.g. mesh, materials, textures, lighting) to generate the final frame.
 
-Find an unified generic shader to deal with all kind of stuff is very complicated and, after analyzing some of the big engines out there, I decided to go for a custom uber-shader-based solution.
+Finding a unified generic shader to deal with all kinds of stuff is very complicated and, after analyzing some of the big engines out there, I decided to go for a custom uber-shader-based solution.
 
-By default, raylib shader struct support the following data:
+By default, raylib's shader struct supports the following data:
 ```c
 typedef struct Shader {
     unsigned int id;      // Shader program id
@@ -28,22 +28,22 @@ typedef struct Shader {
 
 As you can see, most of the location points are pre-defined **on shader loading**; custom shaders developed for raylib must follow those conventions.
 
-On shader loading, following fixed location names are expected for maps:
+On shader load, the following fixed location names are expected for maps:
 ```glsl
 uniform sampler2D texture0;   // GL_TEXTURE0
 uniform sampler2D texture1;   // GL_TEXTURE1
 uniform sampler2D texture2;   // GL_TEXTURE2
 ```
 
-Shaders are also directly related to Material struct:
+Shaders are also directly related to the Material struct:
 ```c
 // Material type
 typedef struct Material {
     Shader shader;              // Standard shader (supports 3 map textures)
 
-    Texture2D texDiffuse;       // Diffuse texture  (binded to shader mapTexture0Loc)
-    Texture2D texNormal;        // Normal texture   (binded to shader mapTexture1Loc)
-    Texture2D texSpecular;      // Specular texture (binded to shader mapTexture2Loc)
+    Texture2D texDiffuse;       // Diffuse texture  (bound to shader mapTexture0Loc)
+    Texture2D texNormal;        // Normal texture   (bound to shader mapTexture1Loc)
+    Texture2D texSpecular;      // Specular texture (bound to shader mapTexture2Loc)
     
     Color colDiffuse;           // Diffuse color
     Color colAmbient;           // Ambient color
@@ -52,12 +52,12 @@ typedef struct Material {
     float glossiness;           // Glossiness level (Ranges from 0 to 1000)
 } Material;
 ```
-Where three texture maps (texDiffuse, texNormal, texSpecular) are binded to shader location points.
+Where three texture maps (texDiffuse, texNormal, texSpecular) will bind to shader location points.
 
-On drawing, depending on textures assigned to material and selected shader, they are internally binded on drawing or not:
+When drawing, textures are internally bound or not depending on the selected shader and material:
 ```c
 // Default material loading example
-Material material = LoadDefaultMaterial();                 // Default shader assigned to material (supports  only diffuse map)
+Material material = LoadDefaultMaterial();                 // Default shader assigned to material (supports only diffuse map)
 material.texDiffuse = LoadTexture("wood_diffuse.png");     // texture unit 0 activated (available in material shader)
 material.texSpecular = LoadTexture("wood_specular.png");   // texture unit 2 activated (available in material shader)
 
@@ -67,4 +67,4 @@ material.texDiffuse = LoadTexture("wood_diffuse.png");     // texture unit 0 act
 material.texSpecular = LoadTexture("wood_specular.png");   // texture unit 2 NOT activated (not available in material shader)
 ```
 
-Despite its name on material struct (`texDiffuse`, `texNormal`, `texSpecular`), user is free to use those maps in any way inside the **custom** shader.
+Despite its name on material struct (`texDiffuse`, `texNormal`, `texSpecular`), the user is free to use those maps in any way inside the **custom** shader.
