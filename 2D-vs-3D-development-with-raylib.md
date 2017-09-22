@@ -10,7 +10,7 @@ raylib creates a bunch of vertex buffers (VBO) at initialization. Those buffers 
 
 Buffers are created at `InitWindow()`, vertex data is stored into buffers with every `Draw*()` function and buffers are processed for drawing on `EndDrawing()`. Internally, they are processed by function [`rlglDraw()`](https://github.com/raysan5/raylib/blob/master/src/rlgl.c#L1242).
 
-Depending on the element drawn, vertex are stored in LINES, TRIANGLES or QUADS buffers. That could suppose a problem because, despite including z-depth information, buffers are processed in an specific order: 
+Depending on the element being drawn, vertices are stored in either LINES, TRIANGLES or QUADS buffers. That could suppose a problem because despite including z-depth information, buffers are processed in an specific order: 
 `(1) LINES -> (2) TRIANGLES -> (3) QUADS`
 
 If no `DEPTH_TEST` is enabled, QUADS-based shapes will be always drawn in front of TRIANGLES and LINES; if `DEPTH_TEST` is enabled, drawing is resolved as expected thanks to the depth-buffer... until we use semi-transparent shapes.
