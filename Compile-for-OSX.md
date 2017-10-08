@@ -48,3 +48,40 @@ _NOTES:_
 - Examples resources should be placed in the folder where XCode generates the product.
 
 _Tutorial written by Aleix Rafegas and trasnlated to english by Ray_
+
+# Without XCode
+
+1) Install GLFW3 library
+
+- To install required packages easier, first install Homebrew, execute in Terminal app the following command:  
+```
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+- Once Homebrew app is installed, run the following command in Terminal:
+```
+    brew install glfw3
+```
+
+2) Setup build script
+
+You can create a build.sh file that you can run to compile your project. In the example below your project is named test.cpp (for c++) and compiles to test.
+
+````
+clang++ -I/w/raylib_build/raylib/release/osx -L/usr/local/lib -L/w/raylib_build/raylib/release/osx -lglfw -lraylib -framework GLUT -framework OpenGL -framework Cocoa test.cpp -o test
+````
+
+Note that this may give you a CLITERAL error, which seems to be an issue in raylib.h: https://github.com/raysan5/raylib/blob/develop/src/raylib.h#L261
+
+Simply comment out that section so that only this line is active:
+````
+    #define CLITERAL    (Color)
+````
+..Or just don't use CLITERAL and use (Color){255,255,255,255} instead. (That would be all white)
+
+
+If you'd like to use C instead:
+````
+clang -I/w/raylib_build/raylib/release/osx -L/usr/local/lib -L/w/raylib_build/raylib/release/osx -lglfw -lraylib -framework GLUT -framework OpenGL -framework Cocoa test.c -o test
+````
+
+Now running build.sh (After setting permissions appropriately) will compile your program! No XCode needed. 
