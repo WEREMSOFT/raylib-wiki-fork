@@ -67,7 +67,7 @@ _Tutorial written by Aleix Rafegas and trasnlated to english by Ray_
 You can create a build.sh file that you can run to compile your project. In the example below your project is named test.cpp (for c++) and compiles to test.
 
 ````
-clang++ -I/w/raylib_build/raylib/release/osx -L/usr/local/lib -L/w/raylib_build/raylib/release/osx -lglfw -lraylib -framework GLUT -framework OpenGL -framework Cocoa test.cpp -o test
+clang++ -I/w/raylib_build/raylib/release/osx -L/usr/local/lib -L/w/raylib_build/raylib/release/osx -lglfw -lraylib -framework GLUT -framework OpenGL -framework Cocoa my_app.cpp -o my_app
 ````
 
 Note that this may give you a CLITERAL error, which seems to be an issue in raylib.h: https://github.com/raysan5/raylib/blob/develop/src/raylib.h#L261
@@ -81,7 +81,139 @@ Simply comment out that section so that only this line is active:
 
 If you'd like to use C instead:
 ````
-clang -I/w/raylib_build/raylib/release/osx -L/usr/local/lib -L/w/raylib_build/raylib/release/osx -lglfw -lraylib -framework GLUT -framework OpenGL -framework Cocoa test.c -o test
+clang -I/w/raylib_build/raylib/release/osx -L/usr/local/lib -L/w/raylib_build/raylib/release/osx -lglfw -lraylib -framework GLUT -framework OpenGL -framework Cocoa my_app.c -o my_app
 ````
 
 Now running build.sh (After setting permissions appropriately) will compile your program! No XCode needed. 
+
+# Building Statically, so you can Run on Other Computers
+
+Let me show you something cool. 
+
+````
+otool -L my_app
+````
+
+This shows you everything your application links to. Basically, if anything is pointing to anything but /usr/lib/* or /System/Library/*, your application will throw an error if you run it on any other Mac. It's not portable. Right now, perhaps it's linking to something in /usr/local/lib, or a relative folder. This is bad. We must fix.
+
+Another thing to observe:
+
+````
+otool -l my_app
+````
+
+Whoa that was a bunch of stuff. Disregard most of it and try to find "LC_VERSION_MIN_MACOSX", look below and find the version number, this will likely be the version of the computer you are currently on. That means anyone on an older OS will receive an error. Again: Bad. We Fix.
+
+First things first, let's make sure we get a reasonable amount of playability on older versions of MacOS. Executing this code before compiling packages, will make sure that your program will run without error on Macs 10.9 and up. (Perhaps you can do older, but you get a warning at 10.8 and lower when compiling)
+
+````
+export MACOSX_DEPLOYMENT_TARGET=10.9
+````
+
+You'll need to rebuild raylib + glfw for the above to affect anything, fortunately that's what we're doing next.
+
+Next, let's make sure we are statically generating the build. This pulls in raylib and glfw, so that your computer isn't seeking these libraries out dynamically during run time.
+
+Perhaps this isn't required - I suppose you can just pull in the dylib from a relative directory when you package your executeable in a bundle, but this is what I got to work for now.
+
+Unfortunately, when you built glfw in a step above using Homebrew, it builds a dylib, not a static .a file. I had to clone from github and then build the library from scractch using cmake -DBUILD_SHARED_LIBS=OFF
+
+Let's confirm MACOSX_DEPLOYMENT_TARGET did it's thing. 
+
+````
+otool -l libglfw3.a
+````
+
+Check under LC_VERSION_MIN_MACOSX for version. It should read 10.9
+
+Rebuild raylib, so the OSX version command above takes effect, and confirm.
+
+````
+otool -l libraylib.a
+````
+  
+All good? Good.
+Once that's done, copy libglfw3.a and librarylib.a into the root directory, and you can link to it like so:
+
+````
+clang -I/w/raylib_build/raylib/release/osx -l./libraylib.a -l./libglfw3.a -framework GLUT -framework OpenGL -framework Cocoa my_app.c -o my_app
+````
+
+Check for warnings! This can tell you if a library you're linking to was not built for OSX 10.9, in which case you'll need to rebuild that too. 
+
+Compare your linker results from the first time:
+
+````
+otool -L my_app
+````
+This should be all /usr/lib/* or /System/Library/*.
+
+Let's check the version of OSX again:
+````
+otool -l my_app
+````
+Again, check under LC_VERSION_MIN_MACOSX for version. It should read 10.9
+
+# Bundle your app in an Application
+
+````
+mkdir standard.app/Contents
+mkdir standard.app/Contents/MacOS
+mkdir standard.app/Contents/Resources
+touch standard.app/Contents/Info.plist
+````
+
+The app you just created, "my_app" should go in the MacOS folder.
+
+````
+mv my_app standard.app/Contents/MacOS
+````
+
+
+Info.plist should read like this:
+````
+<?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+    <plist version="1.0">
+    <dict>
+      <key>CFBundleExecutable</key>
+      <string>my_app</string>
+    </dict>
+    </plist>
+````
+
+See more fields you can add here:     https://stackoverflow.com/questions/1596945/building-osx-app-bundle
+
+Now you can double click on standard.app and it will run your application!
+Note that some things will be cached by the OS. If you want to refresh your application bundle run this:
+
+````
+/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -f standard.app
+````
+
+This has a whole lot of potentially useful info on all the apps on your system, you can use this to determine if the version is correct I suppose:
+
+````
+ /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -dump > dump.txt
+````
+
+Just search for your app in dump.txt.
+
+# Creating a DMG image for sharing your app
+
+You could just as easily do a zip I suppose, but DMGs are fashionable aren't they?
+
+Here's a 32 megabyte dmg:
+````
+    hdiutil create -size 32m -fs HFS+ -volname "My App" my_app_writeable.dmg
+    hdiutil attach test.dmg
+````
+
+This should tell you something like /dev/disk3 or something. Make a note of that, you'll need it.
+
+Drag your app into the dmg. Then run this, replacing disk999 with whatever /dev/disk was specified.
+````
+    hdiutil detach /dev/disk999
+    hdiutil convert my_app_writeable.dmg -format UDZO -o my_app.dmg
+````
+There you go. my_app.dmg is ready to be sent to all your most trusted game critics.
