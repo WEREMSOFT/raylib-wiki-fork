@@ -1,7 +1,7 @@
 ### Table of Contents
 ***
 ## Library Design
-* [raylib arquitecture](raylib-arquitecture)
+* [raylib architecture](raylib-architecture)
 * [raylib data structures](raylib-data-structures)
 * [External dependencies](External-dependencies)
 * [OpenGL Graphic API](OpenGL-Graphic-API)
