@@ -4,6 +4,7 @@ To build your raylib game for HTML5 you need a different compiler than the one t
 
 Download emscripten SDK from [here](http://kripken.github.io/emscripten-site/docs/getting_started/downloads.html). I recommend downloading the Portable Emscripten SDK for Windows and decompressing it in `C:\emsdk` folder. After that, go to emsdk intallation folder, run `emcmdprompt.bat` and execute the following commands:
 
+    emsdk install git-1.9.4
     emsdk update
     emsdk list
     emsdk install sdk-1.37.9-64bit
