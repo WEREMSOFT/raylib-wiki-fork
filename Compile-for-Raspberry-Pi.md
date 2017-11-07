@@ -16,7 +16,7 @@ raylib only requires one additional library dependency to the ones that already 
 
     sudo apt-get install libopenal1 libopenal-dev
 
-If using raylib on desktop mode, another additional dependency is required:
+**If using raylib on desktop mode**, another additional dependency is required:
 
     sudo apt-get install libglfw3
 
@@ -35,10 +35,16 @@ make PLATFORM=PLATFORM_DESKTOP GRAPHICS=GRAPHICS_API_OPENGL_21
 
 ### Compiling raylib examples
 
-Just move to folder `raylib/examples/` and run one of those options (depending on target OpenGL version):
+Just move to folder `raylib/examples/` and run **one of those two options** (depending on target OpenGL version):
 
-    make PLATFORM=PLATFORM_RPI
-    make PLATFORM=PLATFORM_DESKTOP GRAPHICS=GRAPHICS_API_OPENGL_21
+1. To use OpenGL ES 2.0 in native mode (no X11):
+```
+make PLATFORM=PLATFORM_RPI
+```
+2. To use desktop OpenGL 1.1 or 2.1 (X11 window)
+```
+make PLATFORM=PLATFORM_DESKTOP GRAPHICS=GRAPHICS_API_OPENGL_21
+```
 
 To compile just one specific example:
 
