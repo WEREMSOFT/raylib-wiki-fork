@@ -48,11 +48,11 @@ make PLATFORM=PLATFORM_DESKTOP GRAPHICS=GRAPHICS_API_OPENGL_21
 
 To compile just one specific example:
 
-    make core/core_basic_window PLATFORM=PLATFORM_RPI
-    make core/core_basic_window PLATFORM=PLATFORM_DESKTOP GRAPHICS=GRAPHICS_API_OPENGL_21
-
-To force one example recompile:
-
-    make core/core_basic_window PLATFORM=PLATFORM_RPI -B
-    make core/core_basic_window PLATFORM=PLATFORM_DESKTOP GRAPHICS=GRAPHICS_API_OPENGL_21 -B
-
+1. To use OpenGL ES 2.0 in native mode (no X11):
+```
+make core/core_basic_window PLATFORM=PLATFORM_RPI
+```
+2. To use desktop OpenGL 1.1 or 2.1 (X11 window)
+```
+make core/core_basic_window PLATFORM=PLATFORM_DESKTOP GRAPHICS=GRAPHICS_API_OPENGL_21
+```
