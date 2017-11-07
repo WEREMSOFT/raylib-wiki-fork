@@ -35,7 +35,7 @@ make PLATFORM=PLATFORM_DESKTOP GRAPHICS=GRAPHICS_API_OPENGL_21
 
 ### Compiling raylib examples
 
-Just move to folder `raylib/examples/` and run **one of those two options** (depending on target OpenGL version):
+Just move to folder `raylib/examples/` and run **ONE of THOSE TWO OPTIONS** (depending on target OpenGL version):
 
 1. To use OpenGL ES 2.0 in native mode (no X11):
 ```
