@@ -40,7 +40,7 @@ _Steps:_
 - Make sure XCode finds `raylib.h`: Go to `Build Settings > Search Paths` and add raylib header folder (`raylib-master/src`) to `Header Search Paths` 
 - Make sure XCode finds `libraylib.a`: Go to `Build Settings > Search Paths` and add raylib library folder (`raylib-master/release/osx`) to `Library Search Paths`.
 
-6) raylib should work correctly. To make sure, just go to [official raylib page](www.raylib.com) and check the different examples available. Just copy the code into `main.c` file and run it with Run button or ⌘R.
+6) raylib should work correctly. To make sure, just go to [official raylib page](http://www.raylib.com) and check the different examples available. Just copy the code into `main.c` file and run it with Run button or ⌘R.
 
 _NOTES:_
 
