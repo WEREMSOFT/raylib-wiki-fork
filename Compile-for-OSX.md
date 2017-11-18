@@ -57,7 +57,7 @@ _Tutorial written by Aleix Rafegas and translated to English by Ray_
 
 3) Setup build script
 
-You can create a build.sh file that you can run to compile your project. In the example below your project is named my_app.cpp (for C++) and compiles to my_app.
+You can create a build.sh file that you can run to compile your project. In the example below your project is named my_app.c (for C) or my_app.cpp (for C++), and compiles to my_app.
 
 ````
 clang++ -I /path/to/raylib/src -L /usr/local/lib -L /path/to/raylib/release/libs/osx -lglfw -lraylib -framework GLUT -framework OpenGL -framework Cocoa my_app.cpp -o my_app
