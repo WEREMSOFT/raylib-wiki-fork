@@ -67,13 +67,15 @@ _Tutorial written by Aleix Rafegas and translated to English by Ray_
 You can create a build.sh file that you can run to compile your project. In the example below your project is named my_app.cpp (for C++) and compiles to my_app.
 
 ````
-clang++ -I/w/raylib_build/raylib/release/osx -L/usr/local/lib -L/w/raylib_build/raylib/release/osx -lglfw -lraylib -framework GLUT -framework OpenGL -framework Cocoa my_app.cpp -o my_app
+clang++ -I /path/to/raylib/src -L /usr/local/lib -L /path/to/raylib/release/libs/osx -lglfw -lraylib -framework GLUT -framework OpenGL -framework Cocoa my_app.cpp -o my_app
 ````
 
 If you'd like to use C instead:
 ````
-clang -I/w/raylib_build/raylib/release/osx -L/usr/local/lib -L/w/raylib_build/raylib/release/osx -lglfw -lraylib -framework GLUT -framework OpenGL -framework Cocoa my_app.c -o my_app
+clang -I /path/to/raylib/src -L /usr/local/lib -L /path/to/raylib/release/libs/osx -lglfw -lraylib -framework GLUT -framework OpenGL -framework Cocoa my_app.c -o my_app
 ````
+
+Make sure to replace `/path/to/raylib` with the actual path to your cloned copy of the raylib repository.
 
 Now running build.sh (after setting permissions, ie. `chmod +x build.sh`) will compile your program!
 
