@@ -75,7 +75,7 @@ If you'd like to use C instead:
 clang -I/w/raylib_build/raylib/release/osx -L/usr/local/lib -L/w/raylib_build/raylib/release/osx -lglfw -lraylib -framework GLUT -framework OpenGL -framework Cocoa my_app.c -o my_app
 ````
 
-Now running build.sh (After setting permissions appropriately) will compile your program!
+Now running build.sh (after setting permissions, ie. `chmod +x build.sh`) will compile your program!
 
 Note that this may give you a CLITERAL error, which seems to be an issue in raylib.h: https://github.com/raysan5/raylib/blob/develop/src/raylib.h#L261
 
