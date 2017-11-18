@@ -51,16 +51,7 @@ _Tutorial written by Aleix Rafegas and translated to English by Ray_
 
 # Without Xcode
 
-1) Install GLFW3 library
-
-- To install required packages easier, first install Homebrew, execute in Terminal app the following command:  
-```
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
-- Once Homebrew app is installed, run the following command in Terminal:
-```
-    brew install glfw3
-```
+1) Install GLFW3 library (see step 3 above).
 
 2) Complete step 4 in the Xcode section above (about installing raylib).
 
