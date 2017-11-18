@@ -62,7 +62,9 @@ _Tutorial written by Aleix Rafegas and translated to English by Ray_
     brew install glfw3
 ```
 
-2) Setup build script
+2) Complete step 4 in the Xcode section above (about installing raylib).
+
+3) Setup build script
 
 You can create a build.sh file that you can run to compile your project. In the example below your project is named my_app.cpp (for C++) and compiles to my_app.
 
