@@ -84,7 +84,7 @@ Simply comment out that section so that only this line is active:
 ..Or just don't use CLITERAL and use (Color){255,255,255,255} instead. (That would be all white)
 
 
-Now running build.sh (After setting permissions appropriately) will compile your program! No XCode needed. 
+Now running build.sh (After setting permissions appropriately) will compile your program! No Xcode needed. 
 
 # Building Statically, so you can Run on Other Computers
 
