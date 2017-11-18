@@ -53,7 +53,7 @@ _Tutorial written by Aleix Rafegas and translated to English by Ray_
 
 1) Install GLFW3 library (see step 3 above).
 
-2) Complete step 4 in the Xcode section above (about installing raylib).
+2) Install raylib library (see step 4 above).
 
 3) Setup build script
 
