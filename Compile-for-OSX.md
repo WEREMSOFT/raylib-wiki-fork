@@ -47,7 +47,7 @@ _NOTES:_
 - It seems there is a problem with HiDPI displays, in that case, app Window appears smaller. Solution is just moving a bit the Window and it should get scaled automatically.
 - Examples resources should be placed in the folder where XCode generates the product.
 
-_Tutorial written by Aleix Rafegas and translated to english by Ray_
+_Tutorial written by Aleix Rafegas and translated to English by Ray_
 
 # Without XCode
 
