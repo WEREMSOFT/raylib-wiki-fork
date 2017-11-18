@@ -68,7 +68,7 @@ If you'd like to use C instead:
 clang -I /path/to/raylib/src -L /usr/local/lib -L /path/to/raylib/release/libs/osx -lglfw -lraylib -framework GLUT -framework OpenGL -framework Cocoa my_app.c -o my_app
 ````
 
-Make sure to replace `/path/to/raylib` with the actual path to your cloned copy of the raylib repository.
+Make sure to replace `/path/to/raylib` with the actual path to your copy of the raylib repository.
 
 Now running build.sh (after setting permissions, ie. `chmod +x build.sh`) will compile your program!
 
