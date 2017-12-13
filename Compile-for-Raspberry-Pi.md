@@ -2,7 +2,7 @@ To build your raylib game for Raspberry Pi you need to download raylib git repos
 
 ### Supported Devices and OS
 
-Currently ALL Raspberry Pi devices are supported by raylib (1, 2, 3, Zero and variants). OS suppoted are Raspbian Jessie (latest update) and [Raspbian Stretch](https://www.raspberrypi.org/downloads/raspbian/).
+Currently ALL Raspberry Pi devices are supported by raylib (1, 2, 3, Zero and variants). OS supported are Raspbian Jessie (latest update) and [Raspbian Stretch](https://www.raspberrypi.org/downloads/raspbian/).
 
 ### Supported OpenGL backends
 
