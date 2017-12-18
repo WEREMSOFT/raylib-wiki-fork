@@ -19,3 +19,14 @@ Operators | value1 + value2 | `int sum = value + 10;`
 Operators | value1 - value2 | `int res = value - 5;`
 Pointers | MyType *pointer | `Texture2D *array;`
 float values | always x.xf | `float value = 10.0f`
+
+raylib code does not use TABS, use 4 spaces instead.
+
+When dealing with braces or curly brackets, open-close them in aligned mode, it's more visual for students:
+```c
+void SomeFunction()
+{
+   // TODO: Do something here!
+}
+```
+When proposing new functions, please try to use a clear naming for function-name and functions-parameters, in case of doubt, open ans issue for discussion.
