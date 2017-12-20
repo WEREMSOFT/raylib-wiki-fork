@@ -10,6 +10,8 @@ Currently ALL Raspberry Pi devices are supported by raylib (1, 2, 3, Zero and va
  - OpenGL 1.1 on X11 desktop mode, (**only RPI 2 and 3**)
  - OpenGL 2.1 on X11 desktop mode, (**only RPI 2 and 3**)
 
+More detailed information is available on the [OpenGL Graphic API](https://github.com/raysan5/raylib/wiki/OpenGL-Graphic-API) wiki page.
+
 ### Installing dependencies
 
 raylib only requires one additional library dependency to the ones that already comes with Raspbian if used in native mode, this library is OpenAL Soft (audio system management). Just install it:
