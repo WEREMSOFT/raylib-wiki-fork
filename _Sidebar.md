@@ -3,9 +3,9 @@
 ## Library Design
 * [raylib architecture](raylib-architecture)
 * [raylib data structures](raylib-data-structures)
-* [External dependencies](External-dependencies)
-* [OpenGL Graphic API](OpenGL-Graphic-API)
-* [2D vs 3D Development](2D-vs-3D-development-with-raylib)
+* [raylib external dependencies](raylib-external-dependencies)
+* [raylib platforms and graphics](raylib-platforms-and-graphics)
+* [raylib internal buffers (2D vs 3D)](raylib-internal-buffers-(2D-vs-3D))
 * [raylib custom shaders](raylib-generic-uber-shader-and-custom-shaders)
 * [raylib coding conventions](raylib-coding-conventions)
 
