@@ -5,7 +5,7 @@
 * [raylib data structures](raylib-data-structures)
 * [raylib external dependencies](raylib-external-dependencies)
 * [raylib platforms and graphics](raylib-platforms-and-graphics)
-* [raylib internal buffers (2D vs 3D)](raylib-internal-buffers-(2D-vs-3D))
+* [raylib internal buffers](raylib-internal-buffers-(2D-vs-3D))
 * [raylib custom shaders](raylib-generic-uber-shader-and-custom-shaders)
 * [raylib coding conventions](raylib-coding-conventions)
 
