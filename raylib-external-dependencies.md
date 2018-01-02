@@ -6,7 +6,7 @@ External dependencies:
 
 Library | Used Version | raylib module | Notes
 --- | :---: | :---: | ---
-[GLFW3](http://www.glfw.org/) | 3.2.1 | [core](https://github.com/raysan5/raylib/blob/develop/src/core.c) | Window and input management on desktop platforms
+[GLFW3](http://www.glfw.org/) | 3.3-dev | [core](https://github.com/raysan5/raylib/blob/develop/src/core.c) | Window and input management on desktop platforms
 [GLAD](https://github.com/raysan5/raylib/blob/develop/src/external/glad.h) | 0.1.10a0 | [rlgl](https://github.com/raysan5/raylib/blob/develop/src/rlgl.c) | Extensions initialization for OpenGL 3.3 Core (*single-header*)
 [stb_image](https://github.com/raysan5/raylib/blob/develop/src/external/stb_image.h) | 2.15 | [textures](https://github.com/raysan5/raylib/blob/develop/src/texture.c) | Multiple image formats loading (*single-header*)
 [stb_image_resize](https://github.com/raysan5/raylib/blob/develop/src/external/stb_image_resize.h) | 0.94 | [textures](https://github.com/raysan5/raylib/blob/develop/src/texture.c) | Image resizing functions (*single-header*)
