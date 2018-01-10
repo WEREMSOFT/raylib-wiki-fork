@@ -51,6 +51,8 @@ _Tutorial written by Aleix Rafegas and translated to English by Ray_
 
 # Without Xcode
 
+Note, if you want to compile all this statically to make it much easier to run on other machines, skip ahead to the "Building Statically" section, otherwise you're going to have to do some work twice..
+
 1) Install GLFW3 library (see step 3 above).
 
 2) Install raylib library (see step 4 above).
