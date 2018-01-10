@@ -49,107 +49,67 @@ _NOTES:_
 
 _Tutorial written by Aleix Rafegas and translated to English by Ray_
 
-# Without Xcode
+# Without Xcode - Building Statically 
 
-Note, if you want to compile all this statically to make it much easier to run on other machines, skip ahead to the "Building Statically" section, otherwise you're going to have to do some work twice..
+Building statically means you can run this application on other machines with ease - users won't have to have any of the frameworks installed that are required. Also, this will work on mac's 10.9 and up.
 
-1) Install GLFW3 library (see step 3 above).
+## Here's the quick instructions:
 
-2) Install raylib library (see step 4 above).
+1. From the command line:
+`export MACOSX_DEPLOYMENT_TARGET=10.9`
+2. Build glfw (With the export command above it will now run on older macs)
+By default it builds a dynamic library, and we want static so we need to download the repository from github, and use a special cmake modifier:
+````
+git clone https://github.com/glfw/glfw.git
+cd glfw
+cmake -DBUILD_SHARED_LIBS=OFF
+make
+````
+Now, in the src folder of the glfw folder there should be a file called "libglfw3.a"
 
-3) Setup build script
+Confirm that this build matches the version number:
+`otool -l libglfw3.a`
 
-You can create a build.sh file that you can run to compile your project. In the example below your project is named my_app.c (for C) or my_app.cpp (for C++), and compiles to my_app.
+You should see a lot of stuff but scan for this:
+````
+ cmd LC_VERSION_MIN_MACOSX
+ cmdsize 16
+ version 10.9
+````
+Okay you're good. Copy glfw/src/libglfw3.a to the folder of your project for easy access.
+
+3. Build raylib (Again, this is so the export line takes affect) 
 
 ````
-clang++ -I /path/to/raylib/src -L /usr/local/lib -L /path/to/raylib/release/libs/osx -lglfw -lraylib -framework GLUT -framework OpenGL -framework Cocoa my_app.cpp -o my_app
+git clone https://github.com/raysan5/raylib.git
+cd raylib/src
+make
 ````
 
-If you'd like to use C instead:
-````
-clang -I /path/to/raylib/src -L /usr/local/lib -L /path/to/raylib/release/libs/osx -lglfw -lraylib -framework GLUT -framework OpenGL -framework Cocoa my_app.c -o my_app
-````
+You may do the otool check with the file in raylib/src/libs/osx/libraylib.a here if you like. (LC_VERSION_MIN_MACOSX should be version 10.4), and we're good!
+copy raylib/src/libs/osx/libraylib.a to your project.
 
-Make sure to replace `/path/to/raylib` with the actual path to your copy of the raylib repository.
-
-Now running build.sh (after setting permissions, ie. `chmod +x build.sh`) will compile your program!
-
-Note that this may give you a CLITERAL error, which seems to be an issue in raylib.h: https://github.com/raysan5/raylib/blob/develop/src/raylib.h#L261
-
-Simply comment out that section so that only this line is active:
-````
-    #define CLITERAL    (Color)
-````
-..Or just don't use CLITERAL and use (Color){255,255,255,255} instead. (That would be all white)
-
-
-# Building Statically, so you can Run on Other Computers
-
-Let me show you something cool. 
-
-````
-otool -L my_app
-````
-
-This shows you everything your application links to. Basically, if anything is pointing to anything but /usr/lib/* or /System/Library/*, your application will throw an error if you run it on any other Mac. It's not portable. Right now, perhaps it's linking to something in /usr/local/lib, or a relative folder. This is bad. We must fix.
-
-Another thing to observe:
-
-````
-otool -l my_app
-````
-
-Whoa that was a bunch of stuff. Disregard most of it and try to find "LC_VERSION_MIN_MACOSX", look below and find the version number, this will likely be the version of the computer you are currently on. That means anyone on an older OS will receive an error. Again: Bad. We Fix.
-
-First things first, let's make sure we get a reasonable amount of playability on older versions of MacOS. Executing this code before compiling packages, will make sure that your program will run without error on Macs 10.9 and up. (Perhaps you can do older, but you get a warning at 10.8 and lower when compiling)
-
-````
-export MACOSX_DEPLOYMENT_TARGET=10.9
-````
-
-You'll need to rebuild raylib + glfw for the above to affect anything, fortunately that's what we're doing next.
-
-Next, let's make sure we are statically generating the build. This pulls in raylib and glfw, so that your computer isn't seeking these libraries out dynamically during run time.
-
-Perhaps this isn't required - I suppose you can just pull in the dylib from a relative directory when you package your executeable in a bundle, but this is what I got to work for now.
-
-Unfortunately, when you built glfw in a step above using Homebrew, it builds a dylib, not a static .a file. I had to clone from github and then build the library from scractch using cmake -DBUILD_SHARED_LIBS=OFF
-
-Let's confirm MACOSX_DEPLOYMENT_TARGET did it's thing. 
-
-````
-otool -l libglfw3.a
-````
-
-Check under LC_VERSION_MIN_MACOSX for version. It should read 10.9
-
-Rebuild raylib, so the OSX version command above takes effect, and confirm.
-
-````
-otool -l libraylib.a
-````
-  
-All good? Good.
-Once that's done, copy libglfw3.a and librarylib.a into the root directory, and you can link to it like so:
-
-````
-clang -I/w/raylib_build/raylib/release/osx -l./libraylib.a -l./libglfw3.a -framework GLUT -framework OpenGL -framework Cocoa my_app.c -o my_app
-````
+4. Build your project!
+clang  -framework OpenAL -framework CoreVideo -framework IOKit -framework Cocoa -framework GLUT -framework OpenGL  libraylib.a libglfw3.a my_app.c -o my_app
 
 Check for warnings! This can tell you if a library you're linking to was not built for OSX 10.9, in which case you'll need to rebuild that too. 
 
-Compare your linker results from the first time:
+Check otool one last time for the LC_VERSION_MIN_MACOSX version:
+`otool -l my_app`
+
+
+Right now 1/9/2018, this works with the master branch, but not the development branch.
+
+
+Last thing, let me show you something cool:
 
 ````
 otool -L my_app
 ````
-This should be all /usr/lib/* or /System/Library/*.
 
-Let's check the version of OSX again:
-````
-otool -l my_app
-````
-Again, check under LC_VERSION_MIN_MACOSX for version. It should read 10.9
+This shows you everything your application links to. Basically, if anything is pointing to anything but /usr/lib/* or /System/Library/*, your application will throw an error if you run it on any other Mac. It's not portable. 
+For example if it's linking to something in /usr/local/lib, or a relative folder, that would be bad. But after the above, you should be clear of dynamic dependencies!
+
 
 # Bundle your app in an Application
 
