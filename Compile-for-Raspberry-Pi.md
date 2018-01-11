@@ -10,7 +10,7 @@ Currently ALL Raspberry Pi devices are supported by raylib (1, 2, 3, Zero and va
  - OpenGL 1.1 on X11 desktop mode, (**only RPI 2 and 3**)
  - OpenGL 2.1 on X11 desktop mode, (**only RPI 2 and 3**)
 
-More detailed information is available on the [OpenGL Graphic API](https://github.com/raysan5/raylib/wiki/OpenGL-Graphic-API) wiki page.
+More detailed information is available on the [raylib platforms and graphics](https://github.com/raysan5/raylib/wiki/raylib-platforms-and-graphics) wiki page.
 
 ### Installing dependencies
 
