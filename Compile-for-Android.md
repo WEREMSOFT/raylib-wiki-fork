@@ -12,6 +12,7 @@ Use Android Studio's SDK Manager to install the latest Android Platform Tools an
 > Download and decompress on C: [Apache Ant](http://www-eu.apache.org/dist//ant/binaries/apache-ant-1.10.1-bin.zip)
 
 _Step 2._ Create the following environment variables:
+
 Android Studio installs the NDK in a ndk-bundle folder inside the SDK folder location (where ever you installed it).
 
     ANDROID_HOME = C:\android-sdk
