@@ -31,7 +31,7 @@ After that, just navigate from command line to folder `raylib/src/` and execute 
 
     mingw32-make PLATFORM=PLATFORM_ANDROID
 
-**Remember to setup `ANDROID_NDK` `ANDROID_TOOLCHAIN` property properly in the Makefile!**
+**Remember to setup `ANDROID_NDK`, `ANDROID_TOOLCHAIN` property properly in the Makefile!**
 
     ANDROID_NDK = C:/android-sdk/ndk-bundle
     ANDROID_TOOLCHAIN = C:/android_toolchain_arm_api16
