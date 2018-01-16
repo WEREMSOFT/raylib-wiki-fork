@@ -1,4 +1,4 @@
-To build your raylib game for Android you need a different compiler than the one that comes with raylib installation, actually, you need a set of tools. Those tools are basically the Android SDK and Android NDK that can be install from Android Studio's built in SDK Manager.
+To build your raylib game for Android you need a different compiler than the one that comes with raylib installation, actually, you need a set of tools. Those tools are basically the Android SDK and Android NDK that can be installed from Android Studio's built in SDK Manager.
 
 ### Installing Android tools
 
@@ -7,11 +7,11 @@ _Step 1._ Install Java Runtime 8 (JRE), Android Studio (Android SDK, Android NDK
 > Download and Install [Java SE Runtime Environment 8](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)
 
 > Download and Install on C: [Android Studio](https://dl.google.com/dl/android/studio/install/3.0.1.0/android-studio-ide-171.4443003-windows.exe).
-Use Android Studio SDK Manager to install the latest Android Platform Tools and desired SDK's and NDK.
+Use Android Studio's SDK Manager to install the latest Android Platform Tools and desired SDKs and NDK.
 
 > Download and decompress on C: [Apache Ant](http://www-eu.apache.org/dist//ant/binaries/apache-ant-1.10.1-bin.zip)
 
-_Step 2._ Create the following environment variables (Asumming android-sdk is where Android Studio:
+_Step 2._ Create the following environment variables:
 Android Studio installs the NDK in a ndk-bundle folder inside the SDK folder location (where ever you installed it).
 
     ANDROID_HOME = C:\android-sdk
