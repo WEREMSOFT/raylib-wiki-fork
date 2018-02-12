@@ -37,7 +37,7 @@ First of all, you need to download raylib repository from Github; after you can 
     git clone https://github.com/raysan5/raylib.git raylib
     cd raylib/src/
     make PLATFORM=PLATFORM_DESKTOP # To make the static version.
-    make PLATFORM=PLATFORM_DESKTOP SHARED_RAYLIB=YES # To make the dynamic shared version.
+    make PLATFORM=PLATFORM_DESKTOP RAYLIB_LIBTYPE=SHARED # To make the dynamic shared version.
     make PLATFORM=PLATFORM_WEB # To make web version.
 
 **Warning:** if you want to compile a different type of library (static, ...), you must type `make clean` before the compiling.
