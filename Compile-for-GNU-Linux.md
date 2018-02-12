@@ -47,10 +47,10 @@ _NOTE:_ By default raylib is compiled for OpenGL 3.3 Core graphics API backend; 
 If you want, you can install the library in the standard directories, or remove it:
 
     sudo make install # Static version.
-    sudo make install SHARED_RAYLIB=YES # Dynamic shared version.
+    sudo make install RAYLIB_LIBTYPE=SHARED # Dynamic shared version.
     
     sudo make uninstall
-    sudo make uninstall SHARED_RAYLIB=YES
+    sudo make uninstall RAYLIB_LIBTYPE=SHARED
 
 ### Compile raylib examples
 Just move to folder `raylib/examples/` and run:
