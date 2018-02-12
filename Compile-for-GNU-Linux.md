@@ -56,6 +56,7 @@ If you want, you can install the library in the standard directories, or remove 
 Just move to folder `raylib/examples/` and run:
 
     make PLATFORM=PLATFORM_DESKTOP
+    make RAYLIB_LIBTYPE=SHARED # Link to dynamic libraylib.so.  
 
 To compile just one specific example:
 
