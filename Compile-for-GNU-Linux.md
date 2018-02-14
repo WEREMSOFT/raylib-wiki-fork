@@ -42,7 +42,7 @@ First of all, you need to download raylib repository from Github; after you can 
 
 **Warning:** if you want to compile a different type of library (static, ...), you must type `make clean` before the compiling.
 
-_NOTE:_ By default raylib is compiled for OpenGL 3.3 Core graphics API backend; to compile for OpenGL 1.1 graphics API just add `GRAPHICS=GRAPHICS_API_OPENGL_11` to the make command.
+_NOTE:_ By default raylib is compiled for OpenGL 3.3 Core graphics API backend; to compile for OpenGL 1.1 graphics API just add `GRAPHICS=GRAPHICS_API_OPENGL_11` or `GRAPHICS=GRAPHICS_API_OPENGLES_20` to the make command.
 
 If you want, you can install the library in the standard directories, or remove it:
 
@@ -53,10 +53,6 @@ If you want, you can install the library in the standard directories, or remove 
     sudo make uninstall RAYLIB_LIBTYPE=SHARED
 
 
-### I know there is a better way to do this with cmake, but the raylib dynamic libraries were not being found in /usr/local/lib/raysan5.
-
-cd /usr/local/lib/raysan5
-mv * /usr/lib
 
 
 ### Compile raylib examples
