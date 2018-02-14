@@ -1,4 +1,4 @@
-To build your raylib game for GNU/Linux you need to download raylib git repository and install some dependencies. raylib already comes with ready-to-use makefiles to compile source code, examples and templates that you can use on your projects.
+To build your raylib game for GNU/Linux you need to download raylib git repository and install some dependencies. raylib already comes with ready-to-use makefiles to compile source code, examples and templates that you can use on your projects.  Although raylib likes to compile and link statically by default,  these are real world instructions that got raylib to compile with the dynamic libraries.
 
 This guide is for all GNU/Linux distros (I will use APT as package manager, for Debian based distros).
 
@@ -21,8 +21,8 @@ Now, you need to download GLFW3 from sources and build it (you also need cmake t
 
     wget https://github.com/glfw/glfw/releases/download/3.2.1/glfw-3.2.1.zip
     unzip glfw-3.2.1.zip
-    cd glfw
-    cmake .
+    cd glfw-3.2.1
+    cmake  -DBUILD_SHARED_LIBS=ON
     sudo make install
 
 #### Build raylib source code using make
@@ -37,7 +37,7 @@ First of all, you need to download raylib repository from Github; after you can 
     git clone https://github.com/raysan5/raylib.git raylib
     cd raylib/src/
     make PLATFORM=PLATFORM_DESKTOP # To make the static version.
-    make PLATFORM=PLATFORM_DESKTOP RAYLIB_LIBTYPE=SHARED # To make the dynamic shared version.
+    make PLATFORM=PLATFORM_DESKTOP RAYLIB_LIBTYPE=SHARED # To make the dynamic shared version. - Suggested to do this one
     make PLATFORM=PLATFORM_WEB # To make web version.
 
 **Warning:** if you want to compile a different type of library (static, ...), you must type `make clean` before the compiling.
@@ -52,12 +52,22 @@ If you want, you can install the library in the standard directories, or remove 
     sudo make uninstall
     sudo make uninstall RAYLIB_LIBTYPE=SHARED
 
+
+### I know there is a better way to do this with cmake, but the raylib dynamic libraries were not being found in /usr/local/lib/raysan5.
+
+cd /usr/local/lib/raysan5
+mv * /usr/lib
+
+
 ### Compile raylib examples
 Just move to folder `raylib/examples/` and run:
 
-    make PLATFORM=PLATFORM_DESKTOP
-    make RAYLIB_LIBTYPE=SHARED # Link to dynamic libraylib.so.  
+make  PLATFORM=PLATFORM_DESKTOP  GRAPHICS=GRAPHICS_API_OPENGLES_20 \
+    CFLAGS="-fPIC -I/usr/include/GL"  RAYLIB_LIBTYPE=SHARED \
+    LDFLAGS='-L/usr/local/lib/raylib -lGLESv2  -lglfw3'
 
+#This example was for a OpenGL ES 2.0 ubuntu 16.04  platform.
+    
 To compile just one specific example:
 
     make core/core_basic_window PLATFORM=PLATFORM_DESKTOP
@@ -65,6 +75,10 @@ To compile just one specific example:
 To force one example recompile:
 
     make core/core_basic_window PLATFORM=PLATFORM_DESKTOP -B
+
+# The games folder can be made the same way as examples.
+
+
 
 ### Build raylib source code using meson
 
