@@ -1,9 +1,9 @@
-To build your raylib game for GNU/Linux you need to download raylib git repository and install some dependencies. raylib already comes with ready-to-use makefiles to compile source code, examples and templates that you can use on your projects.  Although raylib likes to compile and link statically by default,  these are real world instructions that got raylib to compile with the dynamic libraries.
+To build your raylib game for GNU/Linux you need to download raylib git repository and install some dependencies. raylib already comes with ready-to-use makefiles to compile source code, examples and templates that you can use on your projects.  
 
 This guide is for all GNU/Linux distros (I will use APT as package manager, for Debian based distros).
 
-### Install basis and useful packages
-You have to install GCC compilers, Make tool and git (for downloading raylib repository).
+### Install basics and useful packages
+You have to install GCC compilers, Make tool and git (for downloading raylib repository):
 
     sudo apt install build-essential git
 
@@ -17,7 +17,7 @@ GLFW3 depends on some other libraries:
 
     sudo apt install mesa-common-dev libx11-dev libxrandr-dev libxi-dev xorg-dev libgl1-mesa-dev libglu1-mesa-dev libglew-dev
 
-Now, you need to download GLFW3 from sources and build it (you also need cmake tool; if you don't have, just do: `sudo apt install cmake`):
+Now, download GLFW3 from sources and build it (you also need cmake tool; if you don't have, just do: `sudo apt install cmake`):
 
     wget https://github.com/glfw/glfw/releases/download/3.2.1/glfw-3.2.1.zip
     unzip glfw-3.2.1.zip
@@ -25,26 +25,24 @@ Now, you need to download GLFW3 from sources and build it (you also need cmake t
     cmake  -DBUILD_SHARED_LIBS=ON
     sudo make install
 
-#### Build raylib source code using make
-You can compile three different type of raylib library:
+#### Build raylib using make
+You can compile three different types of raylib library:
 
 * The static library (default method);
-* The dynamic shared library;
+* The dynamic shared library (often used on Linux);
 * The web library.
 
-First of all, you need to download raylib repository from Github; after you can compile it:
+Download the raylib repository from [Github](https://github.com/raysan5/raylib), then compile it with:
 
     git clone https://github.com/raysan5/raylib.git raylib
     cd raylib/src/
     make PLATFORM=PLATFORM_DESKTOP # To make the static version.
-    make PLATFORM=PLATFORM_DESKTOP RAYLIB_LIBTYPE=SHARED # To make the dynamic shared version. - Suggested to do this one
+    make PLATFORM=PLATFORM_DESKTOP RAYLIB_LIBTYPE=SHARED # To make the dynamic shared version. - Recommended
     make PLATFORM=PLATFORM_WEB # To make web version.
 
 **Warning:** if you want to compile a different type of library (static, ...), you must type `make clean` before the compiling.
 
-_NOTE:_ By default raylib is compiled for OpenGL 3.3 Core graphics API backend; to compile for OpenGL 1.1 graphics API just add `GRAPHICS=GRAPHICS_API_OPENGL_11` or `GRAPHICS=GRAPHICS_API_OPENGLES_20` to the make command.
-
-If you want, you can install the library in the standard directories, or remove it:
+Install the library to the standard directories, or remove it:
 
     sudo make install # Static version.
     sudo make install RAYLIB_LIBTYPE=SHARED # Dynamic shared version.
@@ -52,29 +50,33 @@ If you want, you can install the library in the standard directories, or remove 
     sudo make uninstall
     sudo make uninstall RAYLIB_LIBTYPE=SHARED
 
-
-
+_NOTE:_ raylib is versatile and can be be built on several platforms and supports numerous graphics apis, among other things. Please read raylib/src/Makefile to see the available options and values.  
 
 ### Compile raylib examples
-Just move to folder `raylib/examples/` and run:
 
-make  PLATFORM=PLATFORM_DESKTOP  GRAPHICS=GRAPHICS_API_OPENGLES_20 \
-    CFLAGS="-fPIC -I/usr/include/GL"  RAYLIB_LIBTYPE=SHARED \
-    LDFLAGS='-L/usr/local/lib/raylib -lGLESv2  -lglfw3'
+If you have installed raylib with `make install`, just move to folder `raylib/examples` and run:
 
-This example was for a OpenGL ES 2.0 ubuntu 16.04  platform.
+    make PLATFORM=PLATFORM_DESKTOP
+
+If raylib was installed with `make install RAYLIB_LIBTYPE=SHARED`, notify the examples with:
+
+    make PLATFORM=PLATFORM_DESKTOP RAYLIB_LIBTYPE=SHARED
+
+A more detailed command for the OpenGL ES GRAPHICS variant on Ubuntu 16.04 is:
+
+    make  PLATFORM=PLATFORM_DESKTOP  GRAPHICS=GRAPHICS_API_OPENGLES_20 \
+        CFLAGS="-fPIC -I/usr/include/GL"  RAYLIB_LIBTYPE=SHARED \
+        LDFLAGS='-L/usr/local/lib/raysan5 -lGLESv2  -lglfw3'
     
-To compile just one specific example:
+To compile just one specific example, adding flags as needed:
 
     make core/core_basic_window PLATFORM=PLATFORM_DESKTOP
 
-To force one example recompile:
+To force recompile one example:
 
     make core/core_basic_window PLATFORM=PLATFORM_DESKTOP -B
 
-The games folder can be made the same way as examples.
-
-
+The games folder can be made the same way as the examples. Have fun!
 
 ### Build raylib source code using meson
 
