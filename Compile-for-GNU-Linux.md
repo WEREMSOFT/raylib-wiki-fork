@@ -72,7 +72,7 @@ To force one example recompile:
 
     make core/core_basic_window PLATFORM=PLATFORM_DESKTOP -B
 
-# The games folder can be made the same way as examples.
+ The games folder can be made the same way as examples.
 
 
 
