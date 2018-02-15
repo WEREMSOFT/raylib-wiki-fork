@@ -76,7 +76,7 @@ To force recompile one example:
 
     make core/core_basic_window PLATFORM=PLATFORM_DESKTOP -B
 
-The games folder can be made the same way as the examples. Have fun!
+The `raylib/games` folder can be made the same way as the examples. Have fun!
 
 ### Build raylib source code using meson
 
