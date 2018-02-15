@@ -65,7 +65,7 @@ If raylib was installed with `make install RAYLIB_LIBTYPE=SHARED`, notify the ex
 A more detailed command for the OpenGL ES GRAPHICS variant on Ubuntu 16.04 is:
 
     make  PLATFORM=PLATFORM_DESKTOP  GRAPHICS=GRAPHICS_API_OPENGLES_20 \
-        CFLAGS="-fPIC -I/usr/include/GL"  RAYLIB_LIBTYPE=SHARED \
+        CFLAGS="-fPIC -I/usr/include/GL"  RAYLIB_LIBTYPE=SHARED USE_EXTERNAL_GLFW=TRUE \
         LDFLAGS='-L/usr/local/lib/raysan5 -lGLESv2  -lglfw3'
     
 To compile just one specific example, adding flags as needed:
