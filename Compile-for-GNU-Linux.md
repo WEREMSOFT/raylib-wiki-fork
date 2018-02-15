@@ -62,7 +62,7 @@ make  PLATFORM=PLATFORM_DESKTOP  GRAPHICS=GRAPHICS_API_OPENGLES_20 \
     CFLAGS="-fPIC -I/usr/include/GL"  RAYLIB_LIBTYPE=SHARED \
     LDFLAGS='-L/usr/local/lib/raylib -lGLESv2  -lglfw3'
 
-#This example was for a OpenGL ES 2.0 ubuntu 16.04  platform.
+This example was for a OpenGL ES 2.0 ubuntu 16.04  platform.
     
 To compile just one specific example:
 
@@ -72,7 +72,7 @@ To force one example recompile:
 
     make core/core_basic_window PLATFORM=PLATFORM_DESKTOP -B
 
- The games folder can be made the same way as examples.
+The games folder can be made the same way as examples.
 
 
 
