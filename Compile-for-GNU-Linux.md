@@ -17,7 +17,7 @@ GLFW3 depends on some other libraries:
 
     sudo apt install mesa-common-dev libx11-dev libxrandr-dev libxi-dev xorg-dev libgl1-mesa-dev libglu1-mesa-dev libglew-dev
 
-Now, download GLFW3 from sources and build it (you also need cmake tool; if you don't have, just do: `sudo apt install cmake`):
+Now, download GLFW3 from sources and build it (you also need cmake tool; if you don't have it, just do: `sudo apt install cmake`):
 
     wget https://github.com/glfw/glfw/releases/download/3.2.1/glfw-3.2.1.zip
     unzip glfw-3.2.1.zip
@@ -28,9 +28,9 @@ Now, download GLFW3 from sources and build it (you also need cmake tool; if you 
 #### Build raylib using make
 You can compile three different types of raylib library:
 
-* The static library (default method);
-* The dynamic shared library (often used on Linux);
-* The web library.
+* The static library (default method)
+* The dynamic shared library (often used on Linux)
+* The web library
 
 Download the raylib repository from [Github](https://github.com/raysan5/raylib), then compile it with:
 
@@ -54,7 +54,7 @@ _NOTE:_ raylib is versatile and can be be built on several platforms and support
 
 ### Compile raylib examples
 
-If you have installed raylib with `make install`, just move to folder `raylib/examples` and run:
+If you have installed raylib with `make install`, just move to the folder `raylib/examples` and run:
 
     make PLATFORM=PLATFORM_DESKTOP
 
