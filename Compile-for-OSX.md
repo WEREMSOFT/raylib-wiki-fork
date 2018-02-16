@@ -8,20 +8,24 @@ _Steps:_
 
 2) Install *Apple Developer Tools*. Those tools include Xcode, in our case version 7.2.1. 
 
-3) Install GLFW3 library
+3) Install raylib library
 
-- To install required packages easier, first install Homebrew, execute in Terminal app the following command:  
+##### With Homebrew
+
+- If you don't want to build it yourself, install Homebrew by executing the following command in Terminal.app:  
 ```
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
-- Once Homebrew app is installed, run the following command in Terminal:
+- Once Homebrew is installed, run the following command in Terminal:
 ```
-    brew install glfw3
+    brew install raylib
 ```
-4)  Install raylib library
-- Download or Clone raylib from GitHub (https://github.com/raysan5/raylib). `raylib-master.zip` contains all required files: source code, examples, templates, games...
+
+##### Build newest development snapshot from source
+
+- Download or Clone raylib from GitHub (https://github.com/raysan5/raylib). [`raylib-master.zip`](https://github.com/raysan5/raylib/archive/master.zip) contains all required files: source code, examples, templates, games...
 - Decompress `raylib-master.zip` in some folder. In case of using Safari browser, it will be automatically decompressed.
-- From Terminal app, access raylib-master/src directory:
+- From Terminal.app, access `raylib-master/src` directory:
 ```
     cd raylib-master/src
 ```
