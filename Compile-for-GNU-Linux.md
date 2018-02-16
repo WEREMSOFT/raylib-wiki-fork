@@ -77,20 +77,20 @@ To force recompile one example:
 
 The `raylib/games` folder can be made the same way as the examples. Have fun!
 
-### Build raylib source code using meson
+### Build raylib source code using cmake
 
-Building with meson on Linux is easy. If you have all the dependencies installed just use the following:
+Building with cmake on Linux is easy, just use the following:
 
 ```
 git clone https://github.com/raysan5/raylib.git raylib
 cd raylib
-meson builddir
-cd builddir
-ninja
-ninja install
+mkdir build && cd build
+cmake -DSHARED=ON -DSTATIC=ON ..
+make
+make install
 ```
 
-In case any dependencies are missing, meson will tell you.
+In case any dependencies are missing, cmake will tell you.
 
 **If you have any doubt, [just let me know][raysan5].**
 
