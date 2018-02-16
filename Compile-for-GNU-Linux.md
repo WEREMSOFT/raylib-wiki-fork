@@ -3,27 +3,15 @@ To build your raylib game for GNU/Linux you need to download raylib git reposito
 This guide is for all GNU/Linux distros (I will use APT as package manager, for Debian based distros).
 
 ### Install basics and useful packages
-You have to install GCC compilers, Make tool and git for downloading the raylib repository:
+You will need a C99 compiler, make and git for downloading the raylib repository:
 
     sudo apt install build-essential git
 
 ### Compile raylib source code
 #### Install raylib dependencies
-raylib requires GLFW3 (Windows and input management) and OpenAL Soft (audio system management). Just install them:
+First we need to install some required libraries:
 
-    sudo apt install libopenal-dev
-
-GLFW3 depends on some other libraries:
-
-    sudo apt install mesa-common-dev libx11-dev libxrandr-dev libxi-dev xorg-dev libgl1-mesa-dev libglu1-mesa-dev libglew-dev
-
-Now, download GLFW3 from sources and build it. You also need cmake tool; if you don't have it, just do: `sudo apt install cmake`
-
-    wget https://github.com/glfw/glfw/releases/download/3.2.1/glfw-3.2.1.zip
-    unzip glfw-3.2.1.zip
-    cd glfw-3.2.1
-    cmake  -DBUILD_SHARED_LIBS=ON
-    sudo make install
+    sudo apt install libasound2-dev mesa-common-dev libx11-dev libxrandr-dev libxi-dev xorg-dev libgl1-mesa-dev libglu1-mesa-dev
 
 #### Build raylib using make
 You can compile three different types of raylib library:
@@ -91,6 +79,24 @@ make install
 ```
 
 In case any dependencies are missing, cmake will tell you.
+
+### Link raylib with system GLFW
+
+Instead of using the embedded GLFW, you can download GLFW3 and build it from source, for which you will need cmake; if you don't have it, just do: `sudo apt install cmake`
+
+    wget https://github.com/glfw/glfw/releases/download/3.2.1/glfw-3.2.1.zip
+    unzip glfw-3.2.1.zip
+    cd glfw-3.2.1
+    cmake  -DBUILD_SHARED_LIBS=ON
+    sudo make install
+
+Now with GLFW installed, you may build raylib while specifying `USE_EXTERNAL_GLFW`:
+
+```
+make USE_EXTERNAL_GLFW=TRUE
+# or
+cmake -DUSE_EXTERNAL_GLFW=ON
+```
 
 **If you have any doubt, [just let me know][raysan5].**
 
