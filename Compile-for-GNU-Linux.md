@@ -3,7 +3,7 @@ To build your raylib game for GNU/Linux you need to download raylib git reposito
 This guide is for all GNU/Linux distros (I will use APT as package manager, for Debian based distros).
 
 ### Install basics and useful packages
-You have to install GCC compilers, Make tool and git (for downloading raylib repository):
+You have to install GCC compilers, Make tool and git for downloading the raylib repository:
 
     sudo apt install build-essential git
 
@@ -17,7 +17,7 @@ GLFW3 depends on some other libraries:
 
     sudo apt install mesa-common-dev libx11-dev libxrandr-dev libxi-dev xorg-dev libgl1-mesa-dev libglu1-mesa-dev libglew-dev
 
-Now, download GLFW3 from sources and build it (you also need cmake tool; if you don't have it, just do: `sudo apt install cmake`):
+Now, download GLFW3 from sources and build it. You also need cmake tool; if you don't have it, just do: `sudo apt install cmake`
 
     wget https://github.com/glfw/glfw/releases/download/3.2.1/glfw-3.2.1.zip
     unzip glfw-3.2.1.zip
@@ -50,25 +50,24 @@ Install the library to the standard directories, or remove it:
     sudo make uninstall
     sudo make uninstall RAYLIB_LIBTYPE=SHARED
 
-_NOTE:_ raylib is versatile and can be be built on several platforms and supports numerous graphics apis, among other things. Please read raylib/src/Makefile to see the available options and values.  
+_NOTE:_ raylib is configurable and can be be built in a variety of ways. Please read raylib/src/Makefile and raylib.h itself to see all the available options and values.  
 
 ### Compile raylib examples
 
-If you have installed raylib with `make install`, just move to the folder `raylib/examples` and run:
+If you have installed raylib with `make install`, Just move to the folder `raylib/examples` and run:
 
     make PLATFORM=PLATFORM_DESKTOP
 
-If raylib was installed with `make install RAYLIB_LIBTYPE=SHARED`, notify the examples with:
+If raylib was installed with `make install RAYLIB_LIBTYPE=SHARED`
 
     make PLATFORM=PLATFORM_DESKTOP RAYLIB_LIBTYPE=SHARED
 
 A more detailed command for the OpenGL ES GRAPHICS variant on Ubuntu 16.04 is:
 
-    make  PLATFORM=PLATFORM_DESKTOP  GRAPHICS=GRAPHICS_API_OPENGLES_20 \
-        CFLAGS="-fPIC -I/usr/include/GL"  RAYLIB_LIBTYPE=SHARED USE_EXTERNAL_GLFW=TRUE \
-        LDFLAGS='-L/usr/local/lib/raysan5 -lGLESv2  -lglfw3'
+    make  PLATFORM=PLATFORM_DESKTOP  GRAPHICS=GRAPHICS_API_OPENGLES_20 RAYLIB_LIBTYPE=SHARED USE_EXTERNAL_GLFW=TRUE \
+        CFLAGS="-fPIC -I/usr/include/GL" LDFLAGS='-L/usr/local/lib/raysan5 -lGLESv2  -lglfw3'
     
-To compile just one specific example, adding flags as needed:
+To compile just one specific example, add flags as needed:
 
     make core/core_basic_window PLATFORM=PLATFORM_DESKTOP
 
