@@ -30,7 +30,7 @@ Download the raylib repository from [Github](https://github.com/raysan5/raylib),
 
 **Warning:** if you want to compile a different type of library (static, ...), you must type `make clean` before the compiling.
 
-Install the library to the standard directories, or remove it:
+Install the library to the standard directories, `usr/local/lib` and `/usr/local/include`, or remove it:
 
     sudo make install # Static version.
     sudo make install RAYLIB_LIBTYPE=SHARED # Dynamic shared version.
