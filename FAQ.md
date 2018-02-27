@@ -21,6 +21,8 @@ Like any other library or project, a raylib project requires different [dependen
 Dependencies depend on platform, so every platform requires some libraries installed in an specific folder to be accesible for the compiler when compiling raylib or a raylib example/game.
 
 Specific dependencies installation is listed for every platform on this [Wiki](https://github.com/raysan5/raylib/wiki). Actually, there are not many external dependencies for raylib, only a couple (GLFW3, OpenAL Soft) and only in some platforms.
+  
+On Linux, both the make and cmake build systems install libraylib and raylib.h to /usr/local/lib and /usr/local/include, respectively. If you want to customize these locations, inspect the appropriate Makefile or CMakeLists.txt.
 
 ## **What are the dependencies on Windows?**
 
