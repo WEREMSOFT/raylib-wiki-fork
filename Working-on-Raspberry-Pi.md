@@ -2,7 +2,7 @@ To build your raylib game for Raspberry Pi you need to download raylib git repos
 
 ### Supported Devices and OS
 
-Currently ALL Raspberry Pi devices are supported by raylib (1, 2, 3, Zero and variants). OS supported are Raspbian Jessie (latest update) and [Raspbian Stretch](https://www.raspberrypi.org/downloads/raspbian/).
+Currently ALL Raspberry Pi devices are supported by raylib (1, 2, 3, Zero and variants). OS supported is [Raspbian Stretch](https://www.raspberrypi.org/downloads/raspbian/).
 
 ### Supported OpenGL backends
 
@@ -12,15 +12,9 @@ Currently ALL Raspberry Pi devices are supported by raylib (1, 2, 3, Zero and va
 
 More detailed information is available on the [raylib platforms and graphics](https://github.com/raysan5/raylib/wiki/raylib-platforms-and-graphics) wiki page.
 
-### Installing dependencies
+### Install required libraries
 
-raylib only requires one additional library dependency to the ones that already comes with Raspbian if used in native mode, this library is OpenAL Soft (audio system management). Just install it:
-
-    sudo apt-get install libopenal1 libopenal-dev
-
-**If using raylib on desktop mode**, another additional dependency is required:
-
-    sudo apt-get install libglfw3
+All required libraries come with the system, no additional dependencies are required.
 
 ### Compiling raylib source code
 
