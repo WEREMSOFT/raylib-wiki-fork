@@ -2,7 +2,7 @@
 
 To build your raylib game for GNU/Linux you need to download raylib git repository. raylib already comes with ready-to-use makefiles and CMake system to compile source code, examples and templates.  
 
-This guide is for all GNU/Linux distros (I will use APT as package manager, for Debian based distros).
+This guide is for all GNU/Linux distros, just note that APT is used as package manager for Debian based distros.
 
 ### Install basics and useful packages
 You will need a **GCC** (or alternative C99 compiler), **make** and **git** (to download raylib repo).
