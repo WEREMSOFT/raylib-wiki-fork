@@ -25,11 +25,11 @@ Despite raylib has, technically speaking, no external dependencies, it requires 
 
 PLATFORM | external dependencies | Notes
 --- | :---: | ---
-DESKTOP:Windows | `OpenGL`, `GDI32` | GDI32 is required for window creation
+DESKTOP:Windows | `OpenGL`, `GDI32` | `GDI32` is required for window creation
 DESKTOP:Linux | `OpenGL`, `X11` | Also requires linkage with `libm`(math), `pthreads`(POSIX threads), `dl`(dynamic loading) and `X11` window system specific libs: `X11`, `Xrandr`, `Xinerama`, `Xi`, `Xxf86vm` and `Xcursor`
 DESKTOP:FreeBSD | `OpenGL`, `X11` | Also requires linkage with `libm`(math), `pthreads`(POSIX threads), `dl`(dynamic loading) and `X11` window system specific libs: `X11`, `Xrandr`, `Xinerama`, `Xi`, `Xxf86vm` and `Xcursor`
 DESKTOP:OSX | `OpenGL`, `Cocoa` | `Cocoa` framework is required for window creation
-ANDROID| `EGL`, `OpenGLES2.0`, `OpenSLES` | Code must be compiled using `Android NDK` libraries
+ANDROID| `EGL`, `OpenGLES2.0`, `OpenSLES` | Code must be compiled using `Android NDK` libraries. Requires linkage with -`native_app_glue`, `log`, `android`, `atomic`, `libc`, `libm`(math) and `dl`(dynamic loading)
 RASPBERRY PI | `EGL`, `OpenGLES2.0`, `bcm_host` | Graphics run in native mode using `bcm_host` (no `XWindows` required) and inputs are also natively read (no `XWindows` input events), also requires linkage with `libm`(math), `pthreads`(POSIX threads) and `dl`(dynamic loading).
 HTML5 (Web) | `WebGL` | Code must be compiled using `emscripten SDK`, dependencies linkage is automatically detected.
 
