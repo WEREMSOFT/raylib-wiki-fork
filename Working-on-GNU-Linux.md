@@ -4,7 +4,7 @@ To build your raylib game for GNU/Linux you need to download raylib git reposito
 
 This guide is for all GNU/Linux distros, just note that APT is used as package manager for Debian based distros.
 
-#### Install basics and useful packages
+#### Install required tools
 You need a **GCC** (or alternative C99 compiler), **make** and **git** (to download raylib repo). 
 
     sudo apt install build-essential git
@@ -13,7 +13,7 @@ Optionally, you could use **CMake** building system.
 
     sudo apt install cmake
 
-#### Install raylib dependencies
+#### Install required libraries
 You need to install some required libraries; **ALSA** for audio, **Mesa** for OpenGL accelerated graphics and **X11** for windowing system.
 
     sudo apt install libasound2-dev mesa-common-dev libx11-dev libxrandr-dev libxi-dev xorg-dev libgl1-mesa-dev libglu1-mesa-dev
