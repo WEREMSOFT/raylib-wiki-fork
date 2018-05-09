@@ -1,4 +1,4 @@
-To build your raylib game for Android you need a set of tools for Android. Those tools are basically the Android SDK and Android NDK that can be installed from Android Studio's built in SDK Manager.
+To build your raylib game for Android you need a set of Android tools. Those tools are basically the Android SDK and Android NDK, including Android Platform Tools and also Java Runtime.
 
 ### Installing Android tools
 
