@@ -1,9 +1,11 @@
-To build your raylib game for GNU/Linux you need to download raylib git repository and install some dependencies. raylib already comes with ready-to-use makefiles to compile source code, examples and templates that you can use on your projects.  
+## Building Library
+
+To build your raylib game for GNU/Linux you need to download raylib git repository. raylib already comes with ready-to-use makefiles and CMake system to compile source code, examples and templates.  
 
 This guide is for all GNU/Linux distros (I will use APT as package manager, for Debian based distros).
 
 ### Install basics and useful packages
-You will need a C99 compiler, make and git for downloading the raylib repository:
+You will need a **GCC** (or alternative C99 compiler), **make** and **git** (to download raylib repo).
 
     sudo apt install build-essential git
 
@@ -40,7 +42,7 @@ Install the library to the standard directories, `usr/local/lib` and `/usr/local
 
 _NOTE:_ raylib is configurable and can be be built in a variety of ways. Please read raylib/src/Makefile and raylib.h itself to see all the available options and values.  
 
-### Compile raylib examples
+### Building Examples
 
 If you have installed raylib with `make install`, Just move to the folder `raylib/examples` and run:
 
@@ -100,4 +102,4 @@ cmake -DUSE_EXTERNAL_GLFW=ON
 
 **If you have any doubt, [just let me know][raysan5].**
 
-[raysan5]: mailto:raysan5@gmail.com "Ramon Santamaria - Ray San"
+[raysan5]: mailto:ray@raylib.com "Ramon Santamaria - Ray San"
