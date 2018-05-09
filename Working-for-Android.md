@@ -1,4 +1,4 @@
-To build your raylib game for Android you need a different compiler than the one that comes with raylib installation, actually, you need a set of tools. Those tools are basically the Android SDK and Android NDK that can be installed from Android Studio's built in SDK Manager.
+To build your raylib game for Android you need a set of tools for Android. Those tools are basically the Android SDK and Android NDK that can be installed from Android Studio's built in SDK Manager.
 
 ### Installing Android tools
 
