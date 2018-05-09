@@ -1,5 +1,7 @@
+## Building Library
+
 This guide has been written using the following software:
-- OSX El Capitan (10.11.3) 
+- OSX El Capitan (10.11.3)
 - Xcode 7.2.1 (7C1002) 
 
 _Steps:_
