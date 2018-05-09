@@ -9,13 +9,13 @@
 * [raylib custom shaders](raylib-generic-uber-shader-and-custom-shaders)
 * [raylib coding conventions](raylib-coding-conventions)
 
-## Platform Compilation
-* [Compile for Windows](Compile-for-Windows)
-* [Compile for GNU Linux](Compile-for-GNU-Linux)
-* [Compile for OSX](Compile-for-OSX)
-* [Compile for Android](Compile-for-Android)
-* [Compile for Raspberry Pi](Compile-for-Raspberry-Pi)
-* [Compile for Web (HTML5)](Compile-for-Web-(HTML5))
+## Development Platforms
+* [Building on Windows](Compile-for-Windows)
+* [Building on macOS](Compile-for-OSX)
+* [Building on GNU Linux](Compile-for-GNU-Linux)
+* [Building on Raspberry Pi](Compile-for-Raspberry-Pi)
+* [Building for Android](Compile-for-Android)
+* [Building for Web (HTML5)](Compile-for-Web-(HTML5))
 
 ## Installation
 * [Install on GNU Linux](Install-on-GNU-Linux)
