@@ -4,18 +4,21 @@ To build your raylib game for GNU/Linux you need to download raylib git reposito
 
 This guide is for all GNU/Linux distros, just note that APT is used as package manager for Debian based distros.
 
-### Install basics and useful packages
-You will need a **GCC** (or alternative C99 compiler), **make** and **git** (to download raylib repo).
+#### Install basics and useful packages
+You need a **GCC** (or alternative C99 compiler), **make** and **git** (to download raylib repo). 
 
     sudo apt install build-essential git
 
-### Compile raylib source code
+Optionally, you could use **CMake** building system.
+
+    sudo apt install cmake
+
 #### Install raylib dependencies
-First we need to install some required libraries:
+You need to install some required libraries; **ALSA** for audio, **Mesa** for OpenGL accelerated graphics and **X11** for windowing system.
 
     sudo apt install libasound2-dev mesa-common-dev libx11-dev libxrandr-dev libxi-dev xorg-dev libgl1-mesa-dev libglu1-mesa-dev
 
-#### Build raylib using make
+### Build raylib using make
 You can compile three different types of raylib library:
 
 * The static library (default method)
@@ -40,9 +43,22 @@ Install the library to the standard directories, `usr/local/lib` and `/usr/local
     sudo make uninstall
     sudo make uninstall RAYLIB_LIBTYPE=SHARED
 
-_NOTE:_ raylib is configurable and can be be built in a variety of ways. Please read raylib/src/Makefile and raylib.h itself to see all the available options and values.  
+_NOTE:_ raylib is configurable and can be be built in a variety of ways. Please read raylib/src/Makefile and raylib.h itself to see all the available options and values.
 
-### Building Examples
+### Build raylib using CMake
+
+Building with cmake on Linux is easy, just use the following:
+```
+git clone https://github.com/raysan5/raylib.git raylib
+cd raylib
+mkdir build && cd build
+cmake -DSHARED=ON -DSTATIC=ON ..
+make
+make install
+```
+In case any dependencies are missing, cmake will tell you.
+
+## Building Examples
 
 If you have installed raylib with `make install`, Just move to the folder `raylib/examples` and run:
 
@@ -55,7 +71,7 @@ If raylib was installed with `make install RAYLIB_LIBTYPE=SHARED`
 A more detailed command for the OpenGL ES GRAPHICS variant on Ubuntu 16.04 is:
 
     make  PLATFORM=PLATFORM_DESKTOP  GRAPHICS=GRAPHICS_API_OPENGLES_20 RAYLIB_LIBTYPE=SHARED USE_EXTERNAL_GLFW=TRUE \
-        CFLAGS="-fPIC -I/usr/include/GL" LDFLAGS='-L/usr/local/lib/raysan5 -lGLESv2  -lglfw3'
+        CFLAGS="-fPIC -I/usr/include/GL" LDFLAGS='-L/usr/local/lib/raysan5 -lGLESv2 -lglfw3'
     
 To compile just one specific example, add flags as needed:
 
@@ -67,29 +83,15 @@ To force recompile one example:
 
 The `raylib/games` folder can be made the same way as the examples. Have fun!
 
-### Build raylib source code using cmake
-
-Building with cmake on Linux is easy, just use the following:
-
-```
-git clone https://github.com/raysan5/raylib.git raylib
-cd raylib
-mkdir build && cd build
-cmake -DSHARED=ON -DSTATIC=ON ..
-make
-make install
-```
-
-In case any dependencies are missing, cmake will tell you.
 
 ### Link raylib with system GLFW
 
-Instead of using the embedded GLFW, you can download GLFW3 and build it from source, for which you will need cmake; if you don't have it, just do: `sudo apt install cmake`
+Instead of using the embedded GLFW, you can download GLFW3 and build it from source (it requires CMake).
 
     wget https://github.com/glfw/glfw/releases/download/3.2.1/glfw-3.2.1.zip
     unzip glfw-3.2.1.zip
     cd glfw-3.2.1
-    cmake  -DBUILD_SHARED_LIBS=ON
+    cmake -DBUILD_SHARED_LIBS=ON
     sudo make install
 
 Now with GLFW installed, you may build raylib while specifying `USE_EXTERNAL_GLFW`:
