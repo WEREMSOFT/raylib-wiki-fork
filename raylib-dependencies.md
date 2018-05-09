@@ -26,11 +26,12 @@ Despite raylib has, technically speaking, no external dependencies, it requires 
 PLATFORM | external dependencies | Notes
 --- | :---: | ---
 DESKTOP:Windows | `OpenGL`, `GDI32` | GDI32 is required for window creation
-DESKTOP:Linux | `OpenGL`, `X11` | Linux also requires linkage with `libm`(math), `pthreads`(POSIX threads), `dl`(dynamic loading) and `X11` window system specific libs: `X11`, `Xrandr`, `Xinerama`, `Xi`, `Xxf86vm` and `Xcursor`
+DESKTOP:Linux | `OpenGL`, `X11` | Also requires linkage with `libm`(math), `pthreads`(POSIX threads), `dl`(dynamic loading) and `X11` window system specific libs: `X11`, `Xrandr`, `Xinerama`, `Xi`, `Xxf86vm` and `Xcursor`
+DESKTOP:FreeBSD | `OpenGL`, `X11` | Also requires linkage with `libm`(math), `pthreads`(POSIX threads), `dl`(dynamic loading) and `X11` window system specific libs: `X11`, `Xrandr`, `Xinerama`, `Xi`, `Xxf86vm` and `Xcursor`
 DESKTOP:OSX | `OpenGL`, `Cocoa` | `Cocoa` framework is required for window creation
 ANDROID| `EGL`, `OpenGLES2.0`, `OpenSLES` | Code must be compiled using `Android NDK` libraries
-RASPBERRY PI | `EGL`, `OpenGLES2.0`, `bcm_host` | Graphics run in native mode using `bcm_host` (no `XWindows` required) and inputs are also natively read (no `XWindows` input events)
-HTML5 (Web) | `WebGL` | Code must be compiled using `emscripten SDK`
+RASPBERRY PI | `EGL`, `OpenGLES2.0`, `bcm_host` | Graphics run in native mode using `bcm_host` (no `XWindows` required) and inputs are also natively read (no `XWindows` input events), also requires linkage with `libm`(math), `pthreads`(POSIX threads) and `dl`(dynamic loading).
+HTML5 (Web) | `WebGL` | Code must be compiled using `emscripten SDK`, dependencies linkage is automatically detected.
 
 Note that the raylib design is [very modular](http://www.raylib.com/images/raylib_architecture.png). Some modules can be dropped if they're not required ([audio](https://github.com/raysan5/raylib/blob/develop/src/audio.c), [shapes](https://github.com/raysan5/raylib/blob/develop/src/shapes.c), [models](https://github.com/raysan5/raylib/blob/develop/src/models.c)...) and consequently the libraries used by those modules. Some modules can also be used as standalone, *independently* of raylib: [rlgl](https://github.com/raysan5/raylib/blob/develop/examples/others/rlgl_standalone.c), [audio](https://github.com/raysan5/raylib/blob/develop/examples/others/audio_standalone.c).
 
