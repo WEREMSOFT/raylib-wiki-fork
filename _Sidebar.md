@@ -10,12 +10,12 @@
 * [raylib coding conventions](raylib-coding-conventions)
 
 ## Development Platforms
-* [Building on Windows](Compile-for-Windows)
-* [Building on macOS](Compile-for-OSX)
-* [Building on GNU Linux](Compile-for-GNU-Linux)
-* [Building on Raspberry Pi](Compile-for-Raspberry-Pi)
-* [Building for Android](Compile-for-Android)
-* [Building for Web (HTML5)](Compile-for-Web-(HTML5))
+* [Working on Windows](Compile-for-Windows)
+* [Working on macOS](Compile-for-OSX)
+* [Working on GNU Linux](Compile-for-GNU-Linux)
+* [Working on Raspberry Pi](Compile-for-Raspberry-Pi)
+* [Working for Android](Compile-for-Android)
+* [Working for Web (HTML5)](Compile-for-Web-(HTML5))
 
 ## Installation
 * [Install on GNU Linux](Install-on-GNU-Linux)
