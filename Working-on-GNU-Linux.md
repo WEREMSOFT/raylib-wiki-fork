@@ -43,7 +43,7 @@ Install the library to the standard directories, `usr/local/lib` and `/usr/local
     sudo make uninstall
     sudo make uninstall RAYLIB_LIBTYPE=SHARED
 
-_NOTE:_ raylib is configurable and can be be built in a variety of ways. Please read raylib/src/Makefile and raylib.h itself to see all the available options and values.
+_NOTE:_ raylib is configurable and can be be built in a variety of ways. Please read [`src/Makefile`](https://github.com/raysan5/raylib/blob/master/src/Makefile), [`src/config.h`](https://github.com/raysan5/raylib/blob/master/src/config.h) and [`raylib.h`](https://github.com/raysan5/raylib/blob/master/src/raylib.h) itself for a full listing of available options and values.
 
 ### Build raylib using CMake
 
@@ -57,6 +57,8 @@ make
 make install
 ```
 In case any dependencies are missing, cmake will tell you.
+
+_NOTE:_ raylib is configurable and can be be built in a variety of ways. Please read [`src/CMakeOptions.txt`](https://github.com/raysan5/raylib/blob/master/src/CMakeOptions.txt) for a full listing of available options and values. Alternatively, you may use the curses UI provided by `ccmake(1)` for configuring raylib.
 
 ## Building Examples
 
