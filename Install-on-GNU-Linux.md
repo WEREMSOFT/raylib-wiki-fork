@@ -1,13 +1,13 @@
 If you are a packager for a Distribution not listed here, please take the time and create a raylib package.
 
 # openSUSE
-openSUSE Tumbleweed has raylib in the official repository. Install it via:
+openSUSE has raylib in the official repository. Install it via:
 
 ```
 zypper in raylib-devel
 ```
 
-openSUSE Leap users will have to add the [devel:libraries:c_c++ devel project](https://build.opensuse.org/project/show/devel:libraries:c_c++).
+Users of older openSUSE versions will have to add the [devel:libraries:c_c++ devel project](https://build.opensuse.org/project/show/devel:libraries:c_c++).
 
 Add the repo, refresh sources and install raylib:
 ```
