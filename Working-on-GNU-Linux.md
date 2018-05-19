@@ -58,7 +58,7 @@ make install
 ```
 In case any dependencies are missing, cmake will tell you.
 
-_NOTE:_ raylib is configurable and can be be built in a variety of ways. Please read [`src/CMakeOptions.txt`](https://github.com/raysan5/raylib/blob/master/src/CMakeOptions.txt) for a full listing of available options and values. Alternatively, you may use the curses UI provided by `ccmake(1)` for configuring raylib.
+_NOTE:_ raylib is configurable and can be be built in a variety of ways. See the [CMake Build Options](https://github.com/raysan5/raylib/wiki/CMake-Build-Options) for a full listing of available options and values. Alternatively, you may use the curses UI provided by `ccmake(1)` for interactively configuring raylib.
 
 ## Building Examples
 
