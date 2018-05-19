@@ -28,4 +28,5 @@
 * [How To: Use raylib with Code::Blocks](Use-raylib-with-Code-Blocks)
 * [How To: Redirect-raylib-output-to-Framebuffer-1 (RPI)](Redirect-raylib-output-to-Framebuffer-1)
 * [How To: Install and configure Touchscreen (RPi)](Install-and-configure-Touchscreen-Drivers-(RPi))
+* [CMake Build Options](https://github.com/raysan5/raylib/wiki/CMake-Build-Options)
 * [FAQ](FAQ)
