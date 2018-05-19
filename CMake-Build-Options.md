@@ -9,6 +9,7 @@ raylib is configurable and can be be built in a variety of ways. Following is a 
  
 | **Binary Option**                        | **Description**                                           | **Default** Value|
 |:-----------------------------:|:-----------------------------------------------------:|:------------:|
+|`USE_WAYLAND`                  | Use Wayland for window creation                     | `OFF`|
 |`WITH_PIC`                     | Compile static library as position-independent code | `OFF`|
 |`SHARED`                       | Build raylib as a dynamic library | `OFF`|
 |`STATIC`                       | Build raylib as a static library | `ON`|
