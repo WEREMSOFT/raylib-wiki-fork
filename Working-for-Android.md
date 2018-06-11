@@ -75,6 +75,8 @@ Again, Notepad++ comes with an already prepared script to do that. Just open `ra
 
 It's helpful to know step by step what each part of the process is doing. For this, let's create a simple bash script, where each line can be run manually and the results can be seen. This should be useful for understanding the process on Linux as well.
 
+This is simple as in we're just using shell commands, no cmake, no builders of any kind. 
+
 ## Folder Setup
 
 > Note: project.c is copied from raylib/templates/simple_game/simple_game.c
