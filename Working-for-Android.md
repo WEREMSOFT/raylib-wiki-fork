@@ -105,6 +105,7 @@ This is simple as in we're just using shell commands, no cmake, no builders of a
 ### /src/com/seth/project/NativeLoader.java
 
 > Note: My project is named "project" and the namespace is named "seth"
+
     package com.seth.project; 
     public class NativeLoader extends android.app.NativeActivity { 
         static {
