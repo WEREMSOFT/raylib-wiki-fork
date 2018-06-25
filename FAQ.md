@@ -34,4 +34,4 @@ In some cases, it could happen that user decided to move that folder to somewher
 
 As a recommendation, if you move `C:\raylib` folder to somewhere else, try to avoid spaces and special characters on the new path, it could generate errors on compilation.
 
-For command-line compilation and custom pipeline configuration, just check [Compile for Windows](https://github.com/raysan5/raylib/wiki/Compile-for-Windows) wiki.
+For command-line compilation and custom pipeline configuration, just check [Compile for Windows](https://github.com/raysan5/raylib/wiki/Working-on-Windows) wiki.
