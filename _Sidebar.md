@@ -13,6 +13,7 @@
 * [Working on Windows](Working-on-Windows)
 * [Working on macOS](Working-on-macOS)
 * [Working on GNU Linux](Working-on-GNU-Linux)
+* [Working on FreeBSD](Working-on-FreeBSD)
 * [Working on Raspberry Pi](Working-on-Raspberry-Pi)
 * [Working for Android](Working-for-Android)
 * [Working for Web (HTML5)](Working-for-Web-(HTML5))
