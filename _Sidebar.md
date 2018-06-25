@@ -18,12 +18,13 @@
 * [Working for Web (HTML5)](Working-for-Web-(HTML5))
 
 ## Misc Help
-* [How To: Using SpriteFonts](Using-SpriteFonts)
+* [How To: Using SpriteFonts](Using-BMFonts)
 * [How To: audio module as standalone library](Use-audio-module-as-standalone-library)
 * [How To: rlgl module as standalone library](Use-rlgl-module-as-standalone-library)
 * [How To: Create Visual Studio Project](Create-Visual-Studio-Project)
 * [How To: Use raylib with Code::Blocks](Use-raylib-with-Code-Blocks)
 * [How To: Redirect-raylib-output-to-Framebuffer-1 (RPI)](Redirect-raylib-output-to-Framebuffer-1)
 * [How To: Install and configure Touchscreen (RPi)](Install-and-configure-Touchscreen-Drivers-(RPi))
-* [CMake Build Options](https://github.com/raysan5/raylib/wiki/CMake-Build-Options)
-* [FAQ](FAQ)
+* [How To: CMake Build Options](https://github.com/raysan5/raylib/wiki/CMake-Build-Options)
+
+## [FAQ](FAQ)
