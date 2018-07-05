@@ -115,6 +115,8 @@ This is simple as in we're just using shell commands, no cmake, no builders of a
 
 AndroidManifest.xml
 
+> Note: "package" is the unique name of your project, this will overwrite apps with the same name
+
     <?xml version='1.0' encoding="utf-8" ?>
     <manifest xmlns:android="http://schemas.android.com/apk/res/android" package='com.seth.project' android:versionCode='0'
         android:versionName='0' >
@@ -124,6 +126,7 @@ AndroidManifest.xml
                 android:configChanges="orientation|keyboardHidden|screenSize"
                 android:launchMode="singleTask"
                 android:clearTaskOnLaunch="true">
+            <meta-data android:name="android.app.lib_name" android:value="project"/>
                 <intent-filter>
                     <category android:name='android.intent.category.LAUNCHER'/>
                     <action android:name='android.intent.action.MAIN'/>
