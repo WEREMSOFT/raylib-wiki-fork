@@ -261,3 +261,37 @@ This command may also help.
 ## Error: INSTALL_FAILED_DEXOPT
 
 This one was easier. The Apk generated must contain classes/classes.dex. If it doesn't, check aapt package -f -M to make sure you are including the folder dex is in at the end of it.
+
+## Dealing with Segmentation Faults - Using adb logcat
+
+In the event of a segfault, don't despair! You can get the entire backtrace using adb logcat.
+
+```
+adb logcat "libc:*" "DEBUG:*" "*:S"
+```
+This gives you everything tagged with libc or DEBUG. "*:S" is there to Silence all other stuff.
+
+Now, you may see a message that says "Suppressing debuggerd output because prctl(PR_GET_DUMPABLE)==0"
+
+In that case you have to set this to 1.
+
+In your c code, dd this include statement, and the prctl command somewhere early on in your main():
+
+```
+#include <sys/prctl.h>
+...
+prctl(PR_SET_DUMPABLE, 1, 0, 0, 0);
+```
+
+Here's a more robust logcat command:
+
+```
+adb logcat "threaded_app:*" "raylib:*" "libc:*" "DEBUG:*" "InputDispatcher:*" "JavaBinder:*" "WindowState:*" "Eve:*" "ViewRootImpl:*" "*:S"
+```
+
+Or be brave and try to find the important tags yourself:
+```
+adb logcat "*:*"
+```
+
+
