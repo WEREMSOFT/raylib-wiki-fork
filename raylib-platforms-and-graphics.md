@@ -12,7 +12,7 @@ PLATFORM_DESKTOP | macOS | `OpenGL 1.1`<br> `OpenGL 2.1`<br> `OpenGL 3.3` | Any 
 PLATFORM_ANDROID | Android | `OpenGL ES 2.0` | Supported from API level 16 (JellyBean 4.1.x)
 PLATFORM_UWP | Windows UWP | `OpenGL ES 2.0` | Supports any UWP device (Desktop App, Phones, Xbox One...). Runs over Direct3D 11 using [ANGLE](https://github.com/Microsoft/angle) emulation layer.
 PLATFORM_RPI | Raspbian (native) | `OpenGL ES 2.0` | Runs graphics natively on console, no X11 windowing/inputs system required.
-PLATFORM_RPI | Raspbian (X11 desktop) | `OpenGL 1.1`<br> `OpenGL 2.1`<br> `OpenGL 3.3` | Runs on X11 desktop, requires VC4 OpenGL driver enabled.
+PLATFORM_RPI | Raspbian (X11 desktop) | `OpenGL 1.1`<br> `OpenGL 2.1` | Runs on X11 desktop, requires VC4 OpenGL driver enabled.
 PLATFORM_WEB | HTML5 (browser) | `WebGL 1.0 (OpenGL ES 2.0)` | `OpenGL ES 2.0` transformed to `WebGL 1.0` on compilation <br>(using `emscripten SDK`), no emulation layer, only pure `WebGL 1.0` translation.
 
 Additional graphic backends (not supported by default): 
