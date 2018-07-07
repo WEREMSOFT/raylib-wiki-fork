@@ -1,29 +1,16 @@
 To build your raylib game for Android you need a set of Android tools. Those tools are basically the Android SDK and Android NDK, including Android Platform Tools and also Java Runtime.
 
-### Installing Android tools
+### Installing Android required tools
 
-_Step 1._ Install Java Runtime 8 (JRE), Android Studio (Android SDK, Android NDK) and Apache Ant tools:
-
-> Download and Install [Java SE Runtime Environment 8](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)
-
-> Download and Install on C: [Android Studio](https://dl.google.com/dl/android/studio/install/3.0.1.0/android-studio-ide-171.4443003-windows.exe).
-Use Android Studio's SDK Manager to install the latest Android Platform Tools and desired SDKs and NDK.
-
-> Download and decompress on C: [Apache Ant](http://www-eu.apache.org/dist//ant/binaries/apache-ant-1.10.1-bin.zip)
-
-_Step 2._ Create the following environment variables:
-
-Android Studio installs the NDK in a ndk-bundle folder inside the SDK folder location (where ever you installed it).
-
-    ANDROID_HOME = C:\android-sdk
-    ANDROID_SDK_TOOLS = C:\android-sdk\platform-tools
-    ANDROID_NDK = C:\android-sdk\ndk-bundle
-    ANT_HOME = C:\apache-ant
+1. [Java 8 JDK and JRE](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+2. Android SDK, just required the [command line tools](https://developer.android.com/studio/#downloads)
+3. [Android NDK](https://developer.android.com/ndk/downloads/)
 
 ### Compiling raylib source code
 
-To compile raylib src it's required to install a [custom ndk standalone toolchain](https://developer.android.com/ndk/guides/standalone_toolchain.html).
- Build toolchain with this command:
+To compile raylib sources, it's recommended to use [Android NDK standalone toolchain](https://developer.android.com/ndk/guides/standalone_toolchain.html).
+
+You can build the toolchain with this command:
 
     python %ANDROID_NDK%\build\tools\make_standalone_toolchain.py --arch arm --api 16 --install-dir=C:\android_toolchain_arm_api16
 
@@ -62,9 +49,6 @@ _Step 4:_ To view log output from device:
 
     %ANDROID_SDK_TOOLS%\adb logcat -c
     %ANDROID_SDK_TOOLS%\adb -d  logcat raylib:V *:S
-
-Again, Notepad++ comes with an already prepared script to do that. Just open `raylib/templates/simple_game/simple_game.c` and run Notepad++ script `raylib_compile_android_project_run_log`.
-
 
 **If you have any doubt, [just let me know][raysan5].**
 
