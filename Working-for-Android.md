@@ -4,6 +4,9 @@ To build your raylib game for Android you need a set of Android tools. Those too
 
 1. [Java 8 JDK and JRE](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 2. Android SDK, just required the [command line tools](https://developer.android.com/studio/#downloads)
+
+  We will use the [SDKManager](https://developer.android.com/studio/command-line/sdkmanager) to install all required tools
+
 3. [Android NDK](https://developer.android.com/ndk/downloads/)
 
 ### Compiling raylib source code
