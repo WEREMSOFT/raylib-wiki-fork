@@ -7,9 +7,9 @@ Download emscripten SDK from [here](http://kripken.github.io/emscripten-site/doc
     emsdk install git-1.9.4
     emsdk update
     emsdk list
-    emsdk install sdk-1.38.6-64bit
+    emsdk install sdk-1.38.8-64bit
 
-_NOTE: If a newer preconpiled SDK version (newer than sdk-1.38.6-64bit) is available, install new version. Precompiled SDK already includes version of **clang**, **emscripten**, **python**, **java JDK** and **node.js**, so you don't have to install it separately._
+_NOTE: If a newer preconpiled SDK version (newer than sdk-1.38.8-64bit) is available, install new version. Precompiled SDK already includes version of **clang**, **emscripten**, **python**, **java JDK** and **node.js**, so you don't have to install it separately._
 
 ### Compiling raylib source code
 
