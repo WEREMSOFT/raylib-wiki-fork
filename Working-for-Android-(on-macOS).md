@@ -39,7 +39,7 @@ This is simple as in we're just using shell commands, no cmake, no builders of a
         } 
     } 
 
-AndroidManifest.xml
+### AndroidManifest.xml
 
 > Note: "package" is the unique name of your project, this will overwrite apps with the same name
 
@@ -87,7 +87,7 @@ Install ndk-bundle using Android Studio. Install this in t
 
 ## Install raylib
 
-    Compile Raylib into ./raylib
+    Compile raylib into ./raylib
 
 ## ~/.bash_profile
 
