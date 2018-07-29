@@ -96,7 +96,7 @@ You may do the otool check with the file in raylib/src/libs/osx/libraylib.a here
 copy raylib/src/libs/osx/libraylib.a to your project.
 
 4. Build your project!
-clang  -framework OpenAL -framework CoreVideo -framework IOKit -framework Cocoa -framework GLUT -framework OpenGL  libraylib.a libglfw3.a my_app.c -o my_app
+`clang  -framework OpenAL -framework CoreVideo -framework IOKit -framework Cocoa -framework GLUT -framework OpenGL  libraylib.a libglfw3.a my_app.c -o my_app`
 
 Check for warnings! This can tell you if a library you're linking to was not built for OSX 10.9, in which case you'll need to rebuild that too. 
 
