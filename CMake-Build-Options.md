@@ -5,7 +5,7 @@ raylib is configurable and can be be built in a variety of ways. Following is a 
 |:-----------------------------:|:-----------------------------------------------------:|:------------:|
 |`USE_EXTERNAL_GLFW`            | Link raylib against system GLFW instead of embedded one | **`OFF`** `ON` `IF_POSSIBLE`|
 |`PLATFORM`                     | Platform to build for. | **`Desktop`** `Web` `Android` `Raspberry Pi`|
-|`OPENGL_VERSION`               | OpenGL Version to build raylib with | **`3.3`** `2.1` `1.1` `ES 2.0`|
+|`OPENGL_VERSION`               | Force a specific OpenGL Version? | **`OFF`** `3.3` `2.1` `1.1` `ES 2.0`|
  
 | **Binary Option**                        | **Description**                                           | **Default** Value|
 |:-----------------------------:|:-----------------------------------------------------:|:------------:|
