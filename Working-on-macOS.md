@@ -1,4 +1,4 @@
-## Building Library
+## Building Library with Xcode
 
 This guide has been written using the following software:
 - OSX El Capitan (10.11.3)
@@ -37,12 +37,11 @@ _Steps:_
 ```
 - If everything worked ok, `libraylib.a` should be created in `raylib-master/release/osx` folder.
 
-5) Add generated libraries (raylib, glfw3) to Xcode project.
+5) Add generated libraries (raylib) to Xcode project.
 - Create a new Xcode project using `Command Line Tool`. Make sure selected language is C.
 - Once project created and open, Mouse click over the project main folder in the left project-navigation panel. It should appear `Build Phases` window, just enter and select `Link Binary With Libraries`. There you should add project libraries:
-- To add OpenGL and OpenAL: Click on + and add OpenGL.framework and OpenAL.framework
+- To add OpenGL: Click on + and add OpenGL.framework
 - To add raylib: Click on + and `Add Other...`, look for `libraylib.a` file created previously, it should be in folder `raylib-master/release/osx` (make sure library has been created in that folder).
-- To add GLFW3: Click on + and `Add Other...`, look for folder `/usr/local/lib` and look for file `libglfw3(version).dylib`. 
 - Make sure Xcode finds `raylib.h`: Go to `Build Settings > Search Paths` and add raylib header folder (`raylib-master/src`) to `Header Search Paths` 
 - Make sure Xcode finds `libraylib.a`: Go to `Build Settings > Search Paths` and add raylib library folder (`raylib-master/release/osx`) to `Library Search Paths`.
 
@@ -63,28 +62,7 @@ Building statically means you can run this application on other machines with ea
 
 1. From the command line:
 `export MACOSX_DEPLOYMENT_TARGET=10.9`
-2. Build glfw (With the export command above it will now run on older macs)
-By default it builds a dynamic library, and we want static so we need to download the repository from github, and use a special cmake modifier:
-````
-git clone https://github.com/glfw/glfw.git
-cd glfw
-cmake -DBUILD_SHARED_LIBS=OFF
-make
-````
-Now, in the src folder of the glfw folder there should be a file called "libglfw3.a"
-
-Confirm that this build matches the version number:
-`otool -l libglfw3.a`
-
-You should see a lot of stuff but scan for this:
-````
- cmd LC_VERSION_MIN_MACOSX
- cmdsize 16
- version 10.9
-````
-Okay you're good. Copy glfw/src/libglfw3.a to the folder of your project for easy access.
-
-3. Build raylib (Again, this is so the export line takes affect) 
+2. Build raylib (Again, this is so the export line takes affect) 
 
 ````
 git clone https://github.com/raysan5/raylib.git
@@ -97,17 +75,13 @@ copy raylib/src/libs/osx/libraylib.a to your project.
 
 4. Build your project!
 ```
-clang  -framework OpenAL -framework CoreVideo -framework IOKit -framework Cocoa -framework GLUT -framework OpenGL  libraylib.a libglfw3.a my_app.c -o my_app
+clang -framework CoreVideo -framework IOKit -framework Cocoa -framework GLUT -framework OpenGL  libraylib.a my_app.c -o my_app
 ```
 
 Check for warnings! This can tell you if a library you're linking to was not built for OSX 10.9, in which case you'll need to rebuild that too. 
 
 Check otool one last time for the LC_VERSION_MIN_MACOSX version:
 `otool -l my_app`
-
-
-Right now 1/9/2018, this works with the master branch, but not the development branch.
-
 
 Last thing, let me show you something cool:
 
