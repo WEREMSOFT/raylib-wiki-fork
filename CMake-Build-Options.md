@@ -26,7 +26,8 @@ raylib is configurable and can be be built in a variety of ways. Following is a 
 |`SUPPORT_DISTORTION_SHADER`    | Include stereo rendering distortion shader (shader_distortion.h) | `ON`|
 |`SUPPORT_FONT_TEXTURE`         | Draw rectangle shapes using font texture white character instead of default white texture. Allows drawing rectangles and text with a single draw call, very useful for GUI systems! | `ON`|
 |`SUPPORT_QUADS_DRAW_MODE`      | Use QUADS instead of TRIANGLES for drawing when possible. Some lines-based shapes could still use lines | `ON`|
-|`SUPPORT_IMAGE_GENERATION`     | Support proedural image generation functionality (gradient, spot, perlin-noise, cellular) | `ON`|
+|`SUPPORT_IMAGE_GENERATION`     | Support procedural image generation functionality (gradient, spot, perlin-noise, cellular) | `ON`|
+|`INCLUDE_EVERYTHING`           | Include all optional off-by-default formats in build | `OFF`|
 |`SUPPORT_FILEFORMAT_PNG`       | Support loading PNG as textures | `ON`|
 |`SUPPORT_FILEFORMAT_DDS`       | Support loading DDS as textures | `ON`|
 |`SUPPORT_FILEFORMAT_HDR`       | Support loading HDR as textures | `ON`|
