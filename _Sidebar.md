@@ -18,6 +18,7 @@
 * [Working for Android](Working-for-Android)
 * [Working for Web (HTML5)](Working-for-Web-(HTML5))
 * [Working for UWP (Universal Window Platform)](Working-for-UWP)
+* [Working anywhere with CMake](Working-with-CMake)
 
 ## Misc Help
 * [How To: Using SpriteFonts](Using-BMFonts)
