@@ -10,6 +10,8 @@ cmake --build .   # kick of the build process
 
 The `CMakeLists.txt` is self contained and will arrange to probe whether raylib has been installed and if not, it's downloaded, built and linked statically into the `core_basic_window` example application.
 
+If you want to conserve bandwidth by not downloading raylib for each project, consider installing raylib systemwide by running `cmake --build . --target install` in the raylib build directory.
+
 ## Use from within an IDE
 
 CMake supports a range of generators, which can be used to generate project files for IDEs/Build-Tools such as Visual Studio, Ninja or Sublime Text 2. e.g. for Xcode you can run `cmake -G 'Xcode' ..` to have it generate project files for import into Xcode.
