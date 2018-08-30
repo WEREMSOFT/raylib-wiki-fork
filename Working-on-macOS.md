@@ -94,7 +94,9 @@ For example if it's linking to something in /usr/local/lib, or a relative folder
 
 ## Using VSCode
 
-Copy the files from raylib/projects/VSCODE to a folder. Make sure you set the proper paths to your static build of raylib in c_cpp_properties.json and tasks.json (look for fields named <path_to_raylib>). This will be specific to your installation of raylib. Once that's done, set the default build task to the OSX debug and launch using the OSX debug configuration.
+1. Copy the files from raylib/projects/VSCODE to a folder. 
+2. Make sure you set the proper paths to your static build of raylib in c_cpp_properties.json and tasks.json (look for fields named <path_to_raylib>). This will be specific to your installation of raylib. 
+3. Set the default build task to the OSX debug and launch using the OSX debug configuration.
 
 # Bundle your app in an Application
 
