@@ -4,7 +4,7 @@ raylib is a very modular library, defined by a small number of specific and self
 
 **raylib main modules are 7:**
  - [`core`](https://github.com/raysan5/raylib/blob/master/src/core.c): Window / Graphic Context / Inputs management.
- - [`rlgl`](https://github.com/raysan5/raylib/blob/master/src/rlgl.c): Graphic API (OpenGL) wrapper and pseudo-OpenGL 1.1 translation layer.
+ - [`rlgl`](https://github.com/raysan5/raylib/blob/master/src/rlgl.h): Graphic API (OpenGL) wrapper and pseudo-OpenGL 1.1 translation layer.
  - [`shapes`](https://github.com/raysan5/raylib/blob/master/src/shapes.c): Basic 2D shapes drawing functions.
  - [`textures`](https://github.com/raysan5/raylib/blob/master/src/textures.c): Textures / Image loading and management.
  - [`text`](https://github.com/raysan5/raylib/blob/master/src/text.c): Font data loading and text drawing.
