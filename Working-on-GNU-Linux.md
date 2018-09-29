@@ -127,3 +127,21 @@ zypper in raylib-devel
 **If you have any doubt, [just let me know][raysan5].**
 
 [raysan5]: mailto:ray@raylib.com "Ramon Santamaria - Ray San"
+
+### "Unity build" - the simplest way to build a project.
+
+On linux you can easily build your project (here titled linux_platform.c) without having to mess with make files.  It's fast, and easier to reason about. This is called a unity build (no it has nothing to do with the Unity game engine)
+
+Simple create a build file, and give it executable permissions;
+```
+touch build.sh
+chmod 700 build.sh
+```
+
+The edit build.sh to read:
+```
+set -e    # if error, stop the build
+cc -g -std=c99 -c -I /opt/raylib/src linux_platform.c -o ./obj/linux_platform.o
+cc -o linux_platform  obj/linux_platform.o -s -Wall -std=c99 -I/opt/raylib/src -L/opt/raylib/release/libs/linux -lraylib -lGL -lm -lpthread -ldl -lrt -lX11
+./linux_platform
+```
