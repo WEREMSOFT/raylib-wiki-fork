@@ -1,4 +1,4 @@
-![image](https://github.com/raysan5/raylib.com/blob/master/images/raylib_architecture.png)
+![image](https://github.com/raysan5/raylib.com/blob/master/images/raylib_architecture_v2.0.png)
 
 raylib is a very modular library, defined by a small number of specific and self-contained modules. Every module is organized by its main functionality (avoiding hundreds of modules depending on other modules, like other C libraries).
 
