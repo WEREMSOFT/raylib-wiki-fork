@@ -29,7 +29,7 @@
 * [How To: Redirect-raylib-output-to-Framebuffer-1 (RPI)](Redirect-raylib-output-to-Framebuffer-1)
 * [How To: Install and configure Touchscreen (RPi)](Install-and-configure-Touchscreen-Drivers-(RPi))
 * [How To: CMake Build Options](https://github.com/raysan5/raylib/wiki/CMake-Build-Options)
-* [How To: Using raylib with VSCode](raylib-VSCode)
+* [How To: Use raylib with VSCode](raylib-VSCode)
 
 ## [FAQ](FAQ)
 
