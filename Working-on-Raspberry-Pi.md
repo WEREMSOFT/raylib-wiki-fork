@@ -35,6 +35,12 @@ sudo apt-get install libxcursor
 sudo apt-get install libxinerama
 sudo apt-get install libxrandr-dev
 sudo apt-get install libxi-dev
+sudo apt-get install libasound2-dev
+```
+raylib also works on [DietPi](https://dietpi.com/) distribution, following libraries are required:
+```
+sudo apt-get libraspberrypi-dev raspberrypi-kernel-headers
+sudo apt-get install build-essential
 ```
 
 ### Compiling raylib examples
