@@ -5,7 +5,7 @@ cd projects/CMake # You can also just download the CMakeLists.txt and the core_b
 mkdir build       # Create an out-of-tree build directory. That way build artifacts aren't mixed with source code
 cd build          # enter it
 cmake ..          # run cmake on the parent directory
-cmake --build .   # kick of the build process
+cmake --build .   # kick off the build process
 ```
 
 The `CMakeLists.txt` is self contained and will arrange to probe whether raylib has been installed and if not, it's downloaded, built and linked statically into the `core_basic_window` example application.
