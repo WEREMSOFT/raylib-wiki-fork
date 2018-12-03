@@ -31,8 +31,8 @@ NOTE: To use raylib on Raspbian desktop, you need to had previously installed al
 sudo apt-get install --no-install-recommends raspberrypi-ui-mods lxterminal gvfs
 sudo apt-get install mesa-common-dev
 sudo apt-get install libgl1-mesa-dev
-sudo apt-get install libxcursor
-sudo apt-get install libxinerama
+sudo apt-get install libxcursor-dev
+sudo apt-get install libxinerama-dev
 sudo apt-get install libxrandr-dev
 sudo apt-get install libxi-dev
 sudo apt-get install libasound2-dev
