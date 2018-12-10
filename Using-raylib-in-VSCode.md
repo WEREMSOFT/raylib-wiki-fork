@@ -18,7 +18,11 @@ in **c_cpp_properties.json** make sure
 in some cases it's **mingw32** instead of **mingw** (which comes with installer v2.0). Check your folder to see which one you have. In **tasks.json** also you have to make this change for compile to occur.
 
 ### Step 3
-Install the "C/C++" VSCode extension.
+Install the "C/C++" VSCode extension. (From Menu - **File > Preferences > Extensions**)
 
 ### Step 4
 Try launching by using the "Debug" launch configuration in the Debug tab.
+
+_or_
+
+You can Build the game using **View > Command Palette** (or Ctrl + Shift + P),  Type **Run Task** and press **Enter**. And Select the **Build Debug** option. An game executable will be created in the project folder. You can see any error in the console
