@@ -2,7 +2,7 @@
 
 To build your raylib game for Windows you need to download raylib git repository. raylib already comes with ready-to-use makefiles and CMake system to compile source code, examples and templates. You can alternative download *raylib Windows Installer*.
 
-**raylib Windows Installer** comes with all the required tool to develop with raylib, those tools are:
+**raylib Windows Installer** comes with all the required tools to develop with raylib, those tools are:
  * C Compiler (TCC or MinGW) - To compile the code, it includes all required system libraries.
  * Notepad++ (preconfigured) - To edit code, it includes ready-to-use scripts to compile code and examples.
  * raylib library - Including, source, release, examples and templates.
