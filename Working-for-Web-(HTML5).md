@@ -8,6 +8,7 @@ Download emscripten SDK from [here](http://kripken.github.io/emscripten-site/doc
     emsdk update
     emsdk list
     emsdk install sdk-1.38.8-64bit
+    emsdk activate latest
 
 _NOTE: If a newer precompiled SDK version (newer than sdk-1.38.8-64bit) is available, install new version. Precompiled SDK already includes version of **clang**, **emscripten**, **python**, **java JDK** and **node.js**, so you don't have to install it separately._
 
