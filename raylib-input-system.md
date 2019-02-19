@@ -49,8 +49,8 @@ Keyboard polling is a special case, it can use directly `stdin` inputs to read k
 
 Input | Library | Details
 :---: | :---: | ---
-KEYBOARD (1) | - | `stdin` is remapped to read keys using: `InitKeyboard()`, `ProcessKeyboard()`, `RestoreKeyboard()`
-KEYBOARD (2) | libevdev | Using standard `input_event` to read events from input device
+KEYBOARD | - | `stdin` is remapped to read keys using: `InitKeyboard()`, `ProcessKeyboard()`, `RestoreKeyboard()`
+KEYBOARD | libevdev | Using standard `input_event` to read events from input device
 MOUSE | libevdev | **Threaded**: `InitMouse()` -> `EventThreadSpawn()` -> `EventThread()`, uses `input_event`
 GAMEPAD | joystick.h | **Threaded**: `InitGamepad()` -> `GamepadThread()`, uses `js_event`
 TOUCH | libevdev | *Share `MOUSE` implementation*
