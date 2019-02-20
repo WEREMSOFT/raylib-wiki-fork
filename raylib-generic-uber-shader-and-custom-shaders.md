@@ -103,7 +103,7 @@ User can load any custom shader using provided `Material` and `Shader`structs:
 ```c
 Material material = { 0 };     // Empty material
 
-material.shader = LoadShader("custom_shader.vs", "custom_shader.fs);
+material.shader = LoadShader("custom_shader.vs", "custom_shader.fs");
 
 // Setup location points in case names are not predefined ones or more locations are required
 // Use: GetShaderLocation() and SetShaderValue*() functions
