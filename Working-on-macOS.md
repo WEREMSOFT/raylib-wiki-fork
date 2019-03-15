@@ -27,6 +27,8 @@ _Steps:_
 cc yourgame.c `pkg-config --libs --cflags raylib`
 ```
 
+You may get an error, complaining that the `pkg-config` command was not found. You can use `brew install pkgconfig` to fix that.
+
 > **NOTE**: The raylib Homebrew package tracks the latest [raylib release](https://github.com/raysan5/raylib/releases) and as such can be out of date with what's in master. For active development, we suggest building the newest development snapshot instead.
 
 ##### Build newest development snapshot from source
