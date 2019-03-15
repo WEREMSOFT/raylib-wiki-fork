@@ -22,6 +22,12 @@ _Steps:_
 ```
     brew install raylib
 ```
+- raylib installs a pkg-config file, which describes the necessary compilation and linker flags to use it with `yourgame`:
+```
+cc yourgame.c `pkg-config --libs --cflags raylib`
+```
+
+> **NOTE**: The raylib Homebrew package tracks the latest [raylib release](https://github.com/raysan5/raylib/releases) and as such can be out of date with what's in master. For active development, we suggest building the newest development snapshot instead.
 
 ##### Build newest development snapshot from source
 
