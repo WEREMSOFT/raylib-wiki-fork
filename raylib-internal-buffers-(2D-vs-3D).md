@@ -1,4 +1,4 @@
-raylib was primary conceived for 2D game programming, but with some basic 3D support. Every new raylib version, 3D support has been improvedto the point of including shaders and postprocessing effects. Dealing with 2D and 3D in an easy way required some technical trade-offs that may not be a perfect solutions for 2D or 3D, but work very well for both systems coexistence.
+raylib was primary conceived for 2D game programming, but with some basic 3D support. Every new raylib version, 3D support has been improved to the point of including shaders and postprocessing effects. Dealing with 2D and 3D in an easy way required some technical trade-offs that may not be a perfect solutions for 2D or 3D, but work very well for both systems coexistence.
 
 ### Three separate internal buffers
 
