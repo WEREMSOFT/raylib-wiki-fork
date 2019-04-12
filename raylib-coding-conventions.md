@@ -19,6 +19,7 @@ Operators | value1 + value2 | `int sum = value + 10;`
 Operators | value1 - value2 | `int res = value - 5;`
 Pointers | MyType *pointer | `Texture2D *array;`
 float values | always x.xf | `float value = 10.0f`
+Ternary Operator | (condition)? result1 : result2 | `printf("Value is 0: %s", (value == 0)? "yes" : "no");`
 
 raylib code does not use TABS, use 4 spaces instead.
 
