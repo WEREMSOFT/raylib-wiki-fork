@@ -6,4 +6,4 @@ Welcome to the raylib wiki! Here you will find information about raylib library.
 
  - Third section includes misc information on some specific topics related to raylib development, for example, creating SpriteFonts to be used with raylib or configure a external TFT for RaspberryPi.
 
-**This Wiki is open for contribution, it means, anayone can edit it to improve a section or add new pages, feel free to do it if required, just take a bit of care. :)**
+**This Wiki is open for contribution, anyone can edit it to improve a section or add new pages, feel free to do it if required, just take a bit of care. :)**
