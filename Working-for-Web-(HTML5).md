@@ -7,10 +7,10 @@ Download emscripten SDK from [here](http://kripken.github.io/emscripten-site/doc
     emsdk install git-1.9.4
     emsdk update
     emsdk list
-    emsdk install sdk-1.38.8-64bit
+    emsdk install sdk-1.38.31-64bit
     emsdk activate latest
 
-_NOTE: If a newer precompiled SDK version (newer than sdk-1.38.8-64bit) is available, install new version. Precompiled SDK already includes version of **clang**, **emscripten**, **python**, **java JDK** and **node.js**, so you don't have to install it separately._
+_NOTE: If a newer precompiled SDK version (newer than sdk-1.38.31-64bit) is available, install new version. Precompiled SDK already includes version of **clang**, **emscripten**, **python**, **java JDK** and **node.js**, so you don't have to install it separately._
 
 ### Compiling raylib source code
 
@@ -20,7 +20,7 @@ To compile raylib source code, just execute Notepad++ script: `raylib_makefile` 
 
     make PLATFORM=PLATFORM_WEB -B
 
-Generated `libraylib.bc` is copied in `..\release\libs\html5\libraylib.bc` directory.
+Generated `libraylib.bc` is placed in `raylib\src\libraylib.bc` directory.
 
 ### Preparing your raylib game for web
 
