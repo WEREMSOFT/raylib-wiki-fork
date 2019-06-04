@@ -29,9 +29,10 @@
 * [How To: Use raylib with Code::Blocks](Use-raylib-with-Code-Blocks)
 * [How To: Redirect-raylib-output-to-Framebuffer-1 (RPI)](Redirect-raylib-output-to-Framebuffer-1)
 * [How To: Install and configure Touchscreen (RPi)](Install-and-configure-Touchscreen-Drivers-(RPi))
-* [How To: CMake Build Options](https://github.com/raysan5/raylib/wiki/CMake-Build-Options)
+* [How To: CMake Build Options](CMake-Build-Options)
 * [How To: Use raylib with VSCode](Using-raylib-in-VSCode)
-* [How To: Use raylib with Eclipse](https://github.com/raysan5/raylib/wiki/Use-raylib-with-Eclipse)
+* [How To: Use raylib with Eclipse](Use-raylib-with-Eclipse)
+* [How To: Use raylib with Sublime Text](Use-raylib-with-Sublime-Text)
 
 ## [FAQ](FAQ)
 
