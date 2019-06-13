@@ -1,1 +1,1 @@
-raylib Wiki footer placeholder
+raylib Wiki footer placeholderd
