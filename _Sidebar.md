@@ -33,7 +33,7 @@
 * [How To: Use raylib with VSCode](Using-raylib-in-VSCode)
 * [How To: Use raylib with Eclipse](Use-raylib-with-Eclipse)
 * [How To: Use raylib with Sublime Text](Use-raylib-with-Sublime-Text)
-* [How To: Use rmem memory pool](raylib-memory-pool-objects-pool)
+* [How To: Use raylib memory pool](raylib-memory-pool)
 
 ## [FAQ](FAQ)
 
