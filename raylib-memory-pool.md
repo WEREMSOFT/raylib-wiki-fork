@@ -87,7 +87,7 @@ To allocate from the pool, we have two functions:
 ```
 	
 `MemPool_Realloc` works similar but it takes an existing pointers and resizes its data, it does NOT zero the memory as it exists for resizing existing data. Please note that if you resize a smaller size, the data WILL BE TRUNCATED/CUT OFF.
-If the `ptr` argument for `MemPool_Realloc`, it will work just like a call to `MemPool_Alloc`.
+If the `ptr` argument for `MemPool_Realloc` is `NULL`, it will work just like a call to `MemPool_Alloc`.
 ```c
 	// allocate an int pointer.
 	int *i = MemPool_Realloc(&pool, NULL, sizeof *i);
