@@ -1,6 +1,3 @@
-## **How can I pipe a frame buffer into a "window"? (i.e. WxWindows GraphicsContext)**
-
-(use case: I want to add a "view" pane within a multi-windowed application)
 
 
 ## **Can I run raylib in my old PC?**
