@@ -1,3 +1,5 @@
+## **How can I pipe a frame buffer into a "window"? (i.e. WxWindows GraphicsContext)**
+
 ## **Can I run raylib in my old PC?**
 
 Yes, you can. raylib comes compiled by default for OpenGL 3.3 backend but it can be recompiled for older OpenGL versions! It can be recompiled for OpenGL 1.1 (1997) and OpenGL 2.1 (2006). To do that using Notepad++, just follow this steps:
