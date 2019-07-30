@@ -12,7 +12,7 @@ You can just download the JDK from [here](http://www.oracle.com/technetwork/java
 
 Actually, Android SDK is composed by a series of tools, you can install everything in a go just downloading [Android Studio](https://developer.android.com/studio/#downloads) and installing the full package.
 
-Alternatively, you can just install the required files manually. To do that, start downloading `Command line tools` package, found at the end of this [page](https://developer.android.com/studio/#Command-line-tools).
+Alternatively, you can just install the required files manually. To do that, start downloading `Command line tools` package, found at the end of this [page](https://developer.android.com/studio/#command-tools).
 
  - Decompress downloaded `sdk-tools-...` file into a folder named `android-sdk`. One of the included tools is the [sdkmanager]((https://developer.android.com/studio/command-line/sdkmanager)), a command line utility to install required packages.
  - From command line, navigate to `android-sdk/tools/bin` and execute the following commands:
