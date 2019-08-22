@@ -19,7 +19,7 @@ Android SDK has many packages. If you want to download all of them, you can go i
 ```
 All required tools will be downloaded by these commands. You can check out package's description by looking at `./sdkmanager --list`.
 ## 3- Android NDK
-Raylib is written in C. Hence we need Android NDK. Android Native Development Kit (NDK) allows us to develop in C. You can download it from [here](https://developer.android.com/ndk/downloads/). In this case we need Android NDK because we are going to use it's compiler and API with a standalone toolchain. 
+Raylib is written in C, hence we need Android NDK. Android Native Development Kit (NDK) allows us to develop in C. You can download it from [here](https://developer.android.com/ndk/downloads/). In this case we need Android NDK because we are going to use it's compiler and API with a standalone toolchain. 
 After downloading Android NDK
 * Decompress downloaded `android-ndk-...` and rename it as `android-ndk`
 * From Terminal navigate to `android-ndk/build/tools`
