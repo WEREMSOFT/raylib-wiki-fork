@@ -38,7 +38,7 @@ Default property for `ANDROID_TOOLCHAIN` is `ANDROID_TOOLCHAIN = C:/android_tool
 
 Default property for `ANDROID_NDK` is `ANDROID_NDK = C:/android-ndk`
 
-After that navigate from Terminal to `raylib/src` and, compile Raylib with `make PLATFORM=PLATFORM_ANDROID`
+After that navigate from Terminal to `raylib/src` and compile Raylib with `make PLATFORM=PLATFORM_ANDROID`
 
 This command will create `libraylib.a` in `/src`.
 
