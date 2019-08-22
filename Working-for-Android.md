@@ -1,4 +1,4 @@
-**NOTE: For alternative instructions, check [Working for Android (on macOS)](https://github.com/raysan5/raylib/wiki/Working-for-Android-(on-macOS)).**
+**NOTE: For alternative instructions, check [Working for Android (on macOS)](https://github.com/raysan5/raylib/wiki/Working-for-Android-(on-macOS)) and [Working for Android (on Linux)](https://github.com/raysan5/raylib/wiki/Working-for-Android-(on-Linux))**
 
 ## Installing Android required tools
 
