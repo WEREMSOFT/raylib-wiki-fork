@@ -22,4 +22,6 @@ Assuming you are using **Visual Studio 2017** and you downloaded raylib from **g
 
 7. Apply the changes and press **Ctrl + Shift + B** for start building your solution.
 
+** Alternatively, you can use vcpkg (https://github.com/microsoft/vcpkg) to automatically link the library for you when you include the header **
+
 **Note:** it may be required building **raylib.lib** file for your specific **Visual Studio** version, you can do this with pre-configured [Visual Studio project templates](https://github.com/raysan5/raylib/tree/master/projects/).
