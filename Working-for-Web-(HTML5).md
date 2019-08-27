@@ -9,7 +9,7 @@ After that, go to emsdk intallation folder, run `emcmdprompt.bat` and execute th
     emsdk install latest
     emsdk activate latest
 
-_NOTE: UIpdated installation notes are always [available here](https://emscripten.org/docs/getting_started/downloads.html)._
+_NOTE: Updated installation notes are always [available here](https://emscripten.org/docs/getting_started/downloads.html)._
 
 ### Compiling raylib source code
 
