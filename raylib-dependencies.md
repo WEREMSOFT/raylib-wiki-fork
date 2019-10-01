@@ -32,7 +32,7 @@ Despite raylib requires no external dependencies, there are some platform-specif
 
 PLATFORM | external dependencies | Notes
 --- | :---: | ---
-DESKTOP:Windows | `OpenGL`, `winmm.lib`, `gdi32`, `user32`, `kernel32` | Required for window creation
+DESKTOP:Windows | `OpenGL`, `winmm`, `gdi32`, `user32`, `kernel32` | Required for window creation
 DESKTOP:Linux | `OpenGL`, `X11` | Also requires linkage with `libm`(math), `pthreads`(POSIX threads), `dl`(dynamic loading) and `X11` window system specific libs: `X11`, `Xrandr`, `Xinerama`, `Xi`, `Xxf86vm` and `Xcursor`
 DESKTOP:FreeBSD | `OpenGL`, `X11` | Also requires linkage with `libm`(math), `pthreads`(POSIX threads), `dl`(dynamic loading) and `X11` window system specific libs: `X11`, `Xrandr`, `Xinerama`, `Xi`, `Xxf86vm` and `Xcursor`
 DESKTOP:OSX | `OpenGL`, `Cocoa` | Required for window creation
