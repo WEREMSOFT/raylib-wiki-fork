@@ -48,7 +48,11 @@ You may get an error, complaining that the `pkg-config` command was not found. Y
 5) Add generated libraries (raylib) to Xcode project.
 - Create a new Xcode project using `Command Line Tool`. Make sure selected language is C.
 - Once project created and open, Mouse click over the project main folder in the left project-navigation panel. It should appear `Build Phases` window, just enter and select `Link Binary With Libraries`. There you should add project libraries:
-- To add OpenGL: Click on + and add OpenGL.framework
+  - To add OpenGL: Click on + and add OpenGL.framework
+  - You may also need to add these frameworks in the same way:
+    - CoreVideo.framework
+    - IOKit.framework
+    - Cocoa.framework
 - To add raylib: Click on + and `Add Other...`, look for `libraylib.a` file created previously, it should be in folder `raylib-master/release/osx` (make sure library has been created in that folder).
 - Make sure Xcode finds `raylib.h`: Go to `Build Settings > Search Paths` and add raylib header folder (`raylib-master/src`) to `Header Search Paths` 
 - Make sure Xcode finds `libraylib.a`: Go to `Build Settings > Search Paths` and add raylib library folder (`raylib-master/release/osx`) to `Library Search Paths`.
