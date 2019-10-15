@@ -9,7 +9,7 @@
 * [raylib internal buffers](raylib-internal-buffers-(2D-vs-3D))
 * [raylib custom shaders](raylib-generic-uber-shader-and-custom-shaders)
 * [raylib coding conventions](raylib-coding-conventions)
-* [raylib custom allocators](raylib-memory-pool)
+* [raylib memory pools](raylib-memory-pool)
 
 ## Development Platforms
 * [Working on Windows](Working-on-Windows)
