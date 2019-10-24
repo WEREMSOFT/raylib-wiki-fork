@@ -1,6 +1,6 @@
 raylib 2.0 has no **external** dependencies, all required libraries are included with raylib sources.
 
-Internally, raylib uses some libraries developed by other people, most of them used for some very specific task, like loading a specific fileformat or initialize audio device.
+Internally, raylib uses some libraries developed by other people, most of them used for some very specific task, like loading a specific file format or managing the audio device.
 
 Here is the list of dependencies used by raylib. Note that most of these dependencies are [single-header public-domain libraries](https://github.com/nothings/stb) that are [included in raylib repository](https://github.com/raysan5/raylib/tree/master/src/external).
 
