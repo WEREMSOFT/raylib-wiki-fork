@@ -17,7 +17,7 @@ raylib provides some basic data structures to organize game information. Those s
     struct RenderTexture    // Alias for RenderTexture
     struct RenderTexture2D; // RenderTexture2D type, for texture rendering
     struct CharInfo;        // Font Character Info
-    struct Font;            // Font type, includes texture and charSet array data (SprintFont fallback)
+    struct Font;            // Font type, includes texture and charSet array data (SpriteFont fallback)
     
     struct Camera;          // Alias for Camera3D
     struct Camera2D;        // Camera2D type, defines a 2d camera
