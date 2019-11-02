@@ -6,8 +6,16 @@ Download [emscripten SDK](http://kripken.github.io/emscripten-site/docs/getting_
 
 After that, go to emsdk intallation folder, run `emcmdprompt.bat` and execute the following commands:
 
-    emsdk install latest
-    emsdk activate latest
+```
+emsdk install latest-fastcomp
+emsdk activate latest-fastcomp
+```
+
+This will update the latest version of the **fastcomp** compiler which needed to be able to use the [Emterpreter](https://github.com/emscripten-core/emscripten/wiki/Emterpreter). `EMPTERPRETIFY` is not supported on the WASM backend that is the default one in newer versions.
+
+On Linux and macOS you will also need to set the proper environment so that raylib build system can find the Emscripten compiler:
+
+`source ./emsdk_env.sh`
 
 _NOTE: Updated installation notes are always [available here](https://emscripten.org/docs/getting_started/downloads.html)._
 
@@ -15,13 +23,21 @@ _NOTE: Updated installation notes are always [available here](https://emscripten
 
 Before compiling your game, raylib library must be recompiled for HTML5, generating `libraylib.bc`.
 
+#### Using Makefile
 Before compiling raylib, make sure all paths to emscripten sdk path (`EMSDK_PATH`) and version (`EMSCRIPTEN_VERSION`) are correctly configured on `C:/raylib/raylib/src/Makefile`, you must verify [this lines](https://github.com/raysan5/raylib/blob/master/src/Makefile#L149).
 
 To compile raylib source code, just execute Notepad++ script: `raylib_makefile` and `SET PLATFORM=PLATFORM_WEB`. That script just calls the following `make` line (in case you're are working on a custom environment):
 
-    make PLATFORM=PLATFORM_WEB -B
+`make PLATFORM=PLATFORM_WEB -B`
 
 Generated `libraylib.bc` is placed in `raylib\src\libraylib.bc` directory.
+
+#### Using CMake
+
+```
+cmake -H. -Bbuild -DPLATFORM=Web -GNinja -DCMAKE_TOOLCHAIN_FILE=cmake/emscripten.cmake
+cmake --build build
+```
 
 ### Preparing your raylib game for web
 
