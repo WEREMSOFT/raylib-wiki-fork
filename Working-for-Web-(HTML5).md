@@ -24,9 +24,39 @@ _NOTE: Updated installation notes are always [available here](https://emscripten
 Before compiling your game, raylib library must be recompiled for HTML5, generating `libraylib.bc`.
 
 #### Using Makefile
+
+* For Windows users :
+
 Before compiling raylib, make sure all paths to emscripten sdk path (`EMSDK_PATH`) and version (`EMSCRIPTEN_VERSION`) are correctly configured on `C:/raylib/raylib/src/Makefile`, you must verify [this lines](https://github.com/raysan5/raylib/blob/master/src/Makefile#L149).
 
-To compile raylib source code, just execute Notepad++ script: `raylib_makefile` and `SET PLATFORM=PLATFORM_WEB`. That script just calls the following `make` line (in case you're are working on a custom environment):
+* For Linux users :
+
+You have to modify 3 variables :(`EMSDK_PATH`) (`PYTHON_PATH`) and (`PATH`). Just verify inside the emsdk directory if you have correct paths for (`EMSCRIPTEN_PATH`), (`CLANG_PATH`) and (`NODE_PATH`).
+
+(`EMSDK_PATH`) have to correspond to where you downloaded emscripten.
+
+To find the path of python2.7 you can use the command below and copy paste the path.
+```
+type -a python2.7
+```
+
+You must set the (`PATH`) to :
+```
+$(shell printenv PATH):$(EMSDK_PATH):$(EMSCRIPTEN_PATH):$(CLANG_PATH):$(NODE_PATH):$(PYTHON_PATH)
+```
+
+So this part of your MakeFile should look like below if you are on Linux :
+```
+    EMSDK_PATH         ?= /path/to/emsdk
+    EMSCRIPTEN_PATH    ?= $(EMSDK_PATH)/fastcomp/emscripten
+    CLANG_PATH          = $(EMSDK_PATH)/fastcomp/bin
+    PYTHON_PATH         = /usr/bin/python2.7
+    NODE_PATH           = $(EMSDK_PATH)/node/12.9.1_64bit/bin
+    PATH = $(shell printenv PATH):$(EMSDK_PATH):$(EMSCRIPTEN_PATH):$(CLANG_PATH):$(NODE_PATH):$(PYTHON_PATH)
+```
+* For all users :
+
+To compile raylib source code, just execute Notepad++ script: `raylib_makefile` and `SET PLATFORM=PLATFORM_WEB`. That script just calls the following `make` line (in case you're are working on a custom environment):note
 
 `make PLATFORM=PLATFORM_WEB -B`
 
