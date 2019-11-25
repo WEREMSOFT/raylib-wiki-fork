@@ -7,7 +7,7 @@ To build your raylib game for Windows you need to download raylib git repository
  * Notepad++ (preconfigured) - To edit code, it includes ready-to-use scripts to compile code and examples.
  * raylib library - Including, source, release, examples and templates.
 
-If you want to use another code editor like Visual Studio or another compiler you can also use them but this instructions below are focused on raylib standard development tools: Notepad++ and TCC/MinGW.
+If you want, you can a different code editor (e.g. Visual Studio) or another compiler, but the following instructions are focused on raylib standard development tools: Notepad++ and TCC/MinGW.
 
 ### Build raylib using Notepad++ script
 
