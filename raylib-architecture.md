@@ -9,7 +9,7 @@ raylib is a very modular library, defined by a small number of specific and self
  - [`textures`](https://github.com/raysan5/raylib/blob/master/src/textures.c): Textures / Image loading and management.
  - [`text`](https://github.com/raysan5/raylib/blob/master/src/text.c): Font data loading and text drawing.
  - [`models`](https://github.com/raysan5/raylib/blob/master/src/models.c): 3D models loading and drawing.
- - [`raudio`](https://github.com/raysan5/raylib/blob/master/src/audio.c): Audio device management and sounds / music loading and playing.
+ - [`raudio`](https://github.com/raysan5/raylib/blob/master/src/raudio.c): Audio device management and sounds / music loading and playing.
 
 Those 7 modules share a common header: [`raylib.h`](https://github.com/raysan5/raylib/blob/master/src/raylib.h), all user functions are defined in that header, despite the fact they are divided internally in 7 modules. That way, the user just needs to include `raylib.h` to get all raylib functionality. Other libraries use one header for every module (that way the user can choose included modules) or also headers that refer to other headers. raylib uses a simpler approach that's easier for novice (and expert) users.
 
