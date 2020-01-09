@@ -1,16 +1,16 @@
-Dealing with custom shaders and making them generic is not an easy task. There are many things to consider for a shader because, after all, the shader is responsible for processing all the data sent to the GPU (mesh, materials, textures, lighting) to generate the final frame.
+Dealing with custom shaders and making them generic is not an easy task. There are many things to consider for a shader because, after all, shaders are responsible for processing all the data sent to the GPU (mesh, materials, textures, lighting) to generate the final frame.
 
-Finding a unified generic shader to deal with all kinds of stuff is very complicated and, after analyzing some of the big engines out there, I decided to go for a custom uber-shader-based solution.
+Finding a unified generic shader to deal with all kinds of stuff is very complicated so, after analyzing some of the big engines out there, I decided to go for a custom uber-shader-based solution.
 
 By default, raylib's shader struct is defined as:
 ```c
 typedef struct Shader {
-    unsigned int id;                // Shader program id
-    int locs[MAX_SHADER_LOCATIONS]; // Shader locations array
+    unsigned int id;   // Shader program id
+    int *locs;         // Shader locations array (MAX_SHADER_LOCATIONS)
 } Shader;
 ```
 
-This struct provides an array to store shader locations, those locations can be accessed by position using predefined values for convenience:
+This struct provides an array to store shader locations, those locations can be accessed by position using predefined enum values for convenience:
 ```c
 // Shader location point type
 typedef enum {
@@ -45,7 +45,7 @@ typedef enum {
 #define LOC_MAP_SPECULAR     LOC_MAP_METALNESS
 ```
 
-On shader loading, the following location names are checked:
+On shader loading, the following GLSL location names are checked:
 ```glsl
 uniform mat4 mvp;             // VS: ModelViewProjection matrix
 uniform mat4 projection;      // VS: Projection matrix
@@ -58,17 +58,15 @@ uniform sampler2D texture2;   // FS: GL_TEXTURE2
 
 Shaders are also directly related to the Material struct:
 ```c
-// Material type
-typedef struct Material {
 // Material type (generic)
 typedef struct Material {
     Shader shader;          // Material shader
-    MaterialMap maps[MAX_MATERIAL_MAPS]; // Material maps
+    MaterialMap *maps;      // Material maps array (MAX_MATERIAL_MAPS)
     float *params;          // Material generic parameters (if required)
 } Material;
 ```
 
-Material support by default a number of maps (texture and properties) that can be accessed for convenience using the provided values:
+Material supports by default a number of maps (texture and properties) that can be accessed for convenience using the provided values:
 
 ```c
 // Material map type
@@ -94,8 +92,8 @@ When drawing, maps are internally bound or not depending on the availability:
 ```c
 // Default material loading example
 Material material = LoadMaterialDefault();                      // Default shader assigned to material
-material.maps[MAP_DIFFUSE] = LoadTexture("tex_diffuse.png");    // texture unit 0 activated (available in material shader)
-material.maps[MAP_SPECULAR] = LoadTexture("tex_specular.png");  // texture unit 1 activated (available in material shader)
+material.maps[MAP_DIFFUSE].texture = LoadTexture("tex_diffuse.png");    // texture unit 0 activated (available in material shader)
+material.maps[MAP_SPECULAR].texture = LoadTexture("tex_specular.png");  // texture unit 1 activated (available in material shader)
 ```
 
 User can load any custom shader using provided `Material` and `Shader`structs:
@@ -108,7 +106,7 @@ material.shader = LoadShader("custom_shader.vs", "custom_shader.fs");
 // Setup location points in case names are not predefined ones or more locations are required
 // Use: GetShaderLocation() and SetShaderValue*() functions
 
-material.maps[0] = LoadTexture("tex_albedo.png");
-material.maps[1] = LoadTexture("tex_metalness.png");
-material.maps[2] = LoadTexture("tex_normal.png");
+material.maps[0].texture = LoadTexture("tex_albedo.png");
+material.maps[1].texture = LoadTexture("tex_metalness.png");
+material.maps[2].texture = LoadTexture("tex_normal.png");
 ```
