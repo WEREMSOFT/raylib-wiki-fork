@@ -21,7 +21,7 @@ PLATFORM Flag | Platform/OS | OpenGL version | Notes
 --- | :-------: | :-------: | ---
 PLATFORM_DESKTOP | Windows | `OpenGL ES 2.0` | Support through two possible ways: <br> - `WGL_EXT_create_context_es2_profile` extension<br> - [ANGLE](https://github.com/google/angle) project
 PLATFORM_DESKTOP | Linux | `OpenGL ES 2.0` | Support through: <br> - `GLX_EXT_create_context_es2_profile` extension
-PLATFORM_ANDROID | Android | `OpenGL ES 3.0` | Only about [63% Android devices](https://developer.android.com/about/dashboards/index.html) support it.
+PLATFORM_ANDROID | Android | `OpenGL ES 3.0` | Check [Android support here](https://developer.android.com/about/dashboards/index.html).
 PLATFORM_WEB | HTML5 (browser) | `WebGL 2.0` <br>`(OpenGL ES 3.0)` | `OpenGL ES 3.0` transformed to `WebGL 2.0` <br> on compilation (using `emscripten SDK`).
 
 Please let me know if you require one of those backends to be implemented.
