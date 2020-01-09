@@ -1,4 +1,4 @@
-raylib 2.0 has no **external** dependencies, all required libraries are included with raylib sources.
+raylib has no **external** dependencies, all required libraries are included with raylib sources.
 
 Internally, raylib uses some libraries developed by other people, most of them used for some very specific task, like loading a specific file format or managing the audio device.
 
@@ -28,7 +28,7 @@ Library | Version | raylib module | Notes
 
 Note that raylib supports multiple platforms and, consequently, not all library dependencies from above are the same for all supported platforms. As commented, some of the above libraries included in raylib are single-file header-only libraries (`stb_image`, `stb_image_write`, `stb_image_resize`, `stb_vorbis`, `jar_mod`, `jar_xm`, `glad`, `mini_al`), most of those libraries only depend on the C standard library for the target platform (msvcrt, libc, bionic) and are compiled together with raylib—no need for additional library linkage.
 
-Despite raylib requires no external dependencies, there are some platform-specific system libraries that require to be linked on examples/games compilation. Here it is a table with required libraries:
+Despite raylib requires no external dependencies, there are some platform-specific system libraries that are required to be linked on examples/games compilation. Here it is a table with required libraries:
 
 PLATFORM | external dependencies | Notes
 --- | :---: | ---
@@ -43,5 +43,3 @@ HTML5 (Web) | `WebGL` | Code must be compiled using `emscripten SDK`, dependenci
 raylib design is [very modular](http://www.raylib.com/images/raylib_architecture.png). Some modules can be removed on compilation if they're not required and consequently the libraries used by those modules. 
 
 Some modules can also be used as standalone, *independently* of raylib: [rlgl](https://github.com/raysan5/raylib/blob/develop/examples/others/rlgl_standalone.c), [raudio](https://github.com/raysan5/raylib/blob/develop/examples/others/raudio_standalone.c).
-
-One of raylib goals is to avoid any external dependencies, so I'll keep working to reduce this list as much as possible.
