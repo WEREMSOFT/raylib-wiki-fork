@@ -1,6 +1,6 @@
 raylib input system basically uses an event polling mechanism, centralized on raylib [core module](https://github.com/raysan5/raylib/blob/master/src/core.c).
 
-At the end of the game loop, `EndDrawing()` function is called. This function calls `SwapBuffers()` and `PollInputEvents()`, multiple input devices are scanned at that moment and states are reqistered.
+At the end of the game loop, `EndDrawing()` function is called. This function calls `SwapBuffers()` and `PollInputEvents()`, multiple input devices are scanned at that moment and states are registered.
 
 Depending on the platform, input events are managed using different mechanisms. 
 
@@ -19,7 +19,7 @@ TOUCH | - | Not available by default. Mouse clicks are mapped to touch events us
  
 PLATFORM_WEB
 --------------
-Some of the inputs in this platform are directly using GLFW3 because the library has been partially [ported to emscripten](https://github.com/emscripten-core/emscripten/blob/incoming/src/library_glfw.js). Despite that, gamepad and touch inputs are directly managed using emscripten API.
+Some inputs in this platform are directly using GLFW3 because the library has been partially [ported to emscripten](https://github.com/emscripten-core/emscripten/blob/incoming/src/library_glfw.js). Despite that, gamepad and touch inputs are directly managed using emscripten API.
 
 Input | Library | Details
 :---: | :---: | ---
@@ -32,7 +32,7 @@ PLATFORM_ANDROID
 ------------------
 Android NDK provides its own events polling system: `ALooper_pollAll()`, called on `PollInputEvents()`.
 
-Using `AndroidInputCallback()`, all inputs can be later processed. Currently only some inputs are processed but additional inputs could be processed
+Using `AndroidInputCallback()`, all inputs can be later processed. Currently, only some inputs are processed but additional inputs could be processed
 
 Input | Library | Details
 :---: | :---: | ---
