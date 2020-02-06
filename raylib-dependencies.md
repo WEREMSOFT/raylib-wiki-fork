@@ -8,7 +8,7 @@ _**NOTE: Last update on February 6th 2020 for raylib 3.0 release**_
 
 Library | Version | raylib module | Notes
 --- | :---: | :---: | ---
-[GLFW3](http://www.glfw.org/) | 3.3.1 | [rglfw](https://github.com/raysan5/raylib/blob/master/src/rglfw.c) | Window and input management
+[GLFW3](http://www.glfw.org/) | 3.4-master | [rglfw](https://github.com/raysan5/raylib/blob/master/src/rglfw.c) | Window and input management
 [rgif](https://github.com/raysan5/raylib/blob/master/src/external/rgif.h) | 0.5| [core](https://github.com/raysan5/raylib/blob/master/src/core.c) | GIF recording basic functionality
 [GLAD](https://github.com/raysan5/raylib/blob/master/src/external/glad.h) | 0.1.10a0 | [rlgl](https://github.com/raysan5/raylib/blob/master/src/rlgl.c) | Extensions initialization for OpenGL 3.3 Core
 [stb_image](https://github.com/raysan5/raylib/blob/master/src/external/stb_image.h) | 2.25 | [textures](https://github.com/raysan5/raylib/blob/master/src/texture.c) | Multiple image formats loading
