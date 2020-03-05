@@ -8,7 +8,7 @@ This is simple as in we're just using shell commands, no cmake, no builders of a
 
 > Note: project.c is copied from raylib/templates/simple_game/simple_game.c
 
-    /toolchain_arm_api22    put android_toolchain_arm_api22 here
+    /toolchain_arm_api28    put android_toolchain_arm_api28 here
     /raylib                 put raylib here
     /project1/lib
     /project1/obj
@@ -83,7 +83,7 @@ This is simple as in we're just using shell commands, no cmake, no builders of a
 
 Install ndk-bundle using Android Studio. Install this in t
     
-    ~/Library/Android/sdk/ndk-bundle/build/tools/make-standalone-toolchain.sh --arch=arm --platform=android-22 --install-dir=./toolchain_arm_api22
+    ~/Library/Android/sdk/ndk-bundle/build/tools/make-standalone-toolchain.sh --arch=arm --platform=android-28 --install-dir=./toolchain_arm_api28
 
 ## Install raylib
 
@@ -112,33 +112,33 @@ Install ndk-bundle using Android Studio. Install this in t
 
 > Note: Here's step by step commands which lead to the installation of your project!
 
-    ../toolchain_arm_api22/bin/arm-linux-androideabi-gcc -c ../raylib/src/external/android/native_app_glue/android_native_app_glue.c -o obj/native_app_glue.o -std=c99 -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -ffunction-sections -funwind-tables -fstack-protector-strong -fPIC -Wall -Wa,--noexecstack -Wformat -Werror=format-security -no-canonical-prefixes -DANDROID -DPLATFORM_ANDROID -D__ANDROID_API__=22
+    ../toolchain_arm_api28/bin/arm-linux-androideabi-gcc -c ../raylib/src/external/android/native_app_glue/android_native_app_glue.c -o obj/native_app_glue.o -std=c99 -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -ffunction-sections -funwind-tables -fstack-protector-strong -fPIC -Wall -Wa,--noexecstack -Wformat -Werror=format-security -no-canonical-prefixes -DANDROID -DPLATFORM_ANDROID -D__ANDROID_API__=28
 
     # Requires: folder setup
     # Creates: obj/native_app_glue.o
     # Note: This gcc uses other tools in the same toolchain folder structure, don't even thing about symlinking to it.
 
-    ../toolchain_arm_api22/bin/arm-linux-androideabi-ar rcs obj/libnative_app_glue.a obj/native_app_glue.o
+    ../toolchain_arm_api28/bin/arm-linux-androideabi-ar rcs obj/libnative_app_glue.a obj/native_app_glue.o
 
     # Requires: obj/native_app_glue.o
     # Creates: obj/libnative_app_glue.a
 
-    ../toolchain_arm_api22/bin/arm-linux-androideabi-gcc -c project.c -o obj/project.o -I. -I../raylib/src -I../raylib/src/external/android/native_app_glue -std=c99 -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -ffunction-sections -funwind-tables -fstack-protector-strong -fPIC -Wall -Wa,--noexecstack -Wformat -Werror=format-security -no-canonical-prefixes -DANDROID -DPLATFORM_ANDROID -D__ANDROID_API__=22 --sysroot=../toolchain_arm_api22/sysroot
+    ../toolchain_arm_api28/bin/arm-linux-androideabi-gcc -c project.c -o obj/project.o -I. -I../raylib/src -I../raylib/src/external/android/native_app_glue -std=c99 -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -ffunction-sections -funwind-tables -fstack-protector-strong -fPIC -Wall -Wa,--noexecstack -Wformat -Werror=format-security -no-canonical-prefixes -DANDROID -DPLATFORM_ANDROID -D__ANDROID_API__=28 --sysroot=../toolchain_arm_api28/sysroot
 
     # Requires: project.c
     # Creates: obj/project.o
 
-    ../toolchain_arm_api22/bin/arm-linux-androideabi-gcc -o lib/armeabi-v7a/libproject.so obj/project.o -shared -I. -I../raylib/src -I../raylib/src/external/android/native_app_glue -Wl,-soname,libproject.so -Wl,--exclude-libs,libatomic.a -Wl,--build-id -Wl,--no-undefined -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now -Wl,--warn-shared-textrel -Wl,--fatal-warnings -u ANativeActivity_onCreate -L. -Lobj -Llib/armeabi-v7a -lraylib -lnative_app_glue -llog -landroid -lEGL -lGLESv2 -lOpenSLES -latomic -lc -lm -ldl
+    ../toolchain_arm_api28/bin/arm-linux-androideabi-gcc -o lib/armeabi-v7a/libproject.so obj/project.o -shared -I. -I../raylib/src -I../raylib/src/external/android/native_app_glue -Wl,-soname,libproject.so -Wl,--exclude-libs,libatomic.a -Wl,--build-id -Wl,--no-undefined -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now -Wl,--warn-shared-textrel -Wl,--fatal-warnings -u ANativeActivity_onCreate -L. -Lobj -Llib/armeabi-v7a -lraylib -lnative_app_glue -llog -landroid -lEGL -lGLESv2 -lOpenSLES -latomic -lc -lm -ldl
 
     # Requires: obj/project.o
     # Creates: lib/armeabi-v7a/libproject.so
 
-    aapt package -f -m -S res -J src -M AndroidManifest.xml -I ${ANDROID_SDK_ROOT}/platforms/android-22/android.jar
+    aapt package -f -m -S res -J src -M AndroidManifest.xml -I ${ANDROID_SDK_ROOT}/platforms/android-28/android.jar
 
     # Requires: AndroidManifest.xml, res/
     # Creates: src/com/seth/project/R.java
 
-    javac -verbose -source 1.7 -target 1.7 -d obj -bootclasspath `/usr/libexec/java_home`/jre/lib/rt.jar -classpath ${ANDROID_SDK_ROOT}/platforms/android-22/android.jar:obj -sourcepath src src/com/seth/project/R.java src/com/seth/project/NativeLoader.java
+    javac -verbose -source 1.7 -target 1.7 -d obj -bootclasspath `/usr/libexec/java_home`/jre/lib/rt.jar -classpath ${ANDROID_SDK_ROOT}/platforms/android-28/android.jar:obj -sourcepath src src/com/seth/project/R.java src/com/seth/project/NativeLoader.java
 
     # Requires: src/com/seth/project/R.java, src/com/seth/project/NativeLoader.java
     # Creates: obj/com/seth/project/NativeLoader.class ... R&attr.class R$string.class R.class 
@@ -148,7 +148,7 @@ Install ndk-bundle using Android Studio. Install this in t
     # Requires: obj/com/seth/project/NativeLoader.class ... R&attr.class R$string.class R.class 
     # Creates: dex/classes.dex
 
-    aapt package -f -M AndroidManifest.xml -S res -A assets -I ${ANDROID_SDK_ROOT}/platforms/android-22/android.jar -F project.unsigned.apk dex
+    aapt package -f -M AndroidManifest.xml -S res -A assets -I ${ANDROID_SDK_ROOT}/platforms/android-28/android.jar -F project.unsigned.apk dex
 
     # Creates: project.unsigned.apk
     # Note: The "dex" at the end is the directory the classes.dex file is in! This folder can not contain the manifest file for whatever reason.
@@ -177,8 +177,8 @@ You'll get this if your shared library's name does not match across the build. I
 
 This one was tricky! Make sure the platform of the standalone toolchain you build matches the platform you are using on your system.
 
-    make-standalone-toolchain.sh --arch=arm --platform=android-22 --install-dir=./toolchain_arm_api22
-    ${ANDROID_SDK_ROOT}/platforms/android-22
+    make-standalone-toolchain.sh --arch=arm --platform=android-28 --install-dir=./toolchain_arm_api28
+    ${ANDROID_SDK_ROOT}/platforms/android-28
 
 This command may also help.
 
