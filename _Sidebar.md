@@ -22,19 +22,20 @@
 * [Working for UWP (Universal Window Platform)](Working-for-UWP)
 * [Working anywhere with CMake](Working-with-CMake)
 
+## IDE Configurations
+* [How To: Visual Studio](Create-Visual-Studio-Project)
+* [How To: VSCode](Using-raylib-in-VSCode)
+* [How To: Eclipse](Use-raylib-with-Eclipse)
+* [How To: Sublime Text](Use-raylib-with-Sublime-Text)
+* [How To: Code::Blocks](Use-raylib-with-Code-Blocks)
+
 ## Misc Help
-* [How To: Using SpriteFonts](Using-BMFonts)
+* [How To: Using BMFonts](Using-BMFonts)
 * [How To: audio module as standalone library](Use-audio-module-as-standalone-library)
 * [How To: rlgl module as standalone library](Use-rlgl-module-as-standalone-library)
-* [How To: Create Visual Studio Project](Create-Visual-Studio-Project)
-* [How To: Use raylib with Code::Blocks](Use-raylib-with-Code-Blocks)
-* [How To: Redirect-raylib-output-to-Framebuffer-1 (RPI)](Redirect-raylib-output-to-Framebuffer-1)
-* [How To: Install and configure Touchscreen (RPi)](Install-and-configure-Touchscreen-Drivers-(RPi))
+* [How To: RPI: Redirect raylib output to Framebuffer](Redirect-raylib-output-to-Framebuffer-1)
+* [How To: RPI: Install and configure Touchscreen](Install-and-configure-Touchscreen-Drivers-(RPi))
 * [How To: CMake Build Options](CMake-Build-Options)
-* [How To: Use raylib with VSCode](Using-raylib-in-VSCode)
-* [How To: Use raylib with Eclipse](Use-raylib-with-Eclipse)
-* [How To: Use raylib with Sublime Text](Use-raylib-with-Sublime-Text)
-* [How To: Use raylib memory pool](raylib-memory-pool)
 
 ## [FAQ](FAQ)
 
