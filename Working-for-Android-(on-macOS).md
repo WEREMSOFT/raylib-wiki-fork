@@ -138,7 +138,7 @@ Install ndk-bundle using Android Studio. Install this in t
     # Requires: AndroidManifest.xml, res/
     # Creates: src/com/seth/project/R.java
 
-    # javac -verbose -source 1.7 -target 1.7 -d obj -bootclasspath `/usr/libexec/java_home`/jre/lib/rt.jar -classpath ${ANDROID_SDK_ROOT}/platforms/android-22/android.jar:obj -sourcepath src src/com/seth/project/R.java src/com/seth/project/NativeLoader.java
+    javac -verbose -source 1.7 -target 1.7 -d obj -bootclasspath `/usr/libexec/java_home`/jre/lib/rt.jar -classpath ${ANDROID_SDK_ROOT}/platforms/android-22/android.jar:obj -sourcepath src src/com/seth/project/R.java src/com/seth/project/NativeLoader.java
 
     # Requires: src/com/seth/project/R.java, src/com/seth/project/NativeLoader.java
     # Creates: obj/com/seth/project/NativeLoader.class ... R&attr.class R$string.class R.class 
