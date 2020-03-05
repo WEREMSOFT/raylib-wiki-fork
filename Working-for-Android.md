@@ -1,6 +1,8 @@
-**NOTE: For alternative instructions, check [Working for Android (on macOS)](https://github.com/raysan5/raylib/wiki/Working-for-Android-(on-macOS)) and [Working for Android (on Linux)](https://github.com/raysan5/raylib/wiki/Working-for-Android-(on-Linux))**
+**NOTE: This guide is intended for Android development on Windows platform, for alternative platforms, check:**
+ - [Working for Android on macOS](https://github.com/raysan5/raylib/wiki/Working-for-Android-(on-macOS))
+ - [Working for Android on Linux](https://github.com/raysan5/raylib/wiki/Working-for-Android-(on-Linux))
 
-## Installing Android required tools
+## Installing required tools
 
 Android requires a set of tools to do all the build process to generate a .APK game.
 
