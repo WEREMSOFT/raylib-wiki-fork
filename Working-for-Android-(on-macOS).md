@@ -105,8 +105,8 @@ Install ndk-bundle using Android Studio. Install this in t
 
     cd project1
     mkdir lib/armeabi-v7a
-    cp ../raylib/release/libs/android/armeabi-v7a/libraylib.a lib/armeabi-v7a/libraylib.a
-    keytool -genkeypair -validity 1000 -dname "CN=seth,O=Android,C=ES" -keystore project.keystore -storepass 'whatever' -keypass 'mypass' -alias projectKey -keyalg RSA
+    cp ../raylib/src/libraylib.a lib/armeabi-v7a/libraylib.a
+    keytool -genkeypair -validity 1000 -dname "CN=seth,O=Android,C=ES" -keystore project.keystore -storepass 'mypass' -keypass 'mypass' -alias projectKey -keyalg RSA
 
 ## Build Script
 
@@ -123,12 +123,12 @@ Install ndk-bundle using Android Studio. Install this in t
     # Requires: obj/native_app_glue.o
     # Creates: obj/libnative_app_glue.a
 
-    ../toolchain_arm_api22/bin/arm-linux-androideabi-gcc -c project.c -o obj/project.o -I. -I../raylib/release/include -I../raylib/src/external/android/native_app_glue -std=c99 -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -ffunction-sections -funwind-tables -fstack-protector-strong -fPIC -Wall -Wa,--noexecstack -Wformat -Werror=format-security -no-canonical-prefixes -DANDROID -DPLATFORM_ANDROID -D__ANDROID_API__=22 --sysroot=../toolchain_arm_api22/sysroot
+    ../toolchain_arm_api22/bin/arm-linux-androideabi-gcc -c project.c -o obj/project.o -I. -I../raylib/src -I../raylib/src/external/android/native_app_glue -std=c99 -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -ffunction-sections -funwind-tables -fstack-protector-strong -fPIC -Wall -Wa,--noexecstack -Wformat -Werror=format-security -no-canonical-prefixes -DANDROID -DPLATFORM_ANDROID -D__ANDROID_API__=22 --sysroot=../toolchain_arm_api22/sysroot
 
     # Requires: project.c
     # Creates: obj/project.o
 
-    ../toolchain_arm_api22/bin/arm-linux-androideabi-gcc -o lib/armeabi-v7a/libproject.so obj/project.o -shared -I. -I../raylib/release/include -I../raylib/src/external/android/native_app_glue -Wl,-soname,libproject.so -Wl,--exclude-libs,libatomic.a -Wl,--build-id -Wl,--no-undefined -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now -Wl,--warn-shared-textrel -Wl,--fatal-warnings -u ANativeActivity_onCreate -L. -Lobj -Llib/armeabi-v7a -lraylib -lnative_app_glue -llog -landroid -lEGL -lGLESv2 -lOpenSLES -latomic -lc -lm -ldl
+    ../toolchain_arm_api22/bin/arm-linux-androideabi-gcc -o lib/armeabi-v7a/libproject.so obj/project.o -shared -I. -I../raylib/src -I../raylib/src/external/android/native_app_glue -Wl,-soname,libproject.so -Wl,--exclude-libs,libatomic.a -Wl,--build-id -Wl,--no-undefined -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now -Wl,--warn-shared-textrel -Wl,--fatal-warnings -u ANativeActivity_onCreate -L. -Lobj -Llib/armeabi-v7a -lraylib -lnative_app_glue -llog -landroid -lEGL -lGLESv2 -lOpenSLES -latomic -lc -lm -ldl
 
     # Requires: obj/project.o
     # Creates: lib/armeabi-v7a/libproject.so
@@ -157,7 +157,7 @@ Install ndk-bundle using Android Studio. Install this in t
 
     # Does: Adds shared library to apk
     
-    jarsigner -keystore project.keystore -storepass whatever -keypass mypass -signedjar project.signed.apk project.unsigned.apk projectKey
+    jarsigner -keystore project.keystore -storepass mypass -keypass mypass -signedjar project.signed.apk project.unsigned.apk projectKey
 
     # Does: Signs
 
