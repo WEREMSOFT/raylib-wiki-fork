@@ -1,16 +1,27 @@
-Besides the `games/` and `examples/` that are built along raylib by default, there's also a sample CMake project at `projects/CMake`:
+## Requiring raylib to be installed
+If you know that anyone who builds your project, has raylib already installed, a simple `CMakeLists.txt` could look like this:
+```cmake
+cmake_minimum_required(VERSION 3.15)
+project(my_project)
 
+find_package(raylib REQUIRED) # Uses the latest installed version
+
+set(CMAKE_C_STANDARD 11)
+
+add_executable(my_project main.c)
+
+target_link_libraries(my_project main raylib)
 ```
-cd projects/CMake # You can also just download the CMakeLists.txt and the core_basic_window.c file separately
-mkdir build       # Create an out-of-tree build directory. That way build artifacts aren't mixed with source code
-cd build          # enter it
-cmake ..          # run cmake on the parent directory
-cmake --build .   # kick off the build process
+To build, use these commands:
+```cmake
+mkdir build # Create a build directory
+cd build && cmake .. # Build from that directory so the build files are in one place
+cmake --build . # Actually build the project
 ```
 
-The `CMakeLists.txt` is self contained and will arrange to probe whether raylib has been installed and if not, it's downloaded, built and linked statically into the `core_basic_window` example application.
-
-If you want to conserve bandwidth by not downloading raylib for each project, consider installing raylib systemwide by running `cmake --build . --target install` in the raylib build directory.
+## Loading raylib inside cmake
+If you want someone who builds your project to be able to download and build raylib with it, the [CMakeLists.txt at projects/CMake](https://github.com/raysan5/raylib/blob/master/projects/CMake/CMakeLists.txt)
+ will help you.
 
 ## Use from within an IDE
 
