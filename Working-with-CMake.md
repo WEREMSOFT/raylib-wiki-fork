@@ -4,7 +4,7 @@ If you know that anyone who builds your project, has raylib already installed, a
 cmake_minimum_required(VERSION 3.15)
 project(my_project)
 
-find_package(raylib REQUIRED) # Uses the latest installed version
+find_package(raylib 2.5.0 REQUIRED) # Requires at least versionn 2.5.0
 
 set(CMAKE_C_STANDARD 11)
 
