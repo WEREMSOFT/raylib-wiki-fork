@@ -103,3 +103,7 @@ To test the newly created `.html` file (and its .js and .data), just create a lo
 Create localhost using python, make sure you set the local host from the same folder where your .html file is placed or keep in mind that the directory from which you set the localhost is the base directory for browser access:
 
     python -m SimpleHTTPServer 8080
+
+or using Python 3.x:
+
+    python3 -m http.server 8080
