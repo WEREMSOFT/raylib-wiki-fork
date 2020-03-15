@@ -98,7 +98,7 @@ Once `Makefile` has been reviewed, to compile raylib source code, just execute t
 
     make PLATFORM=PLATFORM_WEB -B
 
-_Note that required resources should be embedded into a `.data` file using the compiler parameter `--preload-file filename.ext` or `--preload-file folder` (already configured in the `Makefile` to use `resources` directory).
+_Note that required resources should be embedded into a `.data` file using the compiler parameter `--preload-file filename.ext` or `--preload-file folder` (already configured in the `Makefile` to use `resources` directory)._
 
 Compilation will generate several output files:
 
