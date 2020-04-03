@@ -1,4 +1,4 @@
-raylib is configurable and can be be built in a variety of ways. Following is a listing of available CMake options and values, extracted from [`src/CMakeOptions.txt`](https://github.com/raysan5/raylib/blob/a1ec0a5bc33ab8726e55fa433ffc08fe3b42e539/src/CMakeOptions.txt).
+raylib is configurable and can be built in a variety of ways. Following is a listing of available CMake options and values, extracted from [`src/CMakeOptions.txt`](https://github.com/raysan5/raylib/blob/a1ec0a5bc33ab8726e55fa433ffc08fe3b42e539/src/CMakeOptions.txt).
 > **TIP**:  You can use the curses UI provided by `ccmake(1)` for interactively configuring raylib.
 
 | **Option**                        | **Description**                                           | Possible Values (first is default)|
@@ -32,7 +32,7 @@ raylib is configurable and can be be built in a variety of ways. Following is a 
 |`SUPPORT_FILEFORMAT_DDS`       | Support loading DDS as textures | `ON`|
 |`SUPPORT_FILEFORMAT_HDR`       | Support loading HDR as textures | `ON`|
 |`SUPPORT_FILEFORMAT_KTX`       | Support loading KTX as textures | `ON`|
-|`SUPPORT_FILEFORMAT_ASTC`      | Support loading ASTC as  textures | `ON`|
+|`SUPPORT_FILEFORMAT_ASTC`      | Support loading ASTC as textures | `ON`|
 |`SUPPORT_FILEFORMAT_BMP`       | Support loading BMP as textures | `OFF`|
 |`SUPPORT_FILEFORMAT_TGA`       | Support loading TGA as textures | `OFF`|
 |`SUPPORT_FILEFORMAT_JPG`       | Support loading JPG as textures | `OFF`|
