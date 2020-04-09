@@ -1,8 +1,9 @@
-To build your raylib game for Raspberry Pi you just need to download raylib git repository. All required libraries come with the raylib, **no additional dependencies are required**. raylib also comes with ready-to-use makefiles to compile source code and examples.
+To build your raylib game for Raspberry Pi you just need to download raylib git repository (or wget the current release from [here](https://github.com/raysan5/raylib/releases)). All required libraries come with the raylib, **no additional dependencies are required**. raylib also comes with ready-to-use makefiles to compile source code and examples.
+
 
 ### Supported Devices and OS
 
-Official OS supported is [Raspbian Buster](https://www.raspberrypi.org/downloads/raspbian/). Following Raspberry Pi devices work flawlessly by raylib:
+Official OS supported is [Raspbian Buster](https://www.raspberrypi.org/downloads/raspbian/), but Stretch currently works too. Following Raspberry Pi devices work flawlessly by raylib:
 
  - Raspberry Pi Zero (all models)
  - Raspberry Pi 1 (all models)
@@ -25,6 +26,8 @@ By default, raylib is prepared to be used in native mode, it means, right from t
 OpenGL desktop mode requires the GL desktop driver and supposedly it only works for RPI 2 and higher, that limit is set for performance reasons... but, if required, GL desktop driver can be also enabled on RPI B/B+ or Zero, [just follow this guide](https://www.raspberrypi.org/forums/viewtopic.php?f=66&t=166495) to enable it.
 
 ### Compiling raylib source code
+
+Before you can use raylib in your project you will have to compile it, but this is quick and easy! 
 
 Just navigate to `raylib\src\` directory and run one of the following options depending on your needs:
 
