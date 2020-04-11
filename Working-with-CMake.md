@@ -4,7 +4,7 @@ If you know that anyone who builds your project, has raylib already installed, a
 cmake_minimum_required(VERSION 3.15)
 project(my_project)
 
-find_package(raylib 2.5.0 REQUIRED) # Requires at least versionn 2.5.0
+find_package(raylib 2.5.0 REQUIRED) # Requires at least version 2.5.0
 
 set(CMAKE_C_STANDARD 11)
 
@@ -16,7 +16,7 @@ To build, use these commands:
 ```cmake
 mkdir build # Create a build directory
 cd build && cmake .. # Build from that directory so the build files are in one place
-cmake --build . # Actually build the project
+cmake --build . # Build the project
 ```
 
 ## Loading raylib inside cmake
