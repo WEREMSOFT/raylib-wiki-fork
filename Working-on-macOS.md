@@ -73,20 +73,9 @@ Building statically means you can run this application on other machines with ea
 ## Here's the quick instructions:
 
 1. From the command line: `export MACOSX_DEPLOYMENT_TARGET=10.9`
-2. Install prerequisite external libraries (GLFW, GLUT, etc.) In terminal:
-* Install XCode tools (don't forget to then update the tools in the Mac App Store after!)
+2. Install XCode tools (don't forget to then update the tools in the Mac App Store after!)
 ````
 xcode-select --install
-````
-
-* Install Homebrew:
-````
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-````
-
-* Install GLFW
-````
-brew install glfw
 ````
 
 3. Build raylib (Again, this is so the export line takes effect) 
