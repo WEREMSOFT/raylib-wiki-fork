@@ -5,6 +5,7 @@
 * [raylib data structures](raylib-data-structures)
 * [raylib external dependencies](raylib-dependencies)
 * [raylib dependencies license](raylib-dependencies-license)
+* [raylib GLFW dependency](raylib-GLFW-dependency)
 * [raylib platforms and graphics](raylib-platforms-and-graphics)
 * [raylib input system](raylib-input-system)
 * [raylib internal buffers](raylib-internal-buffers-(2D-vs-3D))
