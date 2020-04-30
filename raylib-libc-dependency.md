@@ -32,7 +32,7 @@ Note that file loading functionality is currently being centralized to `LoadFile
 | :----: | --------------- | ----------------- |
 | core                   | strlen()   | GetFileNameWithoutExt()<br>GetDirectoryPath()<br>GetPrevDirectoryPath()<br>OpenURL()<br>InitEvdevInput()     |
 | core                   | strrchr()  | GetExtension()<br>EventThreadSpawn()  |
-| core                   | strcmp()   | IsGamepadName()<br>EmscriptenKeyboardCallback()  |
+| core                   | strcmp()   | IsGamepadName()  |
 | text                   | strcmp()   | TextIsEqual()   |
 | text                   | strcpy()   | TextAppend()<br>TextReplace()   |
 | text                   | strncpy()  | TextToUtf8()<br>TextReplace()   |
