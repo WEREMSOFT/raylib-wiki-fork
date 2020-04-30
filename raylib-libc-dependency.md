@@ -1,6 +1,6 @@
 raylib is a C library and inevitably it depends on some implementation of [C standard library (libc)](https://en.wikipedia.org/wiki/C_standard_library). 
 
-While working on raylib 3.0 I took some time to analyze that dependency in detail, no plans to remove it (maybe minimize it a bit) but I think it could be useful to have the knowledge where it is required.
+While working on **raylib 3.0** I took some time to analyze that dependency in detail, no plans to remove it (maybe minimize it a bit) but I think it could be useful to have the knowledge where it is required.
 
 ### stdlib.h
 
@@ -14,7 +14,7 @@ While working on raylib 3.0 I took some time to analyze that dependency in detai
 
 ### stdio.h
 
-Note that file loading functionality is currently being centralized to `LoadFileData()`/`SaveFileData()`, most of the file access calls below will disappear soon, replaced by memory buffers parsing (Issue [#1232](https://github.com/raysan5/raylib/issues/1232).
+*Note that file loading functionality is currently being centralized to `LoadFileData()`/`SaveFileData()`, most of the file access calls below will disappear soon, replaced by memory buffers parsing (Issue [#1232](https://github.com/raysan5/raylib/issues/1232)).*
 
 | module | libc function   | raylib function   |
 | :----: | --------------- | ----------------- |
