@@ -14,7 +14,7 @@ While working on raylib 3.0 I took some time to analyze that dependency in detai
 
 ### stdio.h
 
-Note that file loading functionality is currently being centralized to `LoadFileData()`/`SaveFileData()`, most of the file access calls below will disappear soon, replaced by memory buffers parsing.
+Note that file loading functionality is currently being centralized to `LoadFileData()`/`SaveFileData()`, most of the file access calls below will disappear soon, replaced by memory buffers parsing (Issue [#1232](https://github.com/raysan5/raylib/issues/1232).
 
 | module | libc function   | raylib function   |
 | :----: | --------------- | ----------------- |
@@ -57,3 +57,5 @@ Note that file loading functionality is currently being centralized to `LoadFile
 | :----: | --------------- | ----------------- |
 | text   | va\_list, va\_start(), vsprintf(), va\_end()   | TextFormat() |
 | utils  | va\_list, va\_start(), vsprintf(), va\_end()   | TraceLog()   |                                                                                            
+
+Considering the size of raylib, there is not much dependency on *libc*... that's an interesting consideration for embedded devices development where custom *libc* implementations could be used.
