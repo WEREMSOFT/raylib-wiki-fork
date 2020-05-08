@@ -25,4 +25,4 @@ Try launching by using the "Debug" launch configuration in the Debug tab.
 
 _or_
 
-You can Build the game using **View > Command Palette** (or Ctrl + Shift + P),  Type **Run Task** and press **Enter**. And Select the **Build Debug** option. An game executable will be created in the project folder. You can see any error in the console
+You can Build the game using **View > Command Palette** (or Ctrl + Shift + P),  Type **Run Task** and press **Enter**. And Select the **Build Debug** option. A game executable will be created in the project folder. You can see any error in the console
