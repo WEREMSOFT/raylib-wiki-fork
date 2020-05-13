@@ -24,7 +24,7 @@ _Steps:_
 ```
 - raylib installs a pkg-config file, which describes the necessary compilation and linker flags to use it with `yourgame`:
 ```
-cc yourgame.c `pkg-config --libs --cflags raylib`
+cc yourgame.c `pkg-config --libs --cflags raylib` -lraylib
 ```
 
 You may get an error, complaining that the `pkg-config` command was not found. You can use `brew install pkgconfig` to fix that.
