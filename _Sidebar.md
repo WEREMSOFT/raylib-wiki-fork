@@ -40,6 +40,11 @@
 * [How To: RPI: Install and configure Touchscreen](Install-and-configure-Touchscreen-Drivers-(RPi))
 * [How To: CMake Build Options](CMake-Build-Options)
 
+## Function Reference (WIP)
+* [InitWindow](api-reference/InitWindow)
+* [WindowShouldClose](api-reference/WindowShouldClose)
+* [IsWindowReady](api-reference/IsWindowReady)
+
 ## [FAQ](FAQ)
 
 [Wiki History](https://github.com/raysan5/raylib/wiki/_history)
